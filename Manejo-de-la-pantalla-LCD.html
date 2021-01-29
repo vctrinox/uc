@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de la pantalla LCD</title>
+    <link rel="shortcut icon" href="imagenes/Universidad-de-carabobo.png"/>
+    <!-- fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
+
+<!--  -->
+    <script src="https://kit.fontawesome.com/b44d4f8b4b.js" crossorigin = "anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Grandstander:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--  -->
+
+  </head>
+
+
+  <body>
+    <!-- Side navigation -->
+    <div class="sidenav">
+
+      <div class="profile-image">
+        <img src="imagenes/Facultad-de-ingenieria.png" alt="ingenieria">
+      </div>
+      <label class="label">Microprocesadores</label>
+         <button class="collapsible icon icon-solid icon-arrow-down">Teoria</button>
+         <div class="content">
+           <ul style="padding: 0 0 0 20px; margin: 8px 0;">
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+             <li><a href="#">Item</a></li></br>
+           </ul>
+         </div>
+         <button class="collapsible icon icon-solid icon-arrow-down">Laboratorio</button>
+         <div class="content">
+           <ul style="padding: 0 0 0 20px; margin: 8px 0;">
+             <li><a href="Instalacion-de-proteus-8.5.html">Instalación de proteus 8.5</a></li></br>
+             <li><a href="#">Como agregar librerias adicionales en Proteus 8.5</a></li></br>
+             <li><a href="#">Descripcion y manejo de las librerias</a></li></br>
+             <li><a href="#">IDE software Arduino</a></li></br>
+             <li><a href="#">IDE AVR Studio 5</a></li></br>
+             <li><a href="#">Programar el Arduino con AVR Studio 5</a></li></br>
+             <li><a href="#">Introduccion al lenguaje de programacion en C</a></li></br>
+             <li><a href="#">Manejo del display 7 Segmentos</a></li></br>
+             <li><a href="#">Manejo de la pantalla LCD</a></li></br>
+           </ul>
+         </div>
+      </div>
+
+<!-- ************ Menu de navegacion en dispositivos moviles ******************* -->
+      <div class="luxbar luxbar-fixed">
+              <input type="checkbox" id="luxbar-checkbox" class="luxbar-checkbox">
+              <div class="luxbar-menu luxbar-menu-right luxbar-menu-material">
+                  <ol class="luxbar-navigation">
+                      <li class="luxbar-header">
+                          <a class="luxbar-brand" href="#">Microprocesadores UC</a>
+                          <label class="luxbar-hamburger luxbar-hamburger-doublespin"
+                                  for="luxbar-checkbox"> <span></span> </label>
+                      </li>
+                      <button class="luxbar-item collapsible icon icon-solid icon-arrow-down">Teoria</button>
+                      <div class="content">
+                        <ul style="padding: 0 0 0 20px; margin: 8px 0;">
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                          <li><a href="#">Item</a></li></br>
+                        </ul>
+                      </div>
+                      <button class="luxbar-item collapsible icon icon-solid icon-arrow-down">Laboratorio</button>
+                      <div class="content">
+                        <ul style="padding: 0 0 0 20px; margin: 8px 0;">
+                          <li><a href="Instalacion-de-proteus-8.5.html">Instalación de proteus 8.5</a></li></br>
+                          <li><a href="#">Como agregar librerias adicionales en Proteus 8.5</a></li></br>
+                          <li><a href="#">Descripcion y manejo de las librerias</a></li></br>
+                          <li><a href="#">IDE software Arduino</a></li></br>
+                          <li><a href="#">IDE AVR Studio 5</a></li></br>
+                          <li><a href="#">Programar el Arduino con AVR Studio 5</a></li></br>
+                          <li><a href="#">Introduccion al lenguaje de programacion en C</a></li></br>
+                          <li><a href="#">Manejo del display 7 Segmentos</a></li></br>
+                          <li><a href="#">Manejo de la pantalla LCD</a></li></br>
+                        </ul>
+                      </div>
+                  </ol>
+              </div>
+          </div>
+<!-- ************************************************************************** -->
+
+<!-- ***************** Animacion del menu *******************************  -->
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
+    <!-- Page content -->
+    <div class="main">
+      <h1 class="proteus">Manejo de la pantalla LCD</h1>
+
+        <!-- sub menu de contenido -->
+        
+      <!-- end of menu -->
+
+
+
+      <h2 class="pantalla-lcd" style="padding-left: 5px;">¿Que es la pantalla LCD?:</h2>
+      <span class="LCD1">
+       <img src="Imagenes/Manejo-de-la-pantalla-LCD/Pantalla-LCD-16x2.png">
+     </span>
+
+      <span class="LCD2">
+        <p class="text">
+          Los displays LCD (Liquid Crystal Display), permiten graficar o visualizar
+          los caracteres contemplados en el código ASCII. Este esta gobernado por
+          un microcontrolador el cual dirige todo su funcionamiento siendo
+          este el HD44780.
+        </p>
+        <p class="text">Además del código ASCII, los displays LCD admiten graficar hasta 8 caracteres diseñados por el desarrollador.</p>
+        <p class="text">
+             Otra característica fundamental de los
+             LCD, es la conexión del bus de datos, físicamente tienen 8 bits, pero es
+             posible configurar las conexiones con solo 4 bits. La conexión de 8 bits
+             implica una mayor cantidad de cables para su uso, pero la velocidad de
+             trabajo es mayor, por consiguiente la conexión de 4 bits minimiza las
+             conexiones pero disminuye la velocidad de trabajo.
+        </p>
+      </span>
+
+     <p class="text"><b>Partes que conforman el display LCD:</b></p>
+  <ol class="LCD3">
+    <img src="Imagenes/Manejo-de-la-pantalla-LCD/Partes-que-conforman-el-display-LCD.png" alt="partes que conforman la pantalla LCD">
+     <li class="text"><i><b>Pines de alimentación</b>:</i></li></br>
+       <ul>
+         <li class="text"><i><b>Vss</b></i>: Gnd.</li>
+         <li class="text"><i><b>Vdd</b></i>: 5V.</li>
+         <li class="text"><i><b>Vo/Vee</b></i>: Corresponde al pin de contraste, el cual se puede regular con un potenciómetro conectado a Vdd. </li>
+       </ul></br>
+
+     <li class="text"><i><b>Pines de control</b>:</i></li></br>
+       <ul>
+         <li class="text"><i><b>RS</b></i>: EL pin RS funciona paralelamente a los pines del bus de datos. Cuando RS es “0” el dato presente en el bus pertenece a un registro de control/instrucción y cuando RS es “1” el dato presente en el bus de datos pertenece a un registro de datos o un carácter.</li></br>
+         <li class="text"><i><b>R/W</b></i>: Este corresponde al pin de Escritura(0) o Lectura(1). Nos permite escribir un dato en la pantalla o leer un dato desde la pantalla. </li></br>
+         <li class="text"><i><b>E</b></i>: Corresponde al pin Enable o de habilitación. Si E = 0 esto quiere decir que el LCD no esta activado para recibir datos, pero si E = 1 se encuentra activo y podemos escribir o leer desde el LCD.</li></br>
+       </ul>
+     <li class="text"><i><b>Pines de Bus de Datos</b>:</i></li></br>
+       <ul>
+         <li class="text">El bus de datos bidireccional esta comprendido desde D0 hasta D7. para realizar la comunicación con el LCD podemos utilizar los 8 bits del bus de datos (desde D0 hasta D7) o empleando los 4 bits mas significativos (desde D4 hasta D7). </li></br>
+       </ul>
+     <li class="text"><i><b>DDRAM y CGROM</b></i>: Son las dos zonas de la memoria del LCD.</li></br>
+       <ul class="LCD4">
+         <a class="CGROM" target="_blank" href="Imagenes/Manejo-de-la-pantalla-LCD/Tabla-almacenada-en-la-CGROM-típica.png">
+           <img src="Imagenes/Manejo-de-la-pantalla-LCD/Tabla-almacenada-en-la-CGROM-típica.png" alt="CGROM típica de una pantalla LCD"  title="CGROM típica de una pantalla LCD" >
+         </a>
+         <li class="text"><i><b>DDRAM (Display data Ram)</b></i>: Almacena los datos que se desean visualizar por pantalla representados en código de caracteres de 8 bits, es decir, es la memoria donde se almacenan los caracteres a mostrar con su correspondiente posición. </li></br>
+         <li class="text"><i><b>CGROM (Character Generator ROM)</b></i>: Es una memoria interna donde se almacena una tabla con los caracteres que podemos visualizar en el LCD. Cuando se le dice al LCD quemuestre la letra “A”, este necesita saber que puntos activar para que se pueda observar una “A”, esta información es la que esta almacenada en la CGROM.</li></br>
+       </ul>
+  </ol>
+
+  <h3 class="proteus">Manejo de la pantalla LCD con AVR Studio 5 </h3>
+    <p class="text">Ahora se tratará el como hacer funcionar
+                    la pantalla LCD con el microcontrolador ATmega328P junto con el AVR Studio 5,
+                    para esto, se necesitará una librería adicional que se utilizará
+                    como un archivo de cabecera principal, con esta librería lograremos
+                    trabajar con la pantalla LCD mediante funciones muy sencillas de
+                    recordar.
+    </p>
+    <p class="text">Para descargar el archivo necesario basta con entrar a través del siguiente enlace:
+      <a href="https://mega.nz/file/jBgXGYTQ#t_gFWEHBeTSm6vupBk7FbGdxuwjSsjvtp65DK23nOFA">LCD_4bits.h</a>
+    </p>
+    <p class="text">En él se logra descargar el driver necesario para trabajar con solo 4 bits de la pantalla LCD.</p>
+    <p class="text">Una vez descargada, se verá que se tiene el archivo LCD_4bits.h:</p>
+      <img src="Imagenes/Manejo-de-la-pantalla-LCD/archivo-LCD_4bits.png"  alt="archivo LCD_4bits" aling="center" style="margin: 1em 1em 1em 1em;">
+
+
+
+    </div>
+
+<a href="mailto: vctrinox@gmail.com" class="float">
+ <i class="fa fa-envelope my-float"></i>
+</a>
+
+<div class="label-container">
+ <div class="label-text"><span class="correo">Enviar un correo</span></div>
+ <i class="fa fa-play label-arrow"> </i>
+</div>
+  </body>
+</html>
