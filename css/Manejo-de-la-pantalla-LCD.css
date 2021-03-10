@@ -1,0 +1,189 @@
+.main-content .LCD1 img {
+  display: flex;
+  width: 35%;
+  float: right;
+  margin: 1em 3em 1em 1em;
+}
+.main-content .LCD2 {
+  display: block;
+  width: auto;
+}
+.main-content .LCD2 .text {
+  display: block;
+  padding-left: 15px;
+}
+.main-content .LCD3 .LCD4 .CGROM img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 25%;
+  margin-right: 10%;
+}
+
+.main-content .CGROM img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.8);
+}
+
+.main-content .LCD3 img {
+  float: right;
+  margin: 0 1em 1em 1em;
+  width: 35%;
+}
+
+/*.main-content p {
+  margin: 0;
+  padding-top: 8px;
+}*/
+
+.bits_4 {
+  width: 20vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+}
+
+.main-content .function_4bits li {
+  padding: 10px 0;
+}
+
+.main-content .functions_lcd4bits li {
+  padding: 10px 0;
+}
+
+.main-content .functions_lcd4bits li code {
+  color: crimson !important;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+  width: auto !important;
+}
+
+.paso-0,
+.paso-1 {
+  display: block;
+  width: 26vw;
+  padding: 10px 0 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paso-2,
+.paso-3,
+.paso-4 {
+  width: 30vw;
+  display: block;
+  padding: 10px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+code {
+  padding: 20px;
+  color: white !important;
+  display: block;
+  width: max-content;
+  margin-top: unset;
+}
+
+#code_panel1,
+#code_panel2,
+#code_panel3,
+#code_panel4,
+#code_panel5,
+#code_panel6,
+#code_panel7,
+#code_panel8 {
+  margin-top: -26px;
+}
+
+.code_panel {
+  width: /*45vw*/ 600px;
+  height: auto;
+  background-color: #282c34;
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin-top: 1.5vw;
+  overflow-x: auto;
+}
+
+.include_lcd {
+  color: rgb(252, 146, 158);
+}
+
+.code_comment {
+  color: rgb(69 255 69 / 61%);
+}
+
+.define_include {
+  color: rgb(255 155 255);
+}
+
+.char {
+  color: rgb(220 213 123);
+}
+
+#button1 {
+  cursor: pointer;
+  color: white;
+  font-size: smaller;
+  padding-top: 7px;
+  margin-left: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .code_panel {
+    width: 300px;
+  }
+
+  #button1 {
+    padding-bottom: 7px;
+    margin-left: 65%;
+  }
+
+  .bits_4 {
+    width: 80vw;
+  }
+
+  p {
+    margin-bottom: 0 !important;
+  }
+  .paso-2,
+  .paso-3,
+  .paso-4 {
+    width: 85vw;
+  }
+  .code_inside_list {
+    margin-left: -7vw;
+  }
+
+  .paso-0 {
+    margin-left: -9vw;
+    width: 87vw;
+  }
+
+  /* ***********  Manejo de la pantalla LCD ***************** */
+  .main-content .LCD1 img {
+    width: 80vw;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 10vw;
+  }
+  .main-content .LCD3 img {
+    width: 80vw;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 10vw;
+  }
+  .main-content .LCD3 .LCD4 .CGROM img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80vw;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 10vw;
+  }
+}

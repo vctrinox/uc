@@ -1,0 +1,638 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  font-family: unset !important;
+}
+
+p {
+  padding: 10px 0;
+}
+
+/********************************  Sidenav right *******************************************/
+.sidenav2 {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 27.8vw; /* Set the width of the sidebar */
+  margin-left: calc(100% - 27.8vw);
+  margin-top: 60px;
+  position: fixed;
+  z-index: 0; /* Stay on top */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding: 0;
+  background-color: rgba(0, 131, 143, 0.09);
+  border-left: 1px solid rgba(0, 131, 143, 0.178);
+  font-family: "Roboto", sans-serif;
+}
+
+.sidenav2 ul {
+  margin: 0;
+}
+
+.sidenav2 a:hover {
+  text-decoration: none;
+}
+
+.sidenav2 li {
+  cursor: pointer;
+  padding: 10px 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.sidenav2 li a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidenav2 li a:hover {
+  color: #516169;
+}
+
+.sidenav2 label {
+  display: block;
+  text-align: left;
+  padding: 20px 0 20px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+/**************************************  content *********************************************/
+.content {
+  margin-left: 0;
+  margin-top: 60px;
+  width: calc(100% - 27.8vw); /**/
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/**************************************  h1-content *********************************************/
+
+.h1-content {
+  width: 100%;
+  height: 150px;
+  float: left;
+}
+
+.page-title:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 80%; /* Change this to whatever width you want. */
+  padding-top: 20px; /* This creates some space between the element and the border. */
+  border-bottom: 1px solid rgba(85, 85, 85, 0.068); /* This creates the border. Replace black with whatever color you want. */
+}
+
+.content .h1-content h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4.2vw;
+  margin-top: 25px;
+  padding-top: 55px;
+}
+.active {
+  /*border-left: 3px solid #1fc9d8;*/
+  background-color: #1fc9d833;
+}
+
+.main-content {
+  margin-top: 30px;
+  min-height: 100%;
+  padding: 1.04vw 4.9vw 1.04vw 4.9vw;
+  flex: 1 0 auto;
+  margin-bottom: -250px;
+  font-family: "Roboto", sans-serif;
+}
+
+/**************************************  Top-menu content *********************************************/
+#nav-icon2 {
+  display: none;
+}
+
+.top-content {
+  height: 60px;
+  width: 100%;
+  background-color: /*#263238*/ #292929;
+  position: fixed;
+  z-index: 2;
+  color: gray;
+}
+/**/
+.icon-bar {
+  position: absolute;
+  float: left;
+}
+
+.icon-bar a {
+  text-align: center;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.fas {
+  margin-top: 1.6vh;
+  margin-left: 4.17vw;
+}
+
+.top-content .label {
+  color: rgb(255, 255, 255);
+  float: left;
+  font-size: 22px;
+  margin-top: 13.5px;
+  margin-left: 6.9vw;
+  font-weight: 550;
+  font-family: "Roboto", sans-serif;
+}
+/**** *** *** ** *** ** ** ** *** ** ** ** ** ***/
+.top-content ul {
+  list-style-type: none;
+  margin-left: 380px;
+  padding: 0;
+  overflow: auto;
+  opacity: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.top-content li {
+  float: left;
+  height: 60px;
+}
+
+.top-content li a {
+  display: block;
+  color: white;
+  text-align: left;
+  margin: 0;
+  padding: 21px 50px 0 50px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  height: 39px;
+}
+
+.top-content .dropbt:hover a,
+.top-content li a:hover {
+  color: #1fc9d8;
+  transition: all 0.3s ease-in-out;
+}
+.top-content .dropbt:hover {
+  border-top: 1px solid #1fc9d8;
+  transition: all 0.3s ease-in-out;
+}
+/* ************************************************************************** */
+/************************** Top-menu hover links ***********************************/
+
+.top-content .dropdow {
+  float: left;
+}
+
+.top-content .dropdow-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.top-content .dropdow-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Roboto", sans-serif;
+}
+.top-content .dropdow:hover .dropdow-content {
+  margin-top: 60px !important;
+  display: block !important;
+  z-index: 2 !important;
+}
+
+.top-content .dropdow-content a:hover {
+  background-color: #ddd;
+}
+
+/*jump into the same page with sidebar menu of the content*/
+.jump::before {
+  content: "";
+  display: block;
+  height: 65px;
+  margin: -65px 0 0;
+}
+
+.main-content::after {
+  content: "";
+  display: block;
+}
+
+.main-content::after {
+  height: 250px;
+}
+
+/*footer img {
+  float: left;
+  height: 120px;
+  margin: 65px 0 40px 60px;
+  padding-right: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+  margin-left: 380px;
+  padding: 0;
+  overflow: hidden;
+  opacity: 1;
+  margin-top: -250px;
+  margin-bottom: 0;
+}
+
+footer li a {
+  display: block;
+  color: white;
+  text-align: left;
+  margin: 0;
+  padding: 21px 50px 0 50px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  height: 39px;
+}
+
+footer li {
+  float: left;
+  height: 60px;
+}
+.footer2 {
+  width: 45%;
+  height: 250px;
+  display: inline-block;
+  margin: 0;
+}*/
+
+.note {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 229, 100, 0.3);
+  border-left: 5px solid #ffe564;
+}
+
+/********************** FLoating button **************************************
+*******************************************************************************/
+.action {
+  display: none;
+}
+
+.action.active {
+  background-color: #555;
+}
+
+.action span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  font-size: 2em;
+  transition: 0.3s ease-in-out;
+}
+
+.action.active span {
+  transform: rotate(135deg);
+}
+
+.action ul {
+  position: absolute;
+  bottom: 55px;
+  background-color: #fff;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  right: 0;
+  bottom: 40px;
+}
+
+.action.active ul {
+  opacity: 1;
+  bottom: 70px;
+  visibility: visible;
+  transition: 0.3s;
+}
+
+.action ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.action ul li a {
+  color: black;
+}
+
+.action ul li a:hover {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.action ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.action ul li a {
+  margin-right: 10px;
+}
+.action ul li:hover a {
+  opacity: 0.8;
+}
+
+/*************************** End of FLoating button *******************************/
+
+/**************************************** footer ***************************************************/
+
+.your-item {
+  position: relative;
+}
+
+.your-item:after {
+  content: "";
+  height: 65%; /*You can change this if you want smaller/bigger borders*/
+  width: 1px;
+  margin-top: 50px;
+  position: absolute;
+  right: 0;
+  top: 0; /* If you want to set a smaller height and center it, change this value*/
+
+  background-color: rgba(85, 85, 85, 0.342); /* The color of your border*/
+}
+
+footer {
+  min-height: 250px;
+}
+
+.bg-grey {
+  background: #292929;
+}
+.logo-footer {
+  margin-bottom: 40px;
+}
+
+footer {
+  color: grey;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+footer p,
+footer a {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+footer h6 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+}
+footer h6:after {
+  position: absolute;
+  content: "";
+  background: grey;
+  width: 12%;
+  height: 1px;
+  left: 0;
+  bottom: -20px;
+}
+footer .btn-footer {
+  color: grey;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 43px;
+  font-size: 13px;
+  padding: 7px 30px;
+  line-height: 47px;
+}
+footer .btn-footer:hover {
+  text-decoration: none;
+}
+footer .form-footer input[type="text"] {
+  border: none;
+  border-radius: 16px 0 0 16px;
+  outline: none;
+  padding-left: 10px;
+}
+::placeholder {
+  font-size: 15px;
+  padding-left: 10px;
+
+  font-style: italic;
+}
+footer .form-footer button {
+  border: none;
+  background: #232323;
+  margin-left: -5px;
+  color: #fff;
+  outline: none;
+  border-radius: 0 16px 16px 0;
+  padding: 2px 12px;
+}
+footer .social .fa {
+  color: grey;
+  font-size: 22px;
+  padding: 10px 15px;
+  background: #3c3c3c;
+}
+footer ul li {
+  list-style: none;
+  display: block;
+}
+footer ul {
+  padding-left: 0;
+}
+footer ul li a {
+  text-decoration: none;
+  color: grey;
+  text-decoration: none;
+}
+footer > a:hover {
+  text-decoration: none;
+  color: #f5f5f5 !important;
+}
+.social a {
+  text-align: center;
+  transition: all 0.3s ease;
+  color: rgba(128, 128, 128, 0.658);
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/************************ hamburguer icon ***********************/
+#nav-icon2 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 55%;
+  background: white;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon2 span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#nav-icon2 span:nth-child(odd) {
+  left: 0px;
+  border-radius: 9px 0 0 9px;
+}
+
+#nav-icon2 span:nth-child(1),
+#nav-icon2 span:nth-child(2) {
+  top: 4px;
+}
+
+#nav-icon2 span:nth-child(3),
+#nav-icon2 span:nth-child(4) {
+  top: 13px;
+}
+
+#nav-icon2 span:nth-child(5),
+#nav-icon2 span:nth-child(6) {
+  top: 22.5px;
+}
+
+#nav-icon2.open span:nth-child(1),
+#nav-icon2.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon2.open span:nth-child(2),
+#nav-icon2.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon2.open span:nth-child(1) {
+  left: 0;
+  top: 8px;
+}
+
+#nav-icon2.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 8px;
+}
+
+#nav-icon2.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#nav-icon2.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#nav-icon2.open span:nth-child(5) {
+  left: 0;
+  top: 19px;
+}
+
+#nav-icon2.open span:nth-child(6) {
+  left: 10px;
+  top: 19px;
+}
+/*********************************************/
+
+.content-device ul {
+  position: fixed;
+  background-color: #fff;
+  min-width: 100%;
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  height: 100%;
+  top: 60px;
+  opacity: 0;
+}
+
+.content-device.open ul {
+  z-index: 100;
+  bottom: 0;
+  transition: 0.3s;
+  top: 60px;
+  opacity: 1;
+  overflow: auto;
+}
+
+.content-device ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.content-device ul li a {
+  color: black;
+}
+.content-device ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content-device ul li a {
+  margin-right: 10px;
+}
+
+.content-device .dropdow-content {
+  display: none;
+}
+
+.content-device .dropdow-content.activated {
+  display: block;
+}
+
+.content-device .dropdow li {
+  font-family: "Roboto", sans-serif;
+}
+
+.content-device .dropdow li a:hover {
+  text-decoration: none !important;
+}
+
+.content-device .dropdow-content a {
+  color: black;
+  padding: 7px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Roboto", sans-serif;
+}
