@@ -94,6 +94,42 @@
   #brand {
     padding-top: 20px;
   }
+  /********************** IDE Arduino ***********************/
+  #instalación-de-drivers {
+    margin-top: 4% !important;
+  }
+  .responsive1 {
+    width: 98% !important;
+  }
+  .responsive2 {
+    display: unset !important;
+  }
+  .responsive3 {
+    width: 50% !important;
+  }
+  .responsive4 {
+    width: 46% !important;
+  }
+  .flechaIDE {
+    transform: rotate(90deg) !important;
+    width: 10% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .padIMG {
+    padding: 20px 0 !important;
+  }
+  .responsive5 {
+    width: 45% !important;
+    margin-inline-start: unset !important;
+    padding-top: 0 !important;
+  }
+  .responsive6 {
+    padding: 0 !important;
+    width: 6% !important;
+  }
+  /**********************************************************/
 }
 
 @media screen and (max-width: 1000px) {
