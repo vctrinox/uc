@@ -148,6 +148,13 @@
     width: 6% !important;
   }
   /****************************************************************************/
+  /***************************** Programming Arduino with AVR Studio *******************************/
+  .programFileAVRdudeexe {
+    font-size: 80% !important;
+  }
+  .copyText {
+    margin-left: 80% !important;
+  }
 }
 
 @media screen and (max-width: 1000px) {
