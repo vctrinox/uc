@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manejo del Display 7 Segmentos</title>
+  <link rel="shortcut icon" href="imagenes/Universidad-de-carabobo.png" />
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap"
+    rel="stylesheet" />
+  <!-- CSS file -->
+  <link rel="stylesheet" href="css\prueba.css" />
+  <link rel="stylesheet" href="css\media-screen.css" />
+  <link rel="stylesheet" href="css\descripcion-de-las-librerias.css" />
+  <link rel="stylesheet" href="css\Manejo-de-la-pantalla-LCD.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css" />
+  <link rel="stylesheet" href="css\como-agregar-librerias.css">
+  <!-- Js file -->
+  <script src="Js/menu.js" defer></script>
+  <script src="Js/prueba.js" defer></script>
+
+  <!-- --------------------------------------------------------------------------------------------------------------- -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <!-- --------------------------------------------------------------------------------------------------------------- -->
+</head>
+
+<body>
+  <style>
+    p {
+      margin: 0 !important;
+      padding-bottom: 5px !important;
+    }
+  </style>
+  <!-- Top content -->
+  <div class="top-content">
+    <div class="icon-bar">
+      <a class="microchip" href="#">
+        <i class="fas fa-microchip"></i>
+      </a>
+    </div>
+    <label class="label">Microprocesadores UC</label>
+
+    <ul>
+      <div class="dropdow">
+        <li class="dropbt"><a href="#">Teoria</a></li>
+        <div class="dropdow-content">
+          <a href="#">Convertidor ADC</a>
+          <a href="#">Manejo de interrupciones</a>
+          <a href="#">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="#">Timer 0</a>
+          <a href="#">Timer 1</a>
+          <a href="#">Timer 2</a>
+          <a href="#">PWM Timer0 Modo Fase Correcta</a>
+          <a href="#">PWM Timer0 Modo Rapido</a>
+          <a href="#">PWM Timer1 Modo Fase Correcta</a>
+          <a href="#">PWM Timer1 Modo Rapido</a>
+        </div>
+      </div>
+
+      <div class="dropdow">
+        <li class="dropbt"><a href="#">Laboratorio</a></li>
+        <div class="dropdow-content">
+          <a href="Instalacion-de-Proteus-8.5.html">Instalación de proteus 8.5</a>
+          <a href="como-agregar-librerias-a-proteus-8.5.html">Como agregar librerias adicionales en Proteus 8.5</a>
+          <a href="Descripcion-y-manejo.html">Descripcion y manejo de las librerias</a>
+          <a href="IDE-Arduino.html">IDE software Arduino</a>
+          <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+          <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
+          <a href="#">Introduccion al lenguaje de programacion en C</a>
+          <a href="manejo-del-display-7seg.html" class="active">Manejo del display 7 Segmentos</a>
+          <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
+        </div>
+      </div>
+
+      <div class="dropdow">
+        <li class="dropbt"><a href="#">Descargas</a></li>
+        <div class="dropdow-content">
+          <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos en pdf</a>
+          <a href="#">Practicas del Laboratorio</a>
+        </div>
+      </div>
+      <!--<div class="dropdow">
+        <li><a href="#about">About</a></li>
+        <div class="dropdow-content"></div>
+      </div>-->
+    </ul>
+  </div>
+
+  <!-- Haburguer menu -->
+  <div id="nav-icon2">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu in devices -->
+
+  <div class="content-device">
+    <ul>
+      <div class="dropdow">
+        <li class="dropbt" onclick="myFunction()">Teoria</li>
+        <div class="dropdow-content device">
+          <a href="#">Convertidor ADC</a>
+          <a href="#">Manejo de interrupciones</a>
+          <a href="#">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="#">Timer 0</a>
+          <a href="#">Timer 1</a>
+          <a href="#">Timer 2</a>
+          <a href="#">PWM Timer0 Modo Fase Correcta</a>
+          <a href="#">PWM Timer0 Modo Rapido</a>
+          <a href="#">PWM Timer1 Modo Fase Correcta</a>
+          <a href="#">PWM Timer1 Modo Rapido</a>
+        </div>
+      </div>
+      <div class="dropdow">
+        <li class="dropbt" onclick="myFunction2()">Laboratorio</li>
+        <div class="dropdow-content device2">
+          <a href="Instalacion-de-Proteus-8.5.html">Instalación de proteus 8.5</a>
+          <a href="como-agregar-librerias-a-proteus-8.5.html">Como agregar librerias adicionales en Proteus 8.5</a>
+          <a href="Descripcion-y-manejo.html">Descripcion y manejo de las librerias</a>
+          <a href="Descripcion-y-manejo.html">IDE software Arduino</a>
+          <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+          <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
+          <a href="#">Introduccion al lenguaje de programacion en C</a>
+          <a href="manejo-del-display-7seg.html" class="active">Manejo del display 7 Segmentos</a>
+          <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
+        </div>
+      </div>
+      <div class="dropdow">
+        <li class="dropbt" onclick="myFunction3()">Descargas</li>
+        <div class="dropdow-content device3">
+          <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos en pdf</a>
+          <a href="#">Practicas del Laboratorio</a>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+  <!-- sidenav content -->
+  <div class="sidenav2">
+    <label><a href="#" style="color: black">Manejo del Display 7 Segmentos</a></label>
+
+    <ul>
+      <li>
+        <a href="#¿Qué-son-los-Display-7-segmentos?">¿Qué son los Display 7 segmentos?</a>
+      </li>
+      <li>
+        <a href="#Display-Cátodo-Común-y-Ánodo-Común">Display Cátodo Común y Ánodo Común</a>
+      </li>
+      <li>
+        <a href="#Segmentos-de-visualización">Segmentos de visualización</a>
+      </li>
+      <li><a href="#Display-de-4-dígitos">Display de 4 dígitos</a></li>
+      <li><a href="#Manejo-del-Display">Manejo del Display</a></li>
+      <li>
+        <a href="#Diagrama-de-conexiones">Diagrama de conexiones en proteus</a>
+      </li>
+      <li><a href="#Diagrama-de-flujo">Diagrama de flujo</a></li>
+      <li>
+        <a href="#Ejemplo-de-código-en-C-parte-1">Ejemplo de código en C parte 1
+        </a>
+      </li>
+      <li>
+        <a href="#Reasignación-del-puerto">Reasignación del puerto de salida para manejar el Display 7 segmentos
+        </a>
+      </li>
+      <li>
+        <a href="#Ejemplo-de-código-en-C-parte-2">Ejemplo de código en C parte 2</a>
+      </li>
+      <li>
+        <a href="#multiplexación-de-displays">Ejemplo de código en C: multiplexación de displays</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- content -->
+  <div class="content">
+    <!--title content -->
+    <div class="h1-content page-title">
+      <h1 style="font-size: 3.5em">Manejo del Display 7 Segmentos</h1>
+    </div>
+    <!--main content -->
+    <div class="main-content">
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="¿Qué-son-los-Display-7-segmentos?" class="jump">
+        ¿Qué son los Display 7 segmentos?
+      </h3>
+      <p>
+        Un LED o Diodo Emisor de Luz, es un diodo óptico de unión tipo PN que
+        emite energía luminosa en forma de fotones.
+      </p>
+      <p>
+        La emisión de estos fotones ocurre cuando la unión del diodo esta
+        polarizada por un voltaje externo de tal forma que la corriente fluya
+        a través de su unión, en electrónica, este proceso se llama
+        Electroluminiscencia
+      </p>
+      <p>
+        La principal ventaja de los diodos emisores de luz es que debido a su
+        pequeño tamaño, varios de ellos pueden conectarse entre sí dentro de
+        un paquete pequeño y compacto que produce lo que generalmente se llama
+        un Display 7 Segmentos
+      </p>
+      <img class="Display7seg" style="width: 13%; margin: 0 35px; float: left" src="Imagenes\Manejo-del-display-7seg\Display 7 seg.png"
+        alt="Display 7 segmentos" />
+      <p>
+        <b>El Display 7 Segmentos consta de siete LEDs</b> (de ahí su nombre)
+        dispuestos de forma rectangular como se muestra en la figura. Cada uno
+        de los siete LEDs se denomina “<b>segmento</b>” porque cuando se
+        iluminan, el segmento forma parte de un digito numérico (tanto decimal
+        como hexadecimal) que se mostrará. En ocasiones se utiliza un octavo
+        LED adicional dentro del mismo paquete, lo que permite la indicación
+        de un punto decimal (<b>DP</b>)
+      </p>
+      <p>
+        A cada uno de los siete LEDs en el Display se le asigna un segmento
+        posicional con uno de los extremos de sus pines de conexión que se
+        saca directamente del paquete de plástico. Estos pines están
+        etiquetados desde la “<b>a</b>” hasta la “<b>g</b>” que representa a
+        cada LED de manera individual. Los otros extremos de los LEDs están
+        conectados entre sí para formar un pin común
+      </p>
+
+      <!-- --------------------------------------------------------------------------------------- -->
+      <h3 id="Display-Cátodo-Común-y-Ánodo-Común" class="jump">
+        Display Cátodo Común y Ánodo Común
+      </h3>
+      <p>
+        El pin común del Display se usa generalmente para identificar que tipo
+        de Display 7 segmentos es. Como cada LED tiene dos pines de conexión,
+        <b>Ánodo</b> y <b>Cátodo</b>, existen dos tipos de Display 7
+        segmentos:
+      </p>
+      <ul>
+        <li>Cátodo Común (CC)</li>
+        <li>Ánodo Común (AC)</li>
+      </ul>
+      <img class="resp1" style="width: 40%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\inside Display 7 seg.png"
+        alt="Display 7 segmentos Anodo y Catodo comun" />
+      <h5><b>Cátodo Común (CC)</b>:</h5>
+      <p>
+        En este Display todas las conexiones de cátodo de los segmentos se
+        unen a la lógica “<b>0</b>” o <b>tierra</b>. Los segmentos
+        individuales se iluminan mediante la aplicación de una señal “Alta” o
+        un “1” lógico a través de una resistencia limitadora de corriente
+      </p>
+      <img class="responsive" style="width: 30%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\common cathode.png"
+        alt="Display 7 segmentos Anodo y Catodo comun" />
+      <h5><b>Ánodo Común (AC)</b>:</h5>
+      <p>
+        En este Display, todas las conexiones de ánodo de los segmentos se
+        unen a la lógica “<b>1</b>”. Los segmentos individuales se iluminan
+        aplicando una señal de tierra, lógica “0” o una señal “Baja” a través
+        de una resistencia limitadora de corriente
+      </p>
+      <img class="responsive" style="width: 30%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\common anode.png"
+        alt="Display 7 segmentos Anodo y Catodo comun" />
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="Segmentos-de-visualización" class="jump">
+        Segmentos de visualización
+      </h3>
+      <p>
+        Para la visualización de 7 segmentos podemos producir una tabla de la
+        verdad que proporcione los segmentos individuales que necesitan ser
+        iluminados para producir el digito decimal requerido de 0 a 9 ya sea
+        como para el Cátodo común como para el Ánodo común
+      </p>
+      <img class="resp2 displayTable" style="
+            width: 30%;
+            padding: 10px 0;
+            display: inline-block;
+            margin-inline-start: 12%;
+            margin-right: 10%;
+          " src="Imagenes\Manejo-del-display-7seg\common anode table.png"
+        alt="Display 7 segmentos Anodo y Catodo comun" />
+      <img class="resp2 displayTable" style="width: 30%; padding: 10px 0; display: inline-block"
+        src="Imagenes\Manejo-del-display-7seg\common cathode table.png"
+        alt="Display 7 segmentos Anodo y Catodo comun" />
+      <p>Luego el resultado sería:</p>
+      <img class="resp1" style="width: 45%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\graph visual.png"
+        alt="Display 7 segmentos Anodo y Catodo comun" />
+      <div class="note">
+        <p style="padding: 5px">
+          ¿Cuáles serian los valores correspondientes en cada caso para
+          iluminar los segmentos de tal manera que se puedan visualizar los
+          valores hexadecimales?
+        </p>
+      </div>
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 style="margin-top: 2%" id="Display-de-4-dígitos" class="jump">
+        Display de 4 dígitos
+      </h3>
+      <p>
+        Se puede utilizar un modulo compacto de 4 dígitos multiplexandolos,
+        esto significa, que se muestra un digito a la vez, esto es: primero se
+        enciende un único Display, luego, al transcurrir un periodo de tiempo
+        muy corto, se apaga este Display e inmediatamente se enciende el que
+        le sigue mostrando un número decimal diferente, este proceso se repite
+        indefinidamente. Esto sucede a tal velocidad que el ojo humano no
+        puede diferenciar entre que Display se esta apagando o encendiendo,
+        sino que, observará que todos los Display se encuentran encendidos
+      </p>
+
+      <div class="slideshow-container">
+        <div class="mySlides1 fade">
+          <div class="numbertext" style="color: black">1 / 4</div>
+          <img class="resp80" src="Imagenes\Manejo-del-display-7seg\Display 7 seg 4 dig2.png" style="width: 35%" />
+          <div class="text">Display 7 Segmentos de 4 Digitos</div>
+        </div>
+
+        <div class="mySlides1 fade">
+          <div class="numbertext" style="color: black">2 / 4</div>
+          <img class="resp80" src="Imagenes\Manejo-del-display-7seg\Display 7 seg 4 dig.png" style="width: 33%" />
+          <div class="text">Diagrama de conexiones</div>
+        </div>
+
+        <div class="mySlides1 fade">
+          <div class="numbertext" style="color: black">3 / 4</div>
+          <img class="resp80 ptop" src="Imagenes\Manejo-del-display-7seg\Display 7 seg 4 dig common anode.png" style="width: 70%" />
+          <div class="text">Ánodo común</div>
+        </div>
+
+        <div class="mySlides1 fade">
+          <div class="numbertext" style="color: black">4 / 4</div>
+          <img class="resp80 ptop" src="Imagenes\Manejo-del-display-7seg\Display 7 seg 4 dig common cathode.png" style="width: 70%" />
+          <div class="text">Cátodo común</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+      <br />
+
+      <div class="doted" style="text-align: center">
+        <span class="dot1 dott" onclick="currentSlide(1, 0)"></span>
+        <span class="dot1 dott" onclick="currentSlide(2, 0)"></span>
+        <span class="dot1 dott" onclick="currentSlide(3, 0)"></span>
+        <span class="dot1 dott" onclick="currentSlide(4, 0)"></span>
+      </div>
+
+      <p>
+        Así pues, en este sentido, se necesitarían menos pines de conexión
+        para manejar más de un Display. Si se quiere trabajar con dos, se
+        necesitarán 2 pines de control y los 7 correspondientes a los 7
+        segmentos del Display, si se trabaja con 4, se necesitarán 4 pines de
+        control más los 7 pines correspondientes, y así sucesivamente.
+      </p>
+      <p>
+        Entonces, si, por ejemplo, se desea visualizar en el Display de 4
+        dígitos los números <b>1234</b>, en primera instancia se habilita
+        (enciende) el primer Display mientras el resto permanecerá apagado,
+        mostrando, de esta manera, el digito correspondiente, en este caso el
+        número 1, luego, este Display se apagará e inmediatamente se
+        habilitará el siguiente Display mostrando el número 2 y así con el
+        resto de la secuencia. El resultado seria el siguiente:
+      </p>
+
+      <img class="resp1" style="width: 45%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\4x7seg_slow.gif"
+        alt="Display 7 segmentos Anodo y Catodo comun de 4 digitos" />
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="Manejo-del-Display" class="jump">Manejo del Display</h3>
+      <p>
+        Lo primero que tenemos que considerar al momento de utilizar el
+        Display 7 segmentos es la ubicación del mismo en el microcontrolador,
+        de esta manera, se establece el puerto a utilizar y con esto
+        establecer la asignación de los 7 segmentos
+      </p>
+      <p>
+        Para este primer ejemplo se utilizaran 7 bits del <b>PuertoD</b> del
+        microcontrolador para establecer la conexión, luego, a cada uno de
+        estos bits se le asignaran los segmentos desde la “a” hasta la “g”, y,
+        escogiendo un <b>Display CC</b>, se realiza la tabla de la verdad
+        correspondiente a continuación
+      </p>
+      <img class="resp1" style="width: 55%; padding: 10px 0" title="Tabla de la verdad del display cátodo común"
+        src="Imagenes\Manejo-del-display-7seg\true table common cathode.png"
+        alt="tabla de la verdad del display catodo comun" />
+      <p>
+        Ya establecido lo anterior, es necesario elaborar un
+        <b>Arreglo</b> donde estén almacenados los diez dígitos
+        correspondientes en forma ordenada. De esta manera:
+      </p>
+      <style>
+        ::-webkit-scrollbar {
+          display: none;
+        }
+      </style>
+      <div class="code_panel">
+        <div id="button1" onclick="CopyToClipboard('code_panel6')"><i class="far fa-copy"></i> copiar código</div>
+        <code id="code_panel6" style="margin-top: -25px;">
+          <span class="define_include">unsigned char</span> <span class="originalAVR">Dig[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};</span></br>
+          </code>
+      </div>
+      <p>Ahora solo nos resta elaborar una rutina de tal manera que se pueda recorrer todo el conjunto de elementos
+        almacenados en el Arreglo, partiendo de lo siguiente:
+      </p>
+      <img class="resp50" style="width: 25%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\numbers.png"
+        alt="numeros en el arreglo para el display catodo comun" />
+      <div class="note">
+        <p style="margin: 7px !important">Esto quiere decir, que de alguna manera, necesitamos variar el parámetro
+          interno del Arreglo Dig[ ] para lograr recorrer todos los elementos almacenados en este
+        </p>
+      </div>
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="Diagrama-de-conexiones" class="jump">Diagrama de conexiones en proteus</h3>
+      <img class="resp2 displayTable" style="
+            width: 35%;
+            padding: 10px 0;
+            display: inline-block;
+            margin-inline-start: 12%;
+            margin-right: 10%;
+          " src="Imagenes\Manejo-del-display-7seg\diagrama de conexiones parte 1.png"
+        alt="Display 7 segmentos diagrama de conexiones en proteus" />
+      <img class="resp2 displayTable" style="width: 35%; padding: 10px 0; display: inline-block"
+        src="Imagenes\Manejo-del-display-7seg\diagrama de conexiones parte 2.png"
+        alt="Display 7 segmentos diagrama de conexiones en proteus" />
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="Diagrama-de-flujo" class="jump">Diagrama de flujo para el manejo del display 7 segmentos</h3>
+      <img class="resp2 displayTable" style="
+            width: 35%;
+            padding: 10px 0;
+            display: inline-block;
+            margin-inline-start: 12%;
+            margin-right: 1%;
+          " src="Imagenes\Manejo-del-display-7seg\flow diagram.png" alt="Display 7 segmentos diagrama de flujo" />
+      <img class="resp2 displayTable" style="width: 42%; padding: 10px 0; display: inline-block"
+        src="Imagenes\Manejo-del-display-7seg\flow diagram 2.png" alt="Display 7 segmentos diagrama de flujo" />
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="Ejemplo-de-código-en-C-parte-1" class="jump">
+        Ejemplo de código en C parte 1
+      </h3>
+
+      <div class="code_panel">
+        <div id="button1" onclick="CopyToClipboard('code_panel7')"><i class="far fa-copy"></i> copiar código</div>
+        <code id="code_panel7">
+          <span class="define_include">#define</span> <span class="variables">F_CPU</span> 16000000UL <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+          <span class="define_include">#include</span> &lt;avr/io.h&gt;</br>
+          <span class="define_include">#include</span> &lt;util/delay.h&gt;</br></br>
+          <span class="code_comment">/***************** Declaracion de variables ******************************/</span></br>
+          <span class="define_include">unsigned char</span> <span class="originalAVR">Dig[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};</span></br>
+          <span class="define_include">uint8_t</span> <span class="originalAVR"> D0 = 0;</span> <span class="code_comment">// Variable para recorrer el arreglo</span></br>
+          <span class="code_comment">/*************************************************************************/</span></br></br>
+          <span class="code_comment">/***************** Configuracion *************************/</span></br>
+          <span class="define_include">void</span> <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">() {</span> </br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> = 0xFF;</span> <span class="code_comment">// Puerto D como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span class="originalAVR">}</span></br>
+          <span class="code_comment">/*********************************************************/</span></br></br>
+          <span class="code_comment">/********** funcion para mostrar en el display *************/</span></br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">mostrar</span><span class="originalAVR">() {</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = Dig[D0];</span> <span class="code_comment">//Muestra en el PuertoD los digitos de la tabla según el valor de D0</span></br>
+          <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(10);</span></span>  </br>
+          <span class="originalAVR">}</span></br>
+          <span class="code_comment">/*********************************************************/</span></br></br>
+          <span class="code_comment">/************** Programa principal **********************/</span></br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {</br>
+          <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">();</span><br>
+          <span class="define_include" style="margin-left: 1.5vw;">while</span> (1) {</br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar</span></span>(); <span class="code_comment">// Llama a la funcion para mostrar los digitos en el Display</span></br>
+          <span style="margin-left: 2.5vw;" class="originalAVR">D0 += 1;</span> <span class="code_comment">// D0 = D0 + 1; D0 se utiliza para recorrer la tabla</span></br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(300);</span></span>  </br>
+          <span style="margin-left: 2.5vw;"><span class="define_include">if</span><span class="originalAVR"> (D0 >= 10) D0 = 0;</span></span> <span class="code_comment">// Si se recorrio toda la tabla D0 se reinicia a 0 para un nuevo comienzo</span>  </br>
+          <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
+          <span class="originalAVR">}</span></br>
+          </code>
+      </div>
+      <p>Luego simulando en proteus:</p>
+
+      <img class="resp1" style="width: 50%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\Display 7  seg en proteus.gif"
+        alt="Display 7 segmentos en proteus a traves del puerto D del AVR" />
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="Reasignación-del-puerto" class="jump">
+        Reasignación del puerto de salida para manejar el Display 7 segmentos
+      </h3>
+      <p>Ahora bien, que sucede si queremos cambiar la posición del Display en el microcontrolador, si observamos cuidadosamente la placa Arduino, nos daremos cuenta que <b>solo el PuertoD cuenta con los 7 bits necesarios para ocupar todos los segmentos</b>, mientras que, el <b>PuertoC</b> y el <b>PuertoB</b> cuentan solo con 6 bits disponibles para la conexión, lo cual, hace necesario la utilización de un bit de un puerto diferente al que será utilizado 
+      </p>
+      <p>Para este siguiente ejemplo será utilizado el <b>PuertoB</b> para los segmentos del Display desde el a hasta la f y <b>para el segmento g será utilizado el bit 6 del PuertoD</b> (PD6)
+      </p>
+      <img class="resp1" style="width: 53%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\true table common cathode 2.png"
+      alt="reasignacion del puerto para el manejo del display 7 segmentos con el AVR " />
+      <div class="note">
+        <p style="margin: 5px !important;">Si nos damos cuenta, se esta utilizando exactamente la misma tabla que en el ejemplo anterior
+        </p>
+      </div>
+      <p>Para lograr nuestro objetivo es necesario saber cuando se requiere encender el segmento g para que, de esta manera, se logre habilitar el bit que se encuentra en un puerto diferente y lograr el efecto deseado
+      </p>
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="Ejemplo-de-código-en-C-parte-2" class="jump">
+        Ejemplo de código en C parte 2
+      </h3>
+      <div class="code_panel">
+        <div id="button1" onclick="CopyToClipboard('code_panel5')"><i class="far fa-copy"></i> copiar código</div>
+        <code id="code_panel5">
+          <span class="define_include">#define</span> <span class="variables">F_CPU</span> 16000000UL <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+          <span class="define_include">#include</span> &lt;avr/io.h&gt;</br>
+          <span class="define_include">#include</span> &lt;util/delay.h&gt;</br></br>
+          <span class="code_comment">/***************** Declaracion de variables ******************************/</span></br>
+          <span class="define_include">unsigned char</span> <span class="originalAVR">Dig[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};</span></br>
+          <span class="define_include">uint8_t</span> <span class="originalAVR"> tempo, D0 = 0;</span> <span class="code_comment">// tempo se usara como variable temporal</span></br>
+          <span class="code_comment">/*************************************************************************/</span></br></br>
+          <span class="code_comment">/***************** Configuracion *************************/</span></br>
+          <span class="define_include">void</span> <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">() {</span> </br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> = 0xF0;</span> <span class="code_comment">// Puerto D para usar el segmento g</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> = 0xFF;</span> <span class="code_comment">// PORTB como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span class="originalAVR">}</span></br>
+          <span class="code_comment">/*********************************************************/</span></br></br>
+          <span class="code_comment">/********** funcion para mostrar en el display *************/</span></br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">mostrar</span><span class="originalAVR">() {</span></br>
+          <span style="margin-left: 1.5vw;"><span class="originalAVR">tempo = Dig[D0] & 0b01000000;</span> <span class="code_comment">// enmascara el segmento g, con esto se logra determinar cuando es necesario utilizar el segmento g</span></br>
+          <span style="margin-left: 1.5vw;"><span class="define_include">if</span><span class="originalAVR"> (tempo == 0x40) <span class="variables">PORTD</span> = (1 &lt;&lt; <span class="variables">PORTD6</span>);</span></span> <span class="code_comment">// enciende el segmento g cuando este sale en el arreglo</span>  </br>
+          <span style="margin-left: 1.5vw;"><span class="define_include">else</span><span class="originalAVR"> <span class="variables">PORTD</span> = (0 &lt;&lt; <span class="variables">PORTD6</span>); <span class="code_comment">// de lo contrario este permanecera apagado  </span>  </br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = Dig[D0];</span> <span class="code_comment">// se muestran los dígitos correspondientes en el Display a través del puerto B y con el segmento g ubicado en el bit 6 del puerto D</span></br>
+          <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(10);</span></span>  </br>
+          <span class="originalAVR">}</span></br>
+          <span class="code_comment">/*********************************************************/</span></br></br>
+          <span class="code_comment">/************** Programa principal **********************/</span></br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {</br>
+          <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">();</span><br>
+          <span class="define_include" style="margin-left: 1.5vw;">while</span> (1) {</br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar</span></span>(); <span class="code_comment">// Llama a la funcion para mostrar los digitos en el Display</span></br>
+          
+          <span style="margin-left: 2.5vw;" class="originalAVR">D0 += 1;</span> <span class="code_comment">// D0 = D0 + 1; D0 se utiliza para recorrer la tabla</span></br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(300);</span></span>  </br>
+          <span style="margin-left: 2.5vw;"><span class="define_include">if</span><span class="originalAVR"> (D0 >= 10) D0 = 0;</span></span> <span class="code_comment">// Si se recorrio toda la tabla D0 se reinicia a 0 para un nuevo comienzo</span>  </br>
+          <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
+          <span class="originalAVR">}</span></br>
+          </code>
+      </div>
+      <p>Simulando en proteus:</p>
+      <img class="resp1" style="width: 40%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\display 7 seg part 2.gif"
+        alt="Display 7 segmentos en proteus a traves del puerto D y el Puerto B del AVR" />
+
+      <!-- -------------------------------------------------------------------------------------- -->
+      <h3 id="multiplexación-de-displays" class="jump">
+        Ejemplo de código en C: multiplexación de displays
+      </h3>
+      <p>En este ejemplo se ilustra como realizar la multiplexación con dos Displays 
+      </p>
+      <div class="code_panel">
+        <div id="button1" onclick="CopyToClipboard('code_panel4')"><i class="far fa-copy"></i> copiar código</div>
+        <code id="code_panel4">
+          <span class="define_include">#define</span> <span class="variables">F_CPU</span> 16000000UL <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+          <span class="define_include">#include</span> &lt;avr/io.h&gt;</br>
+          <span class="define_include">#include</span> &lt;util/delay.h&gt;</br></br>
+          
+          <span class="code_comment">/***************** Declaracion de variables ******************************/</span></br>
+          <span class="define_include">unsigned char</span> <span class="originalAVR">Dig[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};</span></br>
+          <span class="define_include">uint8_t</span> <span class="originalAVR"> tempo, D0 = 0, D1 = 0;;</span> <span class="code_comment">// tempo se usara como variable temporal</span></br>
+          <span class="code_comment">/*************************************************************************/</span></br></br>
+          
+          <span class="code_comment">/***************** Configuracion *************************/</span></br>
+          <span class="define_include">void</span> <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">() {</span> </br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> = 0xFF;</span> <span class="code_comment">// Puerto D como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> = 0xFF;</span> <span class="code_comment">// Puerto B como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span class="originalAVR">}</span></br>
+          <span class="code_comment">/*********************************************************/</span></br></br>
+          
+          <span class="code_comment">/********** funcion para mostrar en el display *************/</span></br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">mostrar</span><span class="originalAVR">() {</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = (1 &lt;&lt; <span class="variables">PORTB0</span>);</span> <span class="code_comment">// Selecciona el display D1</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = Dig[D0];</span> </br>
+          <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(40);</span></span>  </br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = (1 &lt;&lt; <span class="variables">PORTB1</span>);</span> <span class="code_comment">// Selecciona el display D0</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = Dig[D1];</span> </br>
+          <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(40);</span></span>  </br>
+          <span class="originalAVR">}</span></br>
+          <span class="code_comment">/*********************************************************/</span></br></br>
+         
+          <span class="code_comment">/************** Programa principal **********************/</span></br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {</br>
+          <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">();</span><br>
+          <span class="originalAVR">D0 = 1;</span><br>
+          <span class="originalAVR">D1 = 2;</span><br>
+
+          <span class="define_include" style="margin-left: 1.5vw;">while</span> (1) {</br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar</span></span>(); <span class="code_comment">// Llama a la funcion para mostrar los digitos en el Display</span></br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(40);</span></span>  </br>
+          <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
+          <span class="originalAVR">}</span></br>
+          </code>
+      </div>
+      <p>Si lo vemos un poco en camara lenta el resultado en proteus es el siguiente:</p>
+
+      <img class="resp1" style="width: 50%; padding: 10px 0" src="Imagenes\Manejo-del-display-7seg\multiplexacion de displays.gif"
+        alt="multiplexacion de displays 7 segmentos en proteus a traves del puerto D y el Puerto B del AVR" />
+<!--
+
+while(1){
+    mostrar();
+_delay_ms(40);
+  }                 
+}
+
+       -------------------------------------------------------------------------------------- -->
+    </div>
+
+    <footer class="container-fluid bg-grey py-5" style="padding-top: 0px !important; padding-left: 0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6 your-item">
+                <div class="logo-part" style="height: 250px">
+                  <img src="Imagenes\Facultad-de-ingenieria.png" class="w-50 logo-footer"
+                    style="margin: 25px 0 15px 50px" />
+                  <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      ">
+                    Universidad de Carabobo
+                  </p>
+                  <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      ">
+                    Facultad de Ingeniería
+                  </p>
+                  <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      ">
+                    Escuela de Ingenieria Eléctrica
+                  </p>
+                  <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                      ">
+                    Dpto. de Sistemas y Automática
+                  </p>
+                  <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      ">
+                    © 2021
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 px-4" style="padding-top: 20px">
+                <h6 id="brand" style="display: block; text-align: center; margin-bottom: 0">
+                  Microprocesadores
+                </h6>
+                <h6 style="
+                      display: block;
+                      text-align: center;
+                      margin-bottom: 20px;
+                    ">
+                  SA7E04
+                </h6>
+                <p style="display: block; text-align: center">
+                  Prof: Whendy Garcia.
+                </p>
+                <a href="mailto: vctrinox@gmail.com" class="btn-footer">Enviar un correo</a><br />
+                <a href="https://www.arduino.cc/" class="btn-footer" target="_blank">Ir a: Arduino - Home
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6 px-4" id="show" style="padding-top: 20px; height: 250px">
+                <!--<h6> Help us</h6>
+                <div class="row ">
+                  <div class="col-md-6">
+                    <ul>
+                      <li> <a href="#"> Home</a> </li>
+                      <li> <a href="#"> About</a> </li>
+                      <li> <a href="#"> Service</a> </li>
+                      <li> <a href="#"> Team</a> </li>
+                      <li> <a href="#"> Help</a> </li>
+                      <li> <a href="#"> Contact</a> </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 px-4" id="show">
+                    <ul>
+                      <li> <a href="#"> Cab Faciliy</a> </li>
+                      <li> <a href="#"> Fax</a> </li>
+                      <li> <a href="#"> Terms</a> </li>
+                      <li> <a href="#"> Policy</a> </li>
+                      <li> <a href="#"> Refunds</a> </li>
+                      <li> <a href="#"> Paypal</a> </li>
+                    </ul>
+                  </div>
+                </div>-->
+              </div>
+              <div class="col-md-6" style="padding-top: 20px">
+                <h6>Búsqueda</h6>
+                <div class="social">
+                  <a href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3" target="_blank"
+                    title="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/groups/35195859789/?ref=share" target="_blank" title="Facebook"><i
+                      class="fab fa-facebook-square"></i></a>
+                  <a href="https://twitter.com/electricaing_uc?s=20" target="_blank" title="Twitter"><i
+                      class="fab fa-twitter-square"></i></a>
+                  <a href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw" target="_blank" title="YouTube"><i
+                      class="fab fa-youtube"></i></a>
+                </div>
+                <form class="form-footer my-3" style="margin-bottom: 0 !important">
+                  <input type="text" placeholder="search here...." name="search" />
+                  <button id="go"><i class="fa fa-search"></i></button>
+                </form>
+                <p style="
+                      font-style: italic;
+                      margin-bottom: 0;
+                      padding-bottom: 0;
+                      padding-top: 30px;
+                    ">
+                  Ralizado por:
+                </p>
+                <p style="font-style: italic; padding: 0; margin-bottom: 0">
+                  Victor Ojeda, Gilberto Virguez
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- floating button <a href="mailto: vctrinox@gmail.com" class="float"><i class="fa fa-envelope my-float"></i></a>-->
+    <div class="action" onclick="actionToggle()">
+      <span>+</span>
+      <ul style="
+            font-family: 'Roboto', sans-serif;
+            height: 100vw;
+            overflow: auto;
+          ">
+        <li>
+          <a href="#¿Qué-son-los-Display-7-segmentos?">¿Qué son los Display 7 segmentos?</a>
+        </li>
+        <li>
+          <a href="#Display-Cátodo-Común-y-Ánodo-Común">Display Cátodo Común y Ánodo Común</a>
+        </li>
+        <li>
+          <a href="#Segmentos-de-visualización">Segmentos de visualización</a>
+        </li>
+        <li><a href="#Display-de-4-dígitos">Display de 4 dígitos</a></li>
+        <li><a href="#Manejo-del-Display">Manejo del Display</a></li>
+        <li>
+          <a href="#Diagrama-de-conexiones">Diagrama de conexiones en proteus</a>
+        </li>
+        <li><a href="#Diagrama-de-flujo">Diagrama de flujo</a></li>
+        <li>
+          <a href="#Ejemplo-de-código-en-C-parte-1">Ejemplo de código en C parte 1
+          </a>
+        </li>
+        <li>
+          <a href="#Reasignación-del-puerto">Reasignación del puerto de salida para manejar el Display 7 segmentos
+          </a>
+        </li>
+        <li>
+          <a href="#Ejemplo-de-código-en-C-parte-2">Ejemplo de código en C parte 2</a>
+        </li>
+        <li>
+          <a href="#multiplexación-de-displays">Ejemplo de código en C: multiplexación de displays</a>
+        </li>
+      </ul>
+    </div>
+    <!-- End of floating button -->
+  </div>
+</body>
+
+</html>
