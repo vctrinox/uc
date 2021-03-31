@@ -19,7 +19,7 @@
   <!-- Js file -->
   <script src="Js/menu.js" defer></script>
   <script src="Js/prueba.js" defer></script>
-
+  <script src="Js\loader.js" defer></script>
   <!-- --------------------------------------------------------------------------------------------------------------- -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -41,21 +41,26 @@
       </a>
     </div>
     <label class="label">Microprocesadores UC</label>
+    <div class="dropdow newDp inDevice">
+      <a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a>
+
+  </div>
+
 
     <ul>
       <div class="dropdow">
         <li class="dropbt"><a href="#">Teoria</a></li>
         <div class="dropdow-content">
-          <a href="#">Convertidor ADC</a>
-          <a href="#">Manejo de interrupciones</a>
-          <a href="#">Modulación por ancho de pulso <i>PWM</i></a>
-          <a href="#">Timer 0</a>
-          <a href="#">Timer 1</a>
-          <a href="#">Timer 2</a>
-          <a href="#">PWM Timer0 Modo Fase Correcta</a>
-          <a href="#">PWM Timer0 Modo Rapido</a>
-          <a href="#">PWM Timer1 Modo Fase Correcta</a>
-          <a href="#">PWM Timer1 Modo Rapido</a>
+          <a href="Convertidor-ADC.html">Convertidor ADC</a>
+          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="Timer-0.html">Timer 0</a>
+          <a href="Timer-1.html">Timer 1</a>
+          <a href="Timer-2.html">Timer 2</a>
+          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
+          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
+          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
         </div>
       </div>
 
@@ -68,7 +73,7 @@
           <a href="IDE-Arduino.html">IDE software Arduino</a>
           <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
           <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
-          <a href="#">Introduccion al lenguaje de programacion en C</a>
+          <a href="introduccion-al-lenguaje-de-programacion-en-C.html">Introduccion al lenguaje de programacion en C</a>
           <a href="manejo-del-display-7seg.html" class="active">Manejo del display 7 Segmentos</a>
           <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
         </div>
@@ -78,13 +83,13 @@
         <li class="dropbt"><a href="#">Descargas</a></li>
         <div class="dropdow-content">
           <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos en pdf</a>
-          <a href="#">Practicas del Laboratorio</a>
+          <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
         </div>
       </div>
-      <!--<div class="dropdow">
-        <li><a href="#about">About</a></li>
+      <div class="dropdow newDp">
+        <li><a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a></li>
         <div class="dropdow-content"></div>
-      </div>-->
+      </div>
     </ul>
   </div>
 
@@ -105,16 +110,16 @@
       <div class="dropdow">
         <li class="dropbt" onclick="myFunction()">Teoria</li>
         <div class="dropdow-content device">
-          <a href="#">Convertidor ADC</a>
-          <a href="#">Manejo de interrupciones</a>
-          <a href="#">Modulación por ancho de pulso <i>PWM</i></a>
-          <a href="#">Timer 0</a>
-          <a href="#">Timer 1</a>
-          <a href="#">Timer 2</a>
-          <a href="#">PWM Timer0 Modo Fase Correcta</a>
-          <a href="#">PWM Timer0 Modo Rapido</a>
-          <a href="#">PWM Timer1 Modo Fase Correcta</a>
-          <a href="#">PWM Timer1 Modo Rapido</a>
+          <a href="Convertidor-ADC.html">Convertidor ADC</a>
+          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="Timer-0.html">Timer 0</a>
+          <a href="Timer-1.html">Timer 1</a>
+          <a href="Timer-2.html">Timer 2</a>
+          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
+          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
+          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
         </div>
       </div>
       <div class="dropdow">
@@ -126,7 +131,7 @@
           <a href="Descripcion-y-manejo.html">IDE software Arduino</a>
           <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
           <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
-          <a href="#">Introduccion al lenguaje de programacion en C</a>
+          <a href="introduccion-al-lenguaje-de-programacion-en-C.html">Introduccion al lenguaje de programacion en C</a>
           <a href="manejo-del-display-7seg.html" class="active">Manejo del display 7 Segmentos</a>
           <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
         </div>
@@ -135,7 +140,7 @@
         <li class="dropbt" onclick="myFunction3()">Descargas</li>
         <div class="dropdow-content device3">
           <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos en pdf</a>
-          <a href="#">Practicas del Laboratorio</a>
+          <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
         </div>
       </div>
     </ul>
@@ -182,7 +187,7 @@
   <div class="content">
     <!--title content -->
     <div class="h1-content page-title">
-      <h1 style="font-size: 3.5em">Manejo del Display 7 Segmentos</h1>
+      <h1 class="displayTitle" style="font-size: 3.5em">Manejo del Display 7 Segmentos</h1>
     </div>
     <!--main content -->
     <div class="main-content">
@@ -444,30 +449,30 @@
       <div class="code_panel">
         <div id="button1" onclick="CopyToClipboard('code_panel7')"><i class="far fa-copy"></i> copiar código</div>
         <code id="code_panel7">
-          <span class="define_include">#define</span> <span class="variables">F_CPU</span> 16000000UL <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
-          <span class="define_include">#include</span> &lt;avr/io.h&gt;</br>
-          <span class="define_include">#include</span> &lt;util/delay.h&gt;</br></br>
+          <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+          <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br>
+          <span class="define_include">#include</span> <span class="originalAVR">&lt;util/delay.h&gt;</span></br></br>
           <span class="code_comment">/***************** Declaracion de variables ******************************/</span></br>
           <span class="define_include">unsigned char</span> <span class="originalAVR">Dig[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};</span></br>
           <span class="define_include">uint8_t</span> <span class="originalAVR"> D0 = 0;</span> <span class="code_comment">// Variable para recorrer el arreglo</span></br>
           <span class="code_comment">/*************************************************************************/</span></br></br>
           <span class="code_comment">/***************** Configuracion *************************/</span></br>
           <span class="define_include">void</span> <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">() {</span> </br>
-          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> = 0xFF;</span> <span class="code_comment">// Puerto D como salida</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// Puerto D como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= 0;</span></span> <span class="code_comment">// Segmentos del display apagados</span></br>
           <span class="originalAVR">}</span></br>
           <span class="code_comment">/*********************************************************/</span></br></br>
           <span class="code_comment">/********** funcion para mostrar en el display *************/</span></br>
           <span class="define_include">int</span> <span class="functionsDeclarations">mostrar</span><span class="originalAVR">() {</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = Dig[D0];</span> <span class="code_comment">//Muestra en el PuertoD los digitos de la tabla según el valor de D0</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= Dig[D0];</span></span> <span class="code_comment">//Muestra en el PuertoD los digitos de la tabla según el valor de D0</span></br>
           <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(10);</span></span>  </br>
           <span class="originalAVR">}</span></br>
           <span class="code_comment">/*********************************************************/</span></br></br>
           <span class="code_comment">/************** Programa principal **********************/</span></br>
-          <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {</br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span> <span class="originalAVR">{</span></br>
           <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">();</span><br>
-          <span class="define_include" style="margin-left: 1.5vw;">while</span> (1) {</br>
-          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar</span></span>(); <span class="code_comment">// Llama a la funcion para mostrar los digitos en el Display</span></br>
+          <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {</span></br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar</span></span><span class="originalAVR">();</span> <span class="code_comment">// Llama a la funcion para mostrar los digitos en el Display</span></br>
           <span style="margin-left: 2.5vw;" class="originalAVR">D0 += 1;</span> <span class="code_comment">// D0 = D0 + 1; D0 se utiliza para recorrer la tabla</span></br>
           <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(300);</span></span>  </br>
           <span style="margin-left: 2.5vw;"><span class="define_include">if</span><span class="originalAVR"> (D0 >= 10) D0 = 0;</span></span> <span class="code_comment">// Si se recorrio toda la tabla D0 se reinicia a 0 para un nuevo comienzo</span>  </br>
@@ -502,19 +507,19 @@
       <div class="code_panel">
         <div id="button1" onclick="CopyToClipboard('code_panel5')"><i class="far fa-copy"></i> copiar código</div>
         <code id="code_panel5">
-          <span class="define_include">#define</span> <span class="variables">F_CPU</span> 16000000UL <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
-          <span class="define_include">#include</span> &lt;avr/io.h&gt;</br>
-          <span class="define_include">#include</span> &lt;util/delay.h&gt;</br></br>
+          <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+          <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br>
+          <span class="define_include">#include</span> <span class="originalAVR">&lt;util/delay.h&gt;</span></br></br>
           <span class="code_comment">/***************** Declaracion de variables ******************************/</span></br>
           <span class="define_include">unsigned char</span> <span class="originalAVR">Dig[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};</span></br>
           <span class="define_include">uint8_t</span> <span class="originalAVR"> tempo, D0 = 0;</span> <span class="code_comment">// tempo se usara como variable temporal</span></br>
           <span class="code_comment">/*************************************************************************/</span></br></br>
           <span class="code_comment">/***************** Configuracion *************************/</span></br>
           <span class="define_include">void</span> <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">() {</span> </br>
-          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> = 0xF0;</span> <span class="code_comment">// Puerto D para usar el segmento g</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> = 0xFF;</span> <span class="code_comment">// PORTB como salida</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= 0xF0;</span></span> <span class="code_comment">// Puerto D para usar el segmento g</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// PORTB como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= 0;</span></span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= 0;</span></span> <span class="code_comment">// Segmentos del display apagados</span></br>
           <span class="originalAVR">}</span></br>
           <span class="code_comment">/*********************************************************/</span></br></br>
           <span class="code_comment">/********** funcion para mostrar en el display *************/</span></br>
@@ -552,43 +557,43 @@
       <div class="code_panel">
         <div id="button1" onclick="CopyToClipboard('code_panel4')"><i class="far fa-copy"></i> copiar código</div>
         <code id="code_panel4">
-          <span class="define_include">#define</span> <span class="variables">F_CPU</span> 16000000UL <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
-          <span class="define_include">#include</span> &lt;avr/io.h&gt;</br>
-          <span class="define_include">#include</span> &lt;util/delay.h&gt;</br></br>
+          <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+          <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br>
+          <span class="define_include">#include</span> <span class="originalAVR">&lt;util/delay.h&gt;</span></br></br>
           
           <span class="code_comment">/***************** Declaracion de variables ******************************/</span></br>
           <span class="define_include">unsigned char</span> <span class="originalAVR">Dig[10] = {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F};</span></br>
-          <span class="define_include">uint8_t</span> <span class="originalAVR"> tempo, D0 = 0, D1 = 0;;</span> <span class="code_comment">// tempo se usara como variable temporal</span></br>
+          <span class="define_include">uint8_t</span> <span class="originalAVR"> tempo, D0 = 0, D1 = 0;</span> <span class="code_comment">// tempo se usara como variable temporal</span></br>
           <span class="code_comment">/*************************************************************************/</span></br></br>
           
           <span class="code_comment">/***************** Configuracion *************************/</span></br>
           <span class="define_include">void</span> <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">() {</span> </br>
-          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> = 0xFF;</span> <span class="code_comment">// Puerto D como salida</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> = 0xFF;</span> <span class="code_comment">// Puerto B como salida</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = 0;</span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// Puerto D como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// Puerto B como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= 0;</span></span> <span class="code_comment">// Segmentos del display apagados</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= 0;</span></span> <span class="code_comment">// Segmentos del display apagados</span></br>
           <span class="originalAVR">}</span></br>
           <span class="code_comment">/*********************************************************/</span></br></br>
           
           <span class="code_comment">/********** funcion para mostrar en el display *************/</span></br>
           <span class="define_include">int</span> <span class="functionsDeclarations">mostrar</span><span class="originalAVR">() {</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = (1 &lt;&lt; <span class="variables">PORTB0</span>);</span> <span class="code_comment">// Selecciona el display D1</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = Dig[D0];</span> </br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt;</span> <span class="variables">PORTB0</span><span class="originalAVR">);</span></span> <span class="code_comment">// Selecciona el display D1</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= Dig[D0];</span></span> </br>
           <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(40);</span></span>  </br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> = (1 &lt;&lt; <span class="variables">PORTB1</span>);</span> <span class="code_comment">// Selecciona el display D0</span></br>
-          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> = Dig[D1];</span> </br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt;</span> <span class="variables">PORTB1</span><span class="originalAVR">);</span></span> <span class="code_comment">// Selecciona el display D0</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= Dig[D1];</span></span> </br>
           <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(40);</span></span>  </br>
           <span class="originalAVR">}</span></br>
           <span class="code_comment">/*********************************************************/</span></br></br>
          
           <span class="code_comment">/************** Programa principal **********************/</span></br>
-          <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {</br>
+          <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">) {</span></br>
           <span class="functionsDeclarations"> configuracion</span><span class="originalAVR">();</span><br>
           <span class="originalAVR">D0 = 1;</span><br>
           <span class="originalAVR">D1 = 2;</span><br>
 
-          <span class="define_include" style="margin-left: 1.5vw;">while</span> (1) {</br>
-          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar</span></span>(); <span class="code_comment">// Llama a la funcion para mostrar los digitos en el Display</span></br>
+          <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {</span></br>
+          <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar</span></span><span class="originalAVR">();</span> <span class="code_comment">// Llama a la funcion para mostrar los digitos en el Display</span></br>
           <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(40);</span></span>  </br>
           <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
           <span class="originalAVR">}</span></br>
@@ -609,146 +614,147 @@ _delay_ms(40);
        -------------------------------------------------------------------------------------- -->
     </div>
 
-    <footer class="container-fluid bg-grey py-5" style="padding-top: 0px !important; padding-left: 0">
+    <footer class="container-fluid bg-grey" style="padding-top: 0px; padding-left: 0">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 your-item">
-                <div class="logo-part" style="height: 250px">
-                  <img src="Imagenes\Facultad-de-ingenieria.png" class="w-50 logo-footer"
-                    style="margin: 25px 0 15px 50px" />
-                  <p style="
-                        font-size: 14px;
-                        display: block;
-                        text-align: center;
-                        margin-bottom: 0;
-                        padding-bottom: 0;
-                        padding-top: 0;
-                      ">
-                    Universidad de Carabobo
-                  </p>
-                  <p style="
-                        font-size: 14px;
-                        display: block;
-                        text-align: center;
-                        margin-bottom: 0;
-                        padding-bottom: 0;
-                        padding-top: 0;
-                      ">
-                    Facultad de Ingeniería
-                  </p>
-                  <p style="
-                        font-size: 14px;
-                        display: block;
-                        text-align: center;
-                        margin-bottom: 0;
-                        padding-top: 0;
-                        padding-bottom: 0;
-                      ">
-                    Escuela de Ingenieria Eléctrica
-                  </p>
-                  <p style="
-                        font-size: 14px;
-                        display: block;
-                        text-align: center;
-                        margin-bottom: 0;
-                        padding-top: 0;
-                      ">
-                    Dpto. de Sistemas y Automática
-                  </p>
-                  <p style="
-                        font-size: 14px;
-                        display: block;
-                        text-align: center;
-                        margin-bottom: 0;
-                        padding-top: 0;
-                        padding-bottom: 0;
-                      ">
-                    © 2021
-                  </p>
-                </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="row respRow">
+                      <div class="col-md-6 your-item">
+                          <div class="logo-part" style="max-height: 250px">
+                              <img src="Imagenes\Facultad-de-ingenieria.png" class="w-50 logo-footer"
+                                  style="display: block; margin: 15px auto;" />
+                              <p style="
+                  font-size: 14px;
+                  display: block;
+                  text-align: center;
+                  margin-bottom: 0;
+                  padding-bottom: 0;
+                  padding-top: 0;
+                ">
+                                  Universidad de Carabobo
+                              </p>
+                              <p style="
+                  font-size: 14px;
+                  display: block;
+                  text-align: center;
+                  margin-bottom: 0;
+                  padding-bottom: 0;
+                  padding-top: 0;
+                ">
+                                  Facultad de Ingeniería
+                              </p>
+                              <p style="
+                  font-size: 14px;
+                  display: block;
+                  text-align: center;
+                  margin-bottom: 0;
+                  padding-top: 0;
+                  padding-bottom: 0;
+                ">
+                                  Escuela de Ingenieria Eléctrica
+                              </p>
+                              <p id="TTO" style="
+                  font-size: 14px;
+                  display: block;
+                  text-align: center;
+                  margin-bottom: 0;
+                  padding-top: 0;
+                ">
+                                  Dpto. de Sistemas y Automática
+                              </p>
+                              <p style="
+                  font-size: 14px;
+                  display: block;
+                  text-align: center;
+                  margin-bottom: 0;
+                  padding-top: 0;
+                  padding-bottom: 0;
+                ">
+                                  © 2021
+                              </p>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-4" style="padding-top: 20px">
+                          <h6 id="brand" style="display: block; text-align: center; margin-bottom: 0">
+                              Microprocesadores
+                          </h6>
+                          <h6 style="
+                display: block;
+                text-align: center;
+                margin-bottom: 20px;
+               ">
+                              SA7E04
+                          </h6>
+                          <p style="display: block; text-align: center">
+                              Prof: Whendy Garcia.
+                          </p>
+                          <a href="mailto: vctrinox@gmail.com" class="btn-footer">Enviar un correo</a><br />
+                          <a href="https://www.arduino.cc/" class="btn-footer" target="_blank">Ir a: Arduino -
+                              Home
+                          </a>
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-6 px-4" style="padding-top: 20px">
-                <h6 id="brand" style="display: block; text-align: center; margin-bottom: 0">
-                  Microprocesadores
-                </h6>
-                <h6 style="
-                      display: block;
-                      text-align: center;
-                      margin-bottom: 20px;
-                    ">
-                  SA7E04
-                </h6>
-                <p style="display: block; text-align: center">
-                  Prof: Whendy Garcia.
-                </p>
-                <a href="mailto: vctrinox@gmail.com" class="btn-footer">Enviar un correo</a><br />
-                <a href="https://www.arduino.cc/" class="btn-footer" target="_blank">Ir a: Arduino - Home
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 px-4" id="show" style="padding-top: 20px; height: 250px">
-                <!--<h6> Help us</h6>
-                <div class="row ">
+              <div class="col-md-6">
+                  <div class="row respRow2">
+                      <div class="col-md-6 px-4" id="show" style="padding-top: 20px; height: 250px">
+                          <!--<h6> Help us</h6>
+                  <div class="row ">
                   <div class="col-md-6">
-                    <ul>
+                      <ul>
                       <li> <a href="#"> Home</a> </li>
-                      <li> <a href="#"> About</a> </li>
+                        <li> <a href="#"> About</a> </li>
                       <li> <a href="#"> Service</a> </li>
                       <li> <a href="#"> Team</a> </li>
                       <li> <a href="#"> Help</a> </li>
-                      <li> <a href="#"> Contact</a> </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 px-4" id="show">
-                    <ul>
-                      <li> <a href="#"> Cab Faciliy</a> </li>
-                      <li> <a href="#"> Fax</a> </li>
-                      <li> <a href="#"> Terms</a> </li>
-                      <li> <a href="#"> Policy</a> </li>
+                        <li> <a href="#"> Contact</a> </li>
+                   </ul>
+                 </div>
+                 <div class="col-md-6 px-4" id="show">
+                   <ul>
+                          <li> <a href="#"> Cab Faciliy</a> </li>
+                        <li> <a href="#"> Fax</a> </li>
+                        <li> <a href="#"> Terms</a> </li>
+                       <li> <a href="#"> Policy</a> </li>
                       <li> <a href="#"> Refunds</a> </li>
-                      <li> <a href="#"> Paypal</a> </li>
-                    </ul>
+                            <li> <a href="#"> Paypal</a> </li>
+                       </ul>
+                       </div>
+               </div>-->
+                      </div>
+                      <div class="col-md-6 respCol" style="padding-top: 20px">
+                          <h6>Búsqueda</h6>
+                          <div class="social">
+                              <a href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3" target="_blank"
+                                  title="Instagram"><i class="fab fa-instagram"></i></a>
+                              <a href="https://www.facebook.com/groups/35195859789/?ref=share" target="_blank"
+                                  title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                              <a href="https://twitter.com/electricaing_uc?s=20" target="_blank"
+                                  title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                              <a href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw" target="_blank"
+                                  title="YouTube"><i class="fab fa-youtube"></i></a>
+                          </div>
+                          <form class="form-footer my-3" style="margin-bottom: 0 !important">
+                              <input type="text" placeholder="search here...." name="search" />
+                              <button id="go"><i class="fa fa-search"></i></button>
+                          </form>
+                          <p class="subTitle" style="
+                font-style: italic;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                 padding-top: 5%;
+               ">
+                              Ralizado por:
+                          </p>
+                          <p style="font-style: italic; padding: 0; margin-bottom: 0">
+                              Victor Ojeda, Gilberto Virguez
+                          </p>
+                      </div>
                   </div>
-                </div>-->
               </div>
-              <div class="col-md-6" style="padding-top: 20px">
-                <h6>Búsqueda</h6>
-                <div class="social">
-                  <a href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3" target="_blank"
-                    title="Instagram"><i class="fab fa-instagram"></i></a>
-                  <a href="https://www.facebook.com/groups/35195859789/?ref=share" target="_blank" title="Facebook"><i
-                      class="fab fa-facebook-square"></i></a>
-                  <a href="https://twitter.com/electricaing_uc?s=20" target="_blank" title="Twitter"><i
-                      class="fab fa-twitter-square"></i></a>
-                  <a href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw" target="_blank" title="YouTube"><i
-                      class="fab fa-youtube"></i></a>
-                </div>
-                <form class="form-footer my-3" style="margin-bottom: 0 !important">
-                  <input type="text" placeholder="search here...." name="search" />
-                  <button id="go"><i class="fa fa-search"></i></button>
-                </form>
-                <p style="
-                      font-style: italic;
-                      margin-bottom: 0;
-                      padding-bottom: 0;
-                      padding-top: 30px;
-                    ">
-                  Ralizado por:
-                </p>
-                <p style="font-style: italic; padding: 0; margin-bottom: 0">
-                  Victor Ojeda, Gilberto Virguez
-                </p>
-              </div>
-            </div>
           </div>
-        </div>
       </div>
-    </footer>
+  </footer>
 
     <!-- floating button <a href="mailto: vctrinox@gmail.com" class="float"><i class="fa fa-envelope my-float"></i></a>-->
     <div class="action" onclick="actionToggle()">
