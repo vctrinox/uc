@@ -18,7 +18,7 @@
     <!-- Js file -->
     <script src="Js/menu.js" defer></script>
     <script src="Js/prueba.js" defer></script>
-
+    <script src="Js\loader.js" defer></script>
     <!-- --------------------------------------------------------------------------------------------------------------- -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -39,21 +39,26 @@
             </a>
         </div>
         <label class="label">Microprocesadores UC</label>
+        <div class="dropdow newDp inDevice">
+            <a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a>
+    
+        </div>
+
 
         <ul>
             <div class="dropdow">
                 <li class="dropbt"><a href="#">Teoria</a></li>
                 <div class="dropdow-content">
-                    <a href="#">Convertidor ADC</a>
-                    <a href="#">Manejo de interrupciones</a>
-                    <a href="#">Modulación por ancho de pulso <i>PWM</i></a>
-                    <a href="#">Timer 0</a>
-                    <a href="#">Timer 1</a>
-                    <a href="#">Timer 2</a>
-                    <a href="#">PWM Timer0 Modo Fase Correcta</a>
-                    <a href="#">PWM Timer0 Modo Rapido</a>
-                    <a href="#">PWM Timer1 Modo Fase Correcta</a>
-                    <a href="#">PWM Timer1 Modo Rapido</a>
+                    <a href="Convertidor-ADC.html">Convertidor ADC</a>
+          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="Timer-0.html">Timer 0</a>
+          <a href="Timer-1.html">Timer 1</a>
+          <a href="Timer-2.html">Timer 2</a>
+          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
+          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
+          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
                 </div>
             </div>
 
@@ -67,7 +72,7 @@
                     <a href="IDE-Arduino.html">IDE software Arduino</a>
                     <a href="#" class="active">IDE AVR Studio 5</a>
                     <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
-                    <a href="#">Introduccion al lenguaje de programacion en C</a>
+                    <a href="introduccion-al-lenguaje-de-programacion-en-C.html">Introduccion al lenguaje de programacion en C</a>
                     <a href="manejo-del-display-7seg.html">Manejo del display 7 Segmentos</a>
                     <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
                 </div>
@@ -78,13 +83,13 @@
                 <div class="dropdow-content">
                     <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos
                         en pdf</a>
-                    <a href="#">Practicas del Laboratorio</a>
+                    <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
                 </div>
             </div>
-            <!--<div class="dropdow">
-        <li><a href="#about">About</a></li>
-        <div class="dropdow-content"></div>
-      </div>-->
+            <div class="dropdow newDp">
+                <li><a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a></li>
+                <div class="dropdow-content"></div>
+              </div>
         </ul>
     </div>
 
@@ -105,16 +110,16 @@
             <div class="dropdow">
                 <li class="dropbt" onclick="myFunction()">Teoria</li>
                 <div class="dropdow-content device">
-                    <a href="#">Convertidor ADC</a>
-                    <a href="#">Manejo de interrupciones</a>
-                    <a href="#">Modulación por ancho de pulso <i>PWM</i></a>
-                    <a href="#">Timer 0</a>
-                    <a href="#">Timer 1</a>
-                    <a href="#">Timer 2</a>
-                    <a href="#">PWM Timer0 Modo Fase Correcta</a>
-                    <a href="#">PWM Timer0 Modo Rapido</a>
-                    <a href="#">PWM Timer1 Modo Fase Correcta</a>
-                    <a href="#">PWM Timer1 Modo Rapido</a>
+                    <a href="Convertidor-ADC.html">Convertidor ADC</a>
+          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="Timer-0.html">Timer 0</a>
+          <a href="Timer-1.html">Timer 1</a>
+          <a href="Timer-2.html">Timer 2</a>
+          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
+          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
+          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
                 </div>
             </div>
             <div class="dropdow">
@@ -127,7 +132,7 @@
                     <a href="Descripcion-y-manejo.html">IDE software Arduino</a>
                     <a href="#" class="active">IDE AVR Studio 5</a>
                     <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
-                    <a href="#">Introduccion al lenguaje de programacion en C</a>
+                    <a href="introduccion-al-lenguaje-de-programacion-en-C.html">Introduccion al lenguaje de programacion en C</a>
                     <a href="manejo-del-display-7seg.html">Manejo del display 7 Segmentos</a>
                     <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
                 </div>
@@ -137,7 +142,7 @@
                 <div class="dropdow-content device3">
                     <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos
                         en pdf</a>
-                    <a href="#">Practicas del Laboratorio</a>
+                    <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
                 </div>
             </div>
         </ul>
@@ -553,15 +558,15 @@
             <!-- --------------------------------------------------------------------------------------- -->
         </div>
 
-        <footer class="container-fluid bg-grey py-5" style="padding-top: 0px !important; padding-left: 0">
+        <footer class="container-fluid bg-grey" style="padding-top: 0px; padding-left: 0">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="row">
+                        <div class="row respRow">
                             <div class="col-md-6 your-item">
-                                <div class="logo-part" style="height: 250px">
+                                <div class="logo-part" style="max-height: 250px">
                                     <img src="Imagenes\Facultad-de-ingenieria.png" class="w-50 logo-footer"
-                                        style="margin: 25px 0 15px 50px" />
+                                        style="display: block; margin: 15px auto;" />
                                     <p style="
                         font-size: 14px;
                         display: block;
@@ -592,7 +597,7 @@
                       ">
                                         Escuela de Ingenieria Eléctrica
                                     </p>
-                                    <p style="
+                                    <p id="TTO" style="
                         font-size: 14px;
                         display: block;
                         text-align: center;
@@ -621,7 +626,7 @@
                       display: block;
                       text-align: center;
                       margin-bottom: 20px;
-                    ">
+                     ">
                                     SA7E04
                                 </h6>
                                 <p style="display: block; text-align: center">
@@ -635,33 +640,33 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="row">
+                        <div class="row respRow2">
                             <div class="col-md-6 px-4" id="show" style="padding-top: 20px; height: 250px">
                                 <!--<h6> Help us</h6>
-                <div class="row ">
-                  <div class="col-md-6">
-                    <ul>
-                      <li> <a href="#"> Home</a> </li>
-                      <li> <a href="#"> About</a> </li>
-                      <li> <a href="#"> Service</a> </li>
-                      <li> <a href="#"> Team</a> </li>
-                      <li> <a href="#"> Help</a> </li>
-                      <li> <a href="#"> Contact</a> </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 px-4" id="show">
-                    <ul>
-                      <li> <a href="#"> Cab Faciliy</a> </li>
-                      <li> <a href="#"> Fax</a> </li>
-                      <li> <a href="#"> Terms</a> </li>
-                      <li> <a href="#"> Policy</a> </li>
-                      <li> <a href="#"> Refunds</a> </li>
-                      <li> <a href="#"> Paypal</a> </li>
-                    </ul>
-                  </div>
-                </div>-->
+                        <div class="row ">
+                        <div class="col-md-6">
+                            <ul>
+                            <li> <a href="#"> Home</a> </li>
+                              <li> <a href="#"> About</a> </li>
+                            <li> <a href="#"> Service</a> </li>
+                            <li> <a href="#"> Team</a> </li>
+                            <li> <a href="#"> Help</a> </li>
+                              <li> <a href="#"> Contact</a> </li>
+                         </ul>
+                       </div>
+                       <div class="col-md-6 px-4" id="show">
+                         <ul>
+                                <li> <a href="#"> Cab Faciliy</a> </li>
+                              <li> <a href="#"> Fax</a> </li>
+                              <li> <a href="#"> Terms</a> </li>
+                             <li> <a href="#"> Policy</a> </li>
+                            <li> <a href="#"> Refunds</a> </li>
+                                  <li> <a href="#"> Paypal</a> </li>
+                             </ul>
+                             </div>
+                     </div>-->
                             </div>
-                            <div class="col-md-6" style="padding-top: 20px">
+                            <div class="col-md-6 respCol" style="padding-top: 20px">
                                 <h6>Búsqueda</h6>
                                 <div class="social">
                                     <a href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3" target="_blank"
@@ -677,12 +682,12 @@
                                     <input type="text" placeholder="search here...." name="search" />
                                     <button id="go"><i class="fa fa-search"></i></button>
                                 </form>
-                                <p style="
+                                <p class="subTitle" style="
                       font-style: italic;
                       margin-bottom: 0;
                       padding-bottom: 0;
-                      padding-top: 30px;
-                    ">
+                       padding-top: 5%;
+                     ">
                                     Ralizado por:
                                 </p>
                                 <p style="font-style: italic; padding: 0; margin-bottom: 0">
