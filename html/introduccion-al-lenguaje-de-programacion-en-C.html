@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introducción al lenguaje de programación en C con AVR Studio</title>
+  <link rel="shortcut icon" href="../imagenes/Universidad-de-carabobo.png" />
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap"
+    rel="stylesheet" />
+  <!-- CSS file -->
+  <link rel="stylesheet" href="..\css\prueba.css" />
+  <link rel="stylesheet" href="..\css\media-screen.css" />
+  <link rel="stylesheet" href="..\css\descripcion-de-las-librerias.css" />
+  <link rel="stylesheet" href="..\css\Manejo-de-la-pantalla-LCD.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css" />
+  <link rel="stylesheet" href="..\css\como-agregar-librerias.css">
+  <!-- Js file -->
+  <script src="../Js/menu.js" defer></script>
+  <script src="../Js/prueba.js" defer></script>
+  <script src="..\Js\loader.js" defer></script>
+
+  <!-- --------------------------------------------------------------------------------------------------------------- -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <!-- --------------------------------------------------------------------------------------------------------------- -->
+</head>
+
+<body>
+    <style>
+        p {
+            margin: 0 !important;
+        }
+    </style>
+    <!-- Top content -->
+    <div class="top-content">
+        <div class="icon-bar">
+            <a class="microchip" href="#">
+                <i class="fas fa-microchip"></i>
+            </a>
+        </div>
+        <label class="label">Microprocesadores UC</label>
+       
+        <div class="dropdow newDp inDevice">
+            <a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a>
+    
+        </div>
+
+        <ul>
+            <div class="dropdow">
+                <li class="dropbt"><a href="#">Teoria</a></li>
+                <div class="dropdow-content">
+                    <a href="Convertidor-ADC.html">Convertidor ADC</a>
+          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="Timer-0.html">Timer 0</a>
+          <a href="Timer-1.html">Timer 1</a>
+          <a href="Timer-2.html">Timer 2</a>
+          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
+          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
+          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
+                </div>
+            </div>
+
+            <div class="dropdow">
+                <li class="dropbt"><a href="#">Laboratorio</a></li>
+                <div class="dropdow-content">
+                    <a href="Instalacion-de-Proteus-8.5.html">Instalación de proteus 8.5</a>
+                    <a href="como-agregar-librerias-a-proteus-8.5.html">Como agregar librerias adicionales en Proteus
+                        8.5</a>
+                    <a href="Descripcion-y-manejo.html">Descripcion y manejo de las librerias</a>
+                    <a href="IDE-Arduino.html">IDE software Arduino</a>
+                    <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+                    <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
+                    <a href="introduccion-al-lenguaje-de-programacion-en-C.html" class="active">Introduccion al lenguaje de programacion en C</a>
+                    <a href="manejo-del-display-7seg.html">Manejo del display 7 Segmentos</a>
+                    <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
+                </div>
+            </div>
+
+            <div class="dropdow">
+                <li class="dropbt"><a href="#">Descargas</a></li>
+                <div class="dropdow-content">
+                    <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos
+                        en pdf</a>
+                    <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
+                </div>
+            </div>
+            <div class="dropdow newDp">
+                <li><a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a></li>
+                <div class="dropdow-content"></div>
+              </div>
+        </ul>
+    </div>
+
+    <!-- Haburguer menu -->
+    <div id="nav-icon2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu in devices -->
+
+    <div class="content-device">
+        <ul>
+            <div class="dropdow ">
+                <li class="dropbt" onclick="myFunction()">Teoria</li>
+                <div class="dropdow-content device">
+                    <a href="Convertidor-ADC.html">Convertidor ADC</a>
+          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
+          <a href="Timer-0.html">Timer 0</a>
+          <a href="Timer-1.html">Timer 1</a>
+          <a href="Timer-2.html">Timer 2</a>
+          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
+          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
+          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
+                </div>
+            </div>
+            <div class="dropdow">
+                <li class="dropbt" onclick="myFunction2()">Laboratorio</li>
+                <div class="dropdow-content device2">
+                    <a href="Instalacion-de-Proteus-8.5.html">Instalación de proteus 8.5</a>
+                    <a href="como-agregar-librerias-a-proteus-8.5.html">Como agregar librerias adicionales en Proteus
+                        8.5</a>
+                    <a href="Descripcion-y-manejo.html">Descripcion y manejo de las librerias</a>
+                    <a href="Descripcion-y-manejo.html">IDE software Arduino</a>
+                    <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+                    <a href="Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
+                    <a href="#" class="active">Introduccion al lenguaje de programacion en C</a>
+                    <a href="manejo-del-display-7seg.html">Manejo del display 7 Segmentos</a>
+                    <a href="Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
+                </div>
+            </div>
+            <div class="dropdow">
+                <li class="dropbt" onclick="myFunction3()">Descargas</li>
+                <div class="dropdow-content device3">
+                    <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos
+                        en pdf</a>
+                    <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <!-- sidenav content -->
+    <div class="sidenav2">
+        <label><a href="#" style="color: black">Introducción al lenguaje de programación en C con AVR Studio</a></label>
+
+        <ul>
+            <li>
+                <a href="#Estructura-básica">Estructura básica de un programa elaborado en C</a>
+            </li>
+            <li>
+                <a href="#tipos-de-datos">tipos de datos mas comunes (int, short, char, …)</a>
+            </li>
+            <li><a href="#Como-añadir-comentarios">Como añadir comentarios</a></li>
+            <li>
+                <a href="#Declaración-de-variables">Declaración de variables</a>
+            </li>
+            <li>
+                <a href="#Operadores-utilizados">Operadores utilizados (matemáticos, lógicos, por bit)</a>
+            </li>
+            <li><a href="#Ejemplo-con-operadores">Ejemplo con operadores</a></li>
+            <li>
+                <a href="#While">Sentencia
+                    <p style="color: blue; display: inline-block; padding: 0;">While</p>
+                </a>
+            </li>
+            <li>
+                <a href="#Do-While">Sentencia
+                    <p style="color: blue; display: inline-block; padding: 0;">Do … While</p>
+                </a>
+            </li>
+            <li>
+                <a href="#for">Sentencia
+                    <p style="color: blue; display: inline-block; padding: 0;">for</p>
+                </a>
+            </li>
+            <li>
+                <a href="#if-else">Sentencia
+                    <p style="color: blue; display: inline-block; padding: 0;">if … else</p>
+                </a>
+            </li>
+            <li>
+                <a href="#breack">Sentencia
+                    <p style="color: blue; display: inline-block; padding: 0;">breack</p>
+                </a>
+            </li>
+            <li>
+                <a href="#switch-case">Sentencia
+                    <p style="color: blue; display: inline-block; padding: 0;">switch … case</p>
+                </a>
+            </li>
+            <li>
+                <a href="#return">Sentencia
+                    <p style="color: blue; display: inline-block; padding: 0;">return</p>
+                </a>
+            </li>
+            <li>
+                <a href="#Ejemplo-de-sentencias">Ejemplo de sentencias simples</a>
+            </li>
+            <li><a href="#Funciones-en-C">Funciones en C</a></li>
+            <li>
+                <a href="#Ejemplo-de-funciones">Ejemplo de funciones con parámetros (por valor) y sin parámetros</a>
+            </li>
+            <li>
+                <a href="#Variables">Variables: Variables locales y variables globales</a>
+            </li>
+            <li><a href="#Variables-estáticas">Variables estáticas</a></li>
+            <li><a href="#Variables-volátiles">Variables volátiles</a></li>
+            <li><a href="#Arrays">Arrays o Matrices</a></li>
+            <li><a href="#Punteros">Punteros</a></li>
+            <li style="margin-bottom: 20%;">
+                <a href="#Punteros-con-matrices">Punteros con matrices</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+        <!--title content -->
+        <div class="h1-content page-title">
+            <h1 class="titleH7" style="font-size: 2.3em">
+                Introducción al lenguaje de programación en C con AVR Studio
+            </h1>
+        </div>
+        <!--main content -->
+        <div class="main-content">
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Estructura-básica" class="jump" style="margin-top: 3%">
+                Estructura básica de un programa elaborado en C
+            </h3>
+            <p>
+                Básicamente, toda programación elaborada en lenguaje C tendrá la
+                siguiente estructura:
+            </p>
+            <img class="resp1" style="width: 60%; padding: 10px 0" src="..\Imagenes\Lenguaje C\estructura de un programa.png"
+                alt="estructura de un programa elaborado en lenguaje C" />
+            <div class="note">
+                <ul>
+                    <li style="padding: 5px">
+                        La función <b>Main</b>() hace referencia al inicio del programa
+                        principal
+                    </li>
+                    <li style="padding: 5px">
+                        <b>Un bloque</b> establece y delimita el cuerpo de las funciones y
+                        algunas sentencias mediante llaves { }
+                    </li>
+                    <li style="padding: 5px">
+                        Toda sentencia o instrucción escrita en el programa debe finalizar
+                        con un punto y coma (<b>;</b>).
+                    </li>
+                </ul>
+            </div>
+            <p>
+                El primer renglón de programación lo ocupan las
+                <b>Directivas del pre-procesador</b>, siendo estas un conjunto de
+                archivos que consulta el compilador antes de construir el archivo
+                hexadecimal (<b>.hex</b>) que, posteriormente será grabado en la
+                memoria del microcontrolador. Las directivas siempre comienzan con el
+                carácter denominado numeral (<span style="color: blue">#</span>)
+            </p>
+            <p>
+                Por ejemplo, si estamos por empezar un nuevo proyecto en el
+                <b>IDE AVR Studio 5</b>, lo primero que se nos muestra al crear el
+                proyecto es el archivo de cabecera:
+                <i><a style="font-family: 'Bitter', serif"><span style="color: blue">#include</span> &lt;avr/io.h&gt;
+                    </a></i>
+            </p>
+            <img class="resp1" style="width: 35%; padding: 10px 0" src="..\Imagenes\Lenguaje C\archivo de cabecera include.png"
+                alt="estructura de un programa elaborado en lenguaje C" />
+            <div class="note">
+                <ul>
+                    <li style="padding: 5px">
+                        Este archivo de encabezado incluye las definiciones de
+                        <b>Entrada/Salida</b> (I/O) apropiadas para el dispositivo
+                        especificado por el usuario.
+                    </li>
+                    <li style="padding: 5px">
+                        A estos archivos se les conoce comúnmente como
+                        <i><b>Librerías</b></i>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                El segundo renglón de la programación lo ocupa las
+                <b>Declaraciones</b>, estas hacen referencia a porciones de memoria
+                que almacenan un valor. Estos valores suelen ser Variables o
+                Constantes, ambas dependen del tipo de dato.
+            </p>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="tipos-de-datos" class="jump">
+                Tipos de datos más comunes (int, short, char, …)
+            </h3>
+            <p>
+                Los tipos de datos más comunes y el tamaño en bytes de cada uno de
+                ellos son los siguientes:
+            </p>
+            <img class="resp1" style="width: 80%; padding: 10px 0" src="..\Imagenes\Lenguaje C\tipo de datos.png"
+                alt="Algunos tipos de datos presentados en lenguaje C" />
+            <p>
+                El lenguaje C/C++ además, provee una librería
+                <b>&lt;stdint.h&gt;</b> que define un conjunto de tipos
+                multiplataforma que se puede usar cuando se necesita un número exacto
+                de bits con o sin signo.
+            </p>
+            <img class="resp1" style="width: 50%; padding: 10px 0" src="..\Imagenes\Lenguaje C\tipo de datos multiplataforma.png"
+                alt="Algunos tipos de datos multiplataformas presentados en lenguaje C" />
+
+            <p>Ejemplo:</p>
+            <div class="code_panel">
+                <div id="button1" onclick="CopyToClipboard('code_panel1')"><i class="far fa-copy"></i> copiar código
+                </div>
+                <code id="code_panel1">
+              <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br>
+              <span class="define_include">#include</span> <span class="originalAVR">&lt;stdint.h&gt;</span></br></br>
+              <span class="define_include">uint8_t</span> <span class="originalAVR"> varibale;</span> <span class="code_comment">//Variable de 8 bits sin signo</span></br>
+              <span class="define_include">int8_t</span> <span class="originalAVR"> varibale;</span> <span class="code_comment">//Variable de 8 bits con signo</span></br>
+              </code>
+            </div>
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Como-añadir-comentarios" class="jump" style="margin-top: 3%;">
+                Como añadir comentarios
+            </h3>
+            <p>Los comentarios se inician con doble barra diagonal ( <span style="color: green;">//</span> ) los mismos
+                se usan para aclarar cosas durante la edición del programa. Los comentarios no se transmiten a la
+                memoria del microcontrolador, por lo que pueden emplearse tantas veces sea necesario.
+            </p>
+            <p>Si bien se busca establecer una sección muy amplia como comentario, este deberá comenzar y finalizar con
+                una barra y un asterisco
+                (<span style="color: green;"> /* comentario extenso */ </span>) como se muestra en la siguiente imagen
+            </p>
+            <img class="resp80" style="width: 35%; padding: 10px 0" src="..\Imagenes\Lenguaje C\comentarios.png"
+                alt="Comentarios realizados en lenguaje C" />
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Declaración-de-variables" class="jump">
+                Declaración de variables
+            </h3>
+            <p>No se puede utilizar una variable en el programa si antes no se ha declarado. La forma general más simple
+                de hacerlo es la siguiente:
+            </p>
+            <div class="code_panel">
+                <code>
+            <span class="define_include">Tipo_de_Dato </span> <span class="originalAVR">MyVar;</span> 
+          </code>
+            </div>
+            <p>Aqui se especifica lo siguiente:</p>
+            <div class="note">
+                <ul>
+                    <li style="padding: 5px"><span style="color: blue">Tipo_de_Dato</span>: Corresponde al tipo de dato
+                        con el que se quiere trabajar
+                    </li>
+                    <li style="padding: 5px"><b>MyVar</b>: Nombre de la variable a utilizar (<b>siempre y cuando no sea
+                            una palabra reservada por el compilador</b>)
+                    </li>
+                </ul>
+            </div>
+            <p>Ejemplo:</p>
+            <div class="code_panel" >
+                <code>
+              <span class="define_include">unsigned int </span> <span class="originalAVR">temp;</span> <span class="code_comment">//Variable tipo entero sin signo (16 bits)</span></br>
+              <span class="define_include">signed short </span> <span class="originalAVR">a;</span> <span class="code_comment">  // Varaiable tipo entero con signo (8 bits)</span></br>
+              <span class="define_include">unsigned short </span> <span class="originalAVR">k;</span> <span class="code_comment">// Varaiable tipo entero sin signo (8 bits)</span></br>
+              <span class="define_include">unsigned char </span> <span class="originalAVR">c;</span> <span class="code_comment">// Varaiable tipo entero sin signo (8 bits)</span></br>
+            </code>
+            </div>
+            <p>También es posible declarar varias variables del mismo tipo, separándolas con comas, además de
+                inicializarlas al momento de ser declararlas. De la siguiente manera:
+            </p>
+            <style>
+                ::-webkit-scrollbar {
+                    display: none;
+                }
+            </style>
+            <div class="code_panel">
+                <code>
+                  <span class="define_include">unsigned int </span> <span class="originalAVR">a, b, c; </span> <span class="code_comment">// Variables a, b y c declaradas tipo entero de 16 bits sin signo</span></br>
+                  <span class="define_include">short </span> <span class="originalAVR">j = 0, k = 1;</span> <span class="code_comment">  // Variables j y k declaradas tipo short, donde j se inicializa en 0 y k en 1 (valor inicial)</span></br>
+                </code>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Operadores-utilizados" class="jump" style="margin-top: 3%;">
+                Operadores utilizados (matemáticos, lógicos, por bit)
+            </h3>
+            <p>Un operador es un símbolo que opera sobre un valor o una variable. Por ejemplo: <b>+</b> es un operador para realizar sumas, en lenguaje C podemos encontrar los siguientes:</p>
+            <h5>Operadores Matemáticos</h5>
+            <div class="table-responsive"><table class="setTableColor" style="border: 0;">
+                <thead>
+                    <tr>
+                        <th><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Operador</span></span></th>
+                        <th><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Significado del operador</span></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">+</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Suma o incrementa una unidad</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">-</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Resta o decrementa una unidad</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">*</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Multiplicación</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">/</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">División</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">%</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Resto después de la división (división de módulo)</span></span></td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h5 style="margin-top: 3%;">Operadores Lógicos</h5>
+
+            <div class="table-responsive"><table class="setTableColor" style="border: 0;">
+                <thead>
+                    <tr>
+                        <th><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Operador</span></span></th>
+                        <th><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Significado del operador</span></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Menor que</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&gt;</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Mayor que</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Menor o igual que</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&gt;=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Mayor o igual que</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">==</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Igualdad</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">!=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Desigualdad</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Asignación</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&&</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Función lógica <b>AND</b></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">||</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Función lógica <b>OR</b></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">!</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Función lógica <b>NOT</b></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">++</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Suma una unidad a su argumento (Incremento)</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">--</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Resta una unidad a su argumento (Decremento)</span></span></td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h5 style="margin-top: 3%;">Operador por bit</h5>
+            <div class="table-responsive"><table class="setTableColor" style="border: 0;">
+                <thead>
+                    <tr>
+                        <th><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Operador</span></span></th>
+                        <th><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Significado del operador</span></span></th>
+                        <th><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Equivalente</span></span></th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Función lógica <b>AND</b> para un bit</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">|</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Función lógica <b>OR</b> para un bit</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">^</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Función lógica <b>OR Exclusiva</b> para un bit</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">~</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Complemento a uno (toggle)</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;&lt;</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Desplazamiento hacia la izquierda</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&gt;&gt;</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Desplazamiento hacia la derecha</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">+=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de adición</span></span></td>
+                        <td class="Equ"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x += y es igual a x = x + y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">-=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de sustracción</span></span></td>
+                        <td class="Equ"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x -= y es igual a x = x - y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">*=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de multiplicación</span></span></td>
+                        <td class="Equ"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x *= y es igual a x = x * y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">/=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de división</span></span></td>
+                        <td class="Equ"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x /= y es igual a x = x / y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">%=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de modulo o valor absoluto</span></span></td>
+                        <td class="Equ2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x %= y es igual a x = x % y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;&lt;=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de desplazamiento hacia la izquierda</span></span></td>
+                        <td class="Equ2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x &lt;&lt;= y es igual a x = x &lt;&lt; y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&gt;&gt;=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de desplazamiento hacia la derecha</span></span></td>
+                        <td class="Equ2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x &gt;&gt;= y es igual a x = x &gt;&gt; y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de la función lógica <b>AND</b></span></span></td>
+                        <td class="Equ2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x &= y es igual a x = x & y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">^=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de la función lógica <b>OR Exclusiva</b></span></span></td>
+                        <td class="Equ"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">x ^= y es igual a x = x ^ y</span></span></td>
+                    </tr>
+                    <tr>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">|=</span></span></td>
+                        <td><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Designación de la función lógica <b>OR Inclusiva</b></span></span></td>
+                        <td class="Equ"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span>x |= y es igual a x = x | y</span></td>
+                    </tr>
+                </tbody>
+            </table></div>
+            <h5 style="margin-top: 3%;">Operadores de incremento y decremento</h5>
+
+            <div class="code_panel">
+                <code>
+                  <span class="originalAVR">x = x + 1; </span> <span class="code_comment">// Incrementa la variable x en una unidad</span></br>
+                  <span class="originalAVR">x++;</span> <span class="code_comment"> //  expresión equivalente (sigue del operando)</span></br>
+                  <span class="originalAVR">++x;</span> <span class="code_comment">  //  expresión equivalente (precede al operando)</span></br>
+                  <span class="originalAVR">x += 1;</span> <span class="code_comment">  // expresión equivalente</span></br>
+                </code>
+            </div>
+
+            <p>Ahora bien, Si los operadores preceden al operando, se realiza la operación ++ o en su defecto -- y luego se realiza la asignación a la variable:
+            </p>
+            <div class="code_panel" style="margin-top: 5px;">
+                <code style="padding: 10px 20px;">
+                  <span class="originalAVR">x = 10;</span></br>
+                  <span class="originalAVR">k = ++x; </span> <span class="code_comment">// k vale 11</span></br>
+                </code>
+            </div>
+            <p>Si sigue al operando, se realiza la asignación y posteriormente se realiza la operación ++ o --:</p>
+            <div class="code_panel" style="margin-top: 5px;">
+                <code style="padding: 10px 20px;">
+                  <span class="originalAVR">x = 10;</span></br>
+                  <span class="originalAVR">k = x++; </span> <span class="code_comment">// k vale 10</span></br>
+                </code>
+            </div>
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Ejemplo-con-operadores" class="jump" style="margin-top: 3%;">Ejemplo con operadores</h3>
+
+            <h5>Operadores matemáticos</h5>
+
+            <div class="code_panel">
+                <code>
+                    <span class="define_include">uint8_t</span> <span class="originalAVR"> a, b, c, d, e, f;</span> <span class="code_comment">// Variables de la "a" a la "f" declaradas de 8 bits sin signo</span></br><br>
+                    <span class="originalAVR">a = b + c;</span> <span class="code_comment">// Suma la variable b con la variable c y el resultado se almacena en la variable a</span><br>
+                    <span class="originalAVR">d = e * f;</span> <span class="code_comment">// multiplica "e" con "f" y el resultado se almacena en "d"</span><br>
+                    <span class="originalAVR">a = b / c;</span> <span class="code_comment">// divide "b" entre "c" y el resultado se almacena en "a"</span><br>
+                    <span class="originalAVR">b = a + (b/c);</span> <span class="code_comment">// suma "a" con el resultado de la division entre "b" y "c" y se almacena en "b"</span><br>
+                    <span class="originalAVR">f = c % d;</span> <span class="code_comment">// residuo de dividir "c" entre "d" y se almacena en f</span><br>
+                </code>
+            </div>
+            <p>Para entender un poco más el operador matemático <b>%</b> veamoslo a través de un ejemplo:</p>
+            <p>Supongamos que la variable <b>c</b> es igual a <b>1234</b> y la variable <b>d</b> es igual a <b>100</b> por lo tanto se desea ejecutar la operación <b>f = c % d</b> ¿Qué valor se almacena en la variable <b>f</b>?</p>
+            <p>Procediendo con la división se tiene:</p>
+            <img class="resp50" style="width: 20%;" src="..\Imagenes\Lenguaje C\modulo.png" alt="operador modulo">
+            <p>Por lo que el valor que nos retorna la operación <b>c % d</b> es el valor residual al ejecutar la división entre los dos operandos, por lo tanto, en este caso, <b>f</b> tendrá un valor igual a <b>34</b></p>
+            
+
+
+            <h5 style="margin-top: 3%;">Operadores lógicos</h5>
+
+            <div class="code_panel">
+                <code>
+                    <span class="define_include">if</span> <span class="originalAVR">(!(a==0))</span> <span class="code_comment">// Si la variable a es distinto de cero</span></br>
+                    <span class="originalAVR">{</span><br>
+                    <span style="margin-left: 1vw;" class="code_comment">// se ejecuta(n) esta(s) sentencia(s)</span><br>
+                    <span class="originalAVR">}</span><br><br>
+                   
+                    <span class="define_include">if</span> <span class="originalAVR">( (a&lt;b) && (a&gt;c) )</span> <span class="code_comment">// Si a es menor que b y al mismo tiempo a es mayor que c</span></br>
+                    <span class="originalAVR">{</span><br>
+                    <span style="margin-left: 1vw;" class="code_comment">// se ejecuta(n) esta(s) sentencia(s)</span><br>
+                    <span class="originalAVR">}</span><br><br>
+                   
+                    <span class="define_include">while</span> <span class="originalAVR">( (a==0) || (b==0) )</span> <span class="code_comment">// Mientras a sea cero ó b sea cero</span></br>
+                    <span class="originalAVR">{</span><br>
+                    <span style="margin-left: 1vw;" class="code_comment">// se ejecuta(n) esta(s) sentencia(s)</span><br>
+                    <span class="originalAVR">}</span><br>
+                </code>
+            </div>
+
+            <h5 style="margin-top: 3%;">Operadores por bit</h5>
+            <div class="code_panel">
+                <code>
+                    <span class="define_include">uint8_t</span> <span class="originalAVR"> m, n;</span> <span class="code_comment">// variables de 8 bits</span></br><br>
+                    
+                    <span class="originalAVR">m = 0xF0;</span> <span class="code_comment">// se asigna el valor 0xF0 a la variable m</span><br>
+                    <span class="originalAVR">m = m & 0x0F;</span> <span class="code_comment">// Después de la operacion AND m será 0x00</span><br>
+                    <span class="code_comment">/*dado que se realiza la operacion AND entre 0xF0 y 0x0F el resultado sera 0x00*/</span><br>
+                    <span class="originalAVR">m = m | 0x24;</span> <span class="code_comment">// Después de la operacion OR m será 0x24</span><br>
+                    <span class="originalAVR">m = m & 0b11110000;</span> <span class="code_comment">// Después de la operacion AND m será 0x20</span><br>
+                    <span class="originalAVR">n = 0xF0;</span> <span class="code_comment">// se asigna 0xF0 a la variable n</span><br>
+                    <span class="originalAVR">n = ~n;</span> <span class="code_comment">// despues de la operacion toggle n será 0x0F</span><br>
+                    <span class="originalAVR">m = m | 0b10000001;</span> <span class="code_comment">// Activa los bits 0 y 7 de variable m</span><br>
+                    <span class="originalAVR">m = m & 0xF0;</span> <span class="code_comment">// Limpia el nibble bajo de variable m</span><br>
+                    <span class="originalAVR">m = m ^ 0b00110000;</span> <span class="code_comment">// Invierte bits 4 y 5 de la variable m</span><br>
+                    <span class="originalAVR">m = 0b00011000;</span> <span class="code_comment">// Carga m con 0b00011000</span><br>
+                    <span class="originalAVR">m = m >> 2;</span> <span class="code_comment">// Desplazar m 2 posiciones a la derecha, Ahora m será 0b00000110</span><br>
+
+                    <span class="originalAVR">n = 0x0F;</span> <span class="code_comment">// ahora n vale 0x0F</span><br>
+                    <span class="originalAVR">n = n &lt;&lt; 4;</span> <span class="code_comment">// Desplazar n 4 posiciones a la izquierda, Ahora n será 0xF0</span><br>
+                    <span class="originalAVR">m = 0x01;</span> <span class="code_comment">// carga m con 0x01</span><br>
+                    <span class="originalAVR">m = m &lt;&lt; 8;</span> <span class="code_comment">// Después de esto m será 0x00</span><br>
+                </code>
+            </div>
+            <div class="note" style="margin-top: 2%;">
+                <p style="padding: 5px;">Cuando una variable se desplaza hacia un lado, los bits que salen se pierden y
+                    los bits que entran por el otro lado son siempre ceros. Es por esto que en la última sentencia, m =
+                    m &lt;&lt; 8, el resultado es 0x00. </p>
+            </div>
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="While" class="jump" style="margin-top: 3%;">
+                Sentencia
+                <p style="color: blue; display: inline-block; padding: 0;">While</p>
+            </h3>
+            <p>Esta sentencia se utiliza cuando queremos que una sección de nuestro programa se repita mientras se cumple una condición. De no cumplirse la condición, se ignora esta sentencia y continua con el resto del programa 
+            </p>
+            <h5>Estructura:</h5>
+            <div class="code_panel">
+                <code>
+              <span class="define_include">while </span> <span class="originalAVR">(condicion)</span> </br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span class="code_comment" style="margin-left: 3vw;">// Bloque de sentencias a ejecutar mientras la condicion se cumpla</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span> </br>
+            </code>
+            </div>
+
+            <h5 style="margin-top: 3%;">Ejemplo:</h5>
+            <div class="code_panel">
+                <code>
+              <span class="define_include">while </span> <span class="originalAVR">(1)</span> </br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span style="margin-left: 2.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= 0b00000001;</span></span> <span class="code_comment">// Bit cero del PuertoB Activado</span></br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(500); </span></span><span class="code_comment">// retardo de 500ms</span>  </br>
+              <span style="margin-left: 2.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= 0b00000000;</span></span> <span class="code_comment">// Bit cero del PuertoB apagado</span></br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(500); </span></span><span class="code_comment">// retardo de 500ms</span>  </br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span> </br>
+            </code>
+            </div>
+            <div class="note" style="margin-top: 3%;">
+                <p style="padding: 5px;">El número 1 implementado como condición nos indica que esa sección del programa se repetirá indefinidamente dado que la condición siempre será verdadera
+                </p>
+            </div>
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Do-While" class="jump" style="margin-top: 3%;">
+                Sentencia
+                <p style="color: blue; display: inline-block; padding: 0;">Do … While</p>
+            </h3>
+            <p>A diferencia del <span style="color: blue;">while</span>  la sentencia <span style="color: blue;">Do … While</span> nos permite tener por lo menos una iteración, ya que la condición se comprueba al final del bucle
+            </p>
+            <h5>Estructura:</h5>
+            <div class="code_panel">
+                <code>
+              <span class="define_include">do </span> </br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span class="code_comment" style="margin-left: 3vw;">// Bloque de sentencias que se ejecutan al menos una vez</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span> <span class="define_include">while </span><span class="originalAVR">(condicion)</span> </br>
+            </code>
+            </div>
+
+            <h5 style="margin-top: 3%;">Ejemplo:</h5>
+            <div class="code_panel">
+                <code>
+              <span class="define_include">do </span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">mostrar_numero</span>();</span> <span class="code_comment">// funcion definida en el programa</span></br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(500); </span></span><span class="code_comment">// retardo de 500ms</span>  </br>
+              <span class="originalAVR" style="margin-left: 2.5vw;">i++;</span> <span class="code_comment">// Variable declarada que se incrementa en una unidad</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span> <span class="define_include">while </span><span class="originalAVR">(i &lt; 10);</span><span class="code_comment">// Condición para que se repita el ciclo, es decir, mientras la variable i sea menor a 10 el bucle se repetira</span></br>
+            </code>
+            </div>
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="for" class="jump" style="margin-top: 3%;">
+                Sentencia
+                <p style="color: blue; display: inline-block; padding: 0;">for</p>
+            </h3>
+            <p>El bucle <span style="color: blue;">for</span> permite la inicialización automática y el incremento de una variable tipo contador.
+            </p>
+            <h5>Estructura:</h5>
+            <div class="code_panel">
+                <code>
+              <span class="define_include">for</span> <span class="originalAVR">(Inicialización; Condición; Incremento/Decremento)</span> </br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span class="code_comment" style="margin-left: 3vw;">// Bloque de sentencias</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+            </code>
+            </div>
+            <h5 style="margin-top: 3%;">Ejemplo:</h5>
+            <div class="code_panel">
+                <code>
+                    <span class="define_include">for</span> <span class="originalAVR">(i = 0; i &lt; 10; i++)</span> </br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">printf </span><span class="originalAVR">("hola\n");</span></span> <span class="code_comment">// Se imprime 10 veces hola</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span></br>
+            </code>
+            </div>
+            <div class="note" style="margin-top: 3%;">
+                <p style="padding: 5px;">Aunque la sentencia <span style="color: blue;">for</span> permite ciertas variaciones, generalmente <b>la Inicialización</b> se utiliza para establecer el valor del comienzo de una variable. <b>La Condición</b> normalmente es una sentencia relacional que compara la variable contador con un valor de terminación 
+                </p>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="if-else" class="jump" style="margin-top: 3%;">
+                Sentencia
+                <p style="color: blue; display: inline-block; padding: 0;">if … else</p>
+            </h3>
+            <p>Ambas son sentencias independientes, pero, por lo general, suelen trabajar en conjunto
+            </p>
+            <h5>Estructura:</h5>
+            <div class="code_panel">
+                <code>
+              <span class="define_include">if</span> <span class="originalAVR">(Condición/Condiciones)</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span class="code_comment" style="margin-left: 3vw;">//Bloque de sentencias 1</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+              <span class="define_include">else</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span class="code_comment" style="margin-left: 3vw;">//Bloque de sentencias 2</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+            </code>
+            </div>
+            <p>De cumplirse la condición del <span style="color: blue;">if</span> se ejecutará lo que se encuentre en el bloque de sentencias 1, de lo contrario, se ejecutará lo que se encuentre en el bloque de sentencias 2 si esta existe 
+            </p>
+            <h5>Ejemplo:</h5>
+            <div class="code_panel">
+            <code>
+              <span class="define_include">if</span> <span class="originalAVR">(PINB & (1 &lt;&lt; 0)) </span> <span class="code_comment">// Si el pin PB0 es 1 ...</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span style="margin-left: 2.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt;</span> <span class="variables">PORTB5</span><span class="originalAVR">) & ~(1 &lt;&lt;</span> <span class="variables">PORTB4</span><span class="originalAVR">);</span></span> <span class="code_comment">// Se enciende PB5 y se apaga PB4</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span></br>
+              <span class="define_include">else</span> <span class="code_comment">// si el pin PB0 no es 1 ...</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span style="margin-left: 2.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt;</span> <span class="variables">PORTB4</span><span class="originalAVR">) & ~(1 &lt;&lt;</span> <span class="variables">PORTB5</span><span class="originalAVR">);</span></span> <span class="code_comment">// se enciende PB4 y se apaga PB5</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">}</span></br>
+            </code>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="breack" class="jump" style="margin-top: 3%;">
+                Sentencia
+                <p style="color: blue; display: inline-block; padding: 0;">breack</p>
+            </h3>
+            <p><span style="color: blue;">break</span> se utiliza para salir de un bucle <span style="color: blue;">Do</span>, <span style="color: blue;">For</span> o <span style="color: blue;">while</span> saltándose la condición normal del bucle. También se utiliza para salir de la sentencia <span style="color: blue;">switch</span> 
+            </p>
+            <h5>Ejemplo:</h5>
+            <div class="code_panel">
+            <code>
+              <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {<span class="code_comment"> //Programa principal</span></br>
+              <span class="define_include">int</span> <span class="originalAVR"> m;</span></br>
+          
+              <span class="define_include">for</span> <span class="originalAVR">(m = 0; m &lt; 100; m++)</span><span class="code_comment"> // El ciclo for normalmente deberia terminar una vez se cumpla la condicion m &lt; 100 es decir, cuando m = 99</span> </br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(500);</span></span>  </br>
+              <span style="margin-left: 2.5vw;"><span class="define_include">if</span><span class="originalAVR"> (m == 10) </span></span> <span class="define_include">break<span class="originalAVR">;</span> </span> <span class="code_comment">// Si m = 10 el ciclo for se termina (no se realizan mas iteraciones) y se continua con el resto del programa</span>  </br>
+          
+              <span class="originalAVR" style="margin-left: 2vw;">}</span></br>
+              <span class="originalAVR">}</span></br>
+            </code>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="switch-case" class="jump" style="margin-top: 3%;">
+                Sentencia
+                <p style="color: blue; display: inline-block; padding: 0;">switch … case</p>
+            </h3>
+            <p>Es la sentencia de bifurcación a varias direcciones del programa. Se utiliza a fin de ejecutar un camino de los distintos posibles.
+            </p>
+            <div class="note">
+                <p style="padding: 5px;">Se escribe entre paréntesis después de <span style="color: blue;">switch</span> la expresión a ser analizada
+                </p>
+            </div>
+            <h5 style="margin-top: 3%;">Estructura:</h5>
+            <div class="code_panel">
+                <code>
+              <span class="define_include">switch</span> <span class="originalAVR">(Variable a analizar para la bifurcación)</span></br>
+              <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+                <span class="define_include" style="margin-left: 2.5vw;">case</span> <span class="originalAVR">(Contante 1):</span><br> 
+                <span class="originalAVR" style="margin-left: 3vw;">Conjunto de sentencias 1;</span> <br>
+                <span class="define_include" style="margin-left: 2.5vw;">break</span><span class="originalAVR">;</span><br><br>
+                <span class="define_include" style="margin-left: 2.5vw;">case</span> <span class="originalAVR">(Contante 2):</span><br> 
+                <span class="originalAVR" style="margin-left: 3vw;">Conjunto de sentencias 2;</span> <br>
+                <span class="define_include" style="margin-left: 2.5vw;">break</span><span class="originalAVR">;</span><br>
+                <span class="originalAVR" style="margin-left: 2.5vw;">.</span><br>
+                <span class="originalAVR" style="margin-left: 2.5vw;">.</span><br>
+                <span class="originalAVR" style="margin-left: 2.5vw;">.</span><br>
+                <span class="define_include" style="margin-left: 2.5vw;">case</span> <span class="originalAVR">(Contante n):</span><br> 
+                <span class="originalAVR" style="margin-left: 3vw;">Conjunto de sentencias n;</span> <br>
+                <span class="define_include" style="margin-left: 2.5vw;">break</span><span class="originalAVR">;</span><br><br>
+                <span class="define_include" style="margin-left: 2.5vw;">default</span> <span class="originalAVR">: Sentencias por defecto;</span><br> 
+              <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+              
+            </code>
+            </div>
+            <div class="note" style="margin-top: 3%;">
+                <p style="padding: 5px;">Cada <b>conjunto de sentencias</b> puede estar formado por una o varias sentencias. Si no se cumple ninguno de los “<span style="color: blue;">case</span>” y se requiere hacer algo por defecto, dicha acción se programa mediante la instrucción <span style="color: blue;">default</span> la cual es opcional
+                </p>
+            </div>
+
+            <h5 style="margin-top: 3%;">Ejemplo:</h5>
+            <div class="code_panel">
+                <div id="button1" onclick="CopyToClipboard('code_panel5')"><i class="far fa-copy"></i> copiar código</div>
+                <code id="code_panel5">
+              <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {<span class="code_comment"> //Programa principal</span></br>
+              <span class="define_include">unsigned short</span> <span class="originalAVR"> LED = 0;</span> <span class="code_comment">// Variable a analizar</span></br>
+              <span class="variables">DDRB</span> <span class="originalAVR">= 0xFF;</span> <span class="code_comment">// Puerto B como salida</span></br><br>
+              <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {</span> <span class="code_comment">// Ciclo infinito</span></br>
+              <span class="define_include" style="margin-left: 2.5vw;">switch</span> <span class="originalAVR">(LED)</span> <span class="code_comment"> //Para cada caso de la variable LED (que es una variable de tipo contador) se encenderá un bit del PuertoB</span></br>
+              <span class="originalAVR" style="margin-left: 2.5vw;">{</span> </br>
+
+                <span class="define_include" style="margin-left: 3vw;">case</span> <span class="originalAVR">(0):</span>
+                <span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt; <span class="variables">PORTB0</span>);</span> 
+                <span class="define_include">break</span><span class="originalAVR">;</span> <span class="code_comment">// Si la variable LED es igual a cero se ejecuta esta sentencia</span><br>
+                
+                <span class="define_include" style="margin-left: 3vw;">case</span> <span class="originalAVR">(1):</span>
+                <span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt; <span class="variables">PORTB1</span>);</span> 
+                <span class="define_include">break</span><span class="originalAVR">;</span> <span class="code_comment">// Si la variable LED es igual a uno se ejecuta esta sentencia</span><br>
+                
+                <span class="define_include" style="margin-left: 3vw;">case</span> <span class="originalAVR">(2):</span>
+                <span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt; <span class="variables">PORTB2</span>);</span> 
+                <span class="define_include">break</span><span class="originalAVR">;</span> <span class="code_comment">// Si la variable LED es igual a dos se ejecuta esta sentencia</span><br>
+              
+                <span class="define_include" style="margin-left: 3vw;">case</span> <span class="originalAVR">(3):</span>
+                <span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt; <span class="variables">PORTB3</span>);</span> 
+                <span class="define_include">break</span><span class="originalAVR">;</span> <span class="code_comment">// Si la variable LED es igual a tres se ejecuta esta sentencia</span><br>
+                
+                <span class="define_include" style="margin-left: 3vw;">case</span> <span class="originalAVR">(4):</span>
+                <span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt; <span class="variables">PORTB4</span>);</span> 
+                <span class="define_include">break</span><span class="originalAVR">;</span> <span class="code_comment">// Si la variable LED es igual a cuatro se ejecuta esta sentencia</span><br>
+                
+                <span class="define_include" style="margin-left: 3vw;">case</span> <span class="originalAVR">(5):</span>
+                <span class="variables">PORTB</span> <span class="originalAVR">= (1 &lt;&lt; <span class="variables">PORTB5</span>);</span> 
+                <span class="define_include">break</span><span class="originalAVR">;</span> <span class="code_comment">// Si la variable LED es igual a cinco se ejecuta esta sentencia</span><br>
+                
+                <span class="define_include" style="margin-left: 3vw;">default</span><span class="originalAVR">: PORTB = 0x00;</span> <span class="code_comment">// En caso de que la variable LED no tenga ninguno de los valores anteriores se ejecuta esta sentencia</span><br> 
+              <span class="originalAVR" style="margin-left: 2.5vw;">}</span> </br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(1000);</span></span>  </br>
+              <span style="margin-left: 2.5vw;"><span class="define_include">if</span><span class="originalAVR"> (LED == 6)</span></span> <span class="originalAVR">LED = 0;</span> <span class="code_comment">// Si la variable llego a 6 se reinicia a cero</span>  </br>
+              <span style="margin-left: 2.5vw;"><span class="define_include">else</span><span class="originalAVR"> LED++;</span></span> <span class="code_comment">// Si no ha llegado se incrementa una unidad</span>  </br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">}</span> </br>
+              <span class="originalAVR">}</span> </br>
+            </code>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="return" class="jump" style="margin-top: 3%;">
+                Sentencia
+                <p style="color: blue; display: inline-block; padding: 0;">return</p>
+            </h3>
+            <p>Precisamente, la manera que tiene una función para devolver un valor es mediante la sentencia <span style="color: blue;">return</span>. Cuando una función se encuentra con una sentencia return se devuelve a la rutina de llamada inmediatamente y las sentencias posteriores a return no se ejecutan
+            </p>
+            <h5>Ejemplo:</h5>
+            <div class="code_panel"> 
+            <code>
+                <span class="define_include">unsigned int</span> <span class="functionsDeclarations">sum</span><span class="originalAVR">(</span><span class="define_include">unsigned short</span> <span class="originalAVR">A,</span> <span class="define_include">unsigned short</span> <span class="originalAVR">B</span><span class="originalAVR">)</span><span class="code_comment"> // Funcion para sumar</span></br>
+                <span class="originalAVR">{</span> </br>
+                <span class="functionsDeclarations" style="margin-left: 1vw;" >return</span> <span class="originalAVR">(A + B);</span> <span class="code_comment">// devuelve la sumatoria de los parametros A y B</span><br>
+                <span class="originalAVR" >}</span> </br><br>
+              
+              <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {<span class="code_comment"> //Programa principal</span></br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">a = </span><span class="functionsDeclarations">sum</span><span class="originalAVR">(1, 10); </span><span class="code_comment">// invoca la funcion suma con los parametros A = 1 y B = 10</span><br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">b = </span><span class="functionsDeclarations">sum</span><span class="originalAVR">(15, 6); </span><span class="code_comment">// invoca la funcion suma con los parametros A = 15 y B = 6</span><br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">c = </span><span class="functionsDeclarations">sum</span><span class="originalAVR">(100, 25); </span><span class="code_comment">// invoca la funcion suma con los parametros A = 100 y B = 25</span><br>
+              <span class="code_comment" style="margin-left: 1.5vw;">/** los resultados seran: a = 11, b = 21 y c = 125 **/</span><br>
+              <span class="originalAVR">}</span> </br>
+            </code>
+            </div>
+
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Ejemplo-de-sentencias" class="jump" style="margin-top: 3%;">
+                Ejemplo de sentencias simples
+            </h3>
+            <p>Para escribir el programa de una manera más sencilla y utilizando menos lineas de código existen equivalencias dónde solo la función de alguna condición se ejcuta en una sola linea de código, de esta manera:</p>
+            <h5>Todas estas expresiones … </h5>
+            <div class="code_panel"> 
+                <code>
+                    <span class="code_comment">/************************* Expresion 1 *************************/</span><br>
+                    <span class="define_include">if</span> <span class="originalAVR">(a &gt; b)</span> <span class="code_comment">// si a es mayor que b</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+                    <span class="originalAVR" style="margin-left: 3vw;"></span> <span class="originalAVR">a = 0;</span><span class="code_comment"> // a la variable "a" se le asigna cero</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+                    <span class="code_comment">/************************* Expresion 2 *************************/</span><br>
+                    <span class="define_include">if</span> <span class="originalAVR">(a == b)</span> <span class="code_comment">// si a es igual a b</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+                    <span class="originalAVR" style="margin-left: 3vw;"></span> <span class="originalAVR">a++;</span><span class="code_comment"> // a = a + 1; a se incrementa en una unidad</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+                    <span class="define_include">else</span> <span class="code_comment">// de lo contrario</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+                    <span class="originalAVR" style="margin-left: 3vw;"> b--;</span><span class="code_comment"> // b = b - 1; b se decrementara una unidad</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+                    <span class="code_comment">/************************* Expresion 3 *************************/</span><br> 
+                    <span class="define_include">while </span> <span class="originalAVR">(a >= b)</span> <span class="code_comment">//mientras "a" sea mayor o igual que "b"</span> </br>
+                    <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+                    <span class="originalAVR" style="margin-left: 3vw;">a = a + b;</span> <span class="code_comment">// suma "a" con "b" y actualiza el valor de "a"</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">}</span> </br>  
+                    <span class="code_comment">/************************* Expresion 4 *************************/</span><br> 
+                    <span class="define_include">for</span> <span class="originalAVR">(i=0; i &lt;= 10; i++)</span> <span class="code_comment">// mientras i sea menor o igual a 10 se incrementa en una unidad i </span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">{</span> </br>
+                    <span class="originalAVR" style="margin-left: 3vw;">a = a*2;</span><span class="code_comment"> // y se multiplica la variable "a“ por 2 e inmediatamente se actualiza la variable "a"</span></br>
+                    <span class="originalAVR" style="margin-left: 2vw;">}</span>  </br>
+                </code>
+            </div>
+
+            <h5 style="margin-top: 3%;">Son equivalentes a estas expresiones:</h5>
+            <div class="code_panel"> 
+                <code>
+                    <span class="code_comment">/************************* Expresion 1 *************************/</span><br>
+                    <span class="define_include">if</span><span class="originalAVR"> (a &gt; b) a = 0;</span> <span class="code_comment"> si a es mayor que b a la variable "a" se le asigna cero</span>  </br><br>
+          
+                    <span class="code_comment">/************************* Expresion 2 *************************/</span><br>
+                    <span class="define_include">if</span><span class="originalAVR"> (a == b) a++;</span> <span class="code_comment"> // si a es igual a b ... a = a + 1; a se incrementa en una unidad</span> <br>
+                    <span class="define_include">else</span><span class="originalAVR"> b--;</span> <span class="code_comment"> // de lo contrario ... b = b - 1; b se decrementara una unidad</span>  </br><br>
+          
+                    <span class="code_comment">/************************* Expresion 3 *************************/</span><br> 
+                    <span class="define_include">while </span> <span class="originalAVR">(a >= b) a = a + b;</span> <span class="code_comment">//mientras "a" sea mayor o igual que "b" ... suma "a" con "b" y actualiza el valor de "a"</span> </br><br>
+                    
+                    <span class="code_comment">/************************* Expresion 4 *************************/</span><br> 
+                    <span class="define_include">for</span> <span class="originalAVR">(i=0; i &lt;= 10; i++) a = a*2;</span> <span class="code_comment">// mientras i sea menor o igual a 10 se incrementa en una unidad i y se multiplica la variable "a"  por 2 e inmediatamente se actualiza la variable "a"</span></br><br>
+                </code>
+            </div>
+            <div class="note" style="margin-top: 3%;">
+                <p style="padding: 5px;">Esto se puede hacer siempre y cuando la sentencia que se vaya a realizar sea solo una, si se necesita realizar más de una sentencia se deben colocar los corchetes { }</p>
+            </div>
+
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Funciones-en-C" class="jump" style="margin-top: 3%;">Funciones en C</h3>
+            <p>Las funciones son los bloques constructivos fundamentales en C. Todas las sentencias deben encontrarse dentro de funciones. Las funciones deben ser declaradas y definidas antes de ser utilizadas
+            </p>
+            <h5>Estructura de una función con parámetros:</h5>
+            <div class="code_panel"> 
+                <code>
+                    <span class="define_include">Tipo_de_Dato</span> <span class="functionsDeclarations">Nombre_Func</span><span class="originalAVR">(</span><span class="define_include">Tipo_de_Dato</span> <span class="originalAVR">Parametro1,</span> <span class="define_include">Tipo_de_Dato</span> <span class="originalAVR">Parametro2, ...</span><span class="originalAVR">)</span><br>
+                    <span class="originalAVR" >{</span> </br>
+                    <span class="code_comment" style="margin-left: 1.5vw;">// Cuerpo de la función/ Sentencias</span></br>
+                    <span class="functionsDeclarations" style="margin-left: 1vw;" >return</span> <span class="originalAVR">algunDato;</span> <span class="code_comment">// esto es necesario solo si la función retornará algún valor</span><br>
+                
+                    <span class="originalAVR" >}</span>  </br>
+                </code>
+            </div>
+
+            <div style="margin-top: 3%;" class="note">
+                <ul style="padding: 5px 0 5px 40px;">
+                    <li><b>Nombre_Func</b>: es el nombre que le damos a la función preferiblemente uno fácil de recordar</li>
+                    <li><b>Tipo_Dato</b>: es un tipo de dato que identifica el parámetro de salida, puede ser tipo entero sin signo, con signo o tipo flotante</li>
+                    <li><b>Parametro1, Parametro2 (pueden existir mas)</b>: son las variables que recibirán los datos que se pasan a la función</li>
+                </ul>
+            </div>
+
+            <p>Existen también, funciones sin parámetros, esto quiere decir que son funciones que no reciben ni devuelven ningún valor y cuya estructura se reduce a lo siguiente:
+            </p>
+            <h5>Estructura de una función sin parámetros:</h5>
+            <div class="code_panel"> 
+                <code>
+                    <span class="define_include">void</span> <span class="functionsDeclarations">Nombre_Func</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span><br>
+                    <span class="originalAVR" >{</span> </br>
+                    <span class="code_comment" style="margin-left: 1.5vw;">// Bloque de sentencias</span></br>
+                    <span class="originalAVR" >}</span>  </br>
+                </code>
+            </div>
+            <div class="note" style="margin-top: 3%;">
+                <p style="padding: 5px;">la palabra <b>void</b> nos indica que la función no devuelve ningún valor
+                </p>
+             
+            </div>
+            
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Ejemplo-de-funciones" class="jump" style="margin-top: 3%;">
+                Ejemplo de funciones con parámetros (por valor) y sin parámetros
+            </h3>
+            <h5 style="margin-top: 3%;"><b>Funciones sin parámetros:</b></h5>
+            <p>Para el siguiente ejemplo de una <b>función sin parámetros</b> podemos observar que se declaró la función “<b>Configuracion_Inicial</b>” el cual se encarga de configurar los puertos B y D del microcontrolador, luego, esta función es llamada en el programa principal “<b>main</b>” donde se ejecutará dicha función declarada</p>
+            <h5>Ejemplo de una función sin parámetros:</h5>
+            <div class="code_panel"> 
+                <code>
+                    <span class="define_include">void</span> <span class="functionsDeclarations"> Configuracion_Inicial</span><span class="originalAVR">() {</span> </br>
+                    <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// Declara el PuertoB como salida</span></br>
+                    <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= 0x00;</span></span> <span class="code_comment">// Declara el PuertoD como entrada</span></br>
+                    <span class="originalAVR" >}</span> </br><br>
+                    <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span> <span class="originalAVR">{</span></br>
+                    <span class="functionsDeclarations"> Configuracion_Inicial</span><span class="originalAVR">();</span> <span class="code_comment">// Convoca a la funcion "Configuracion_Inicial", aqui es donde se configuran los puertos B y D</span><br>
+                    <span class="originalAVR" >}</span> </br>   
+                </code>
+            </div>
+            <h5 style="margin-top: 3%;"><b>Funciones con parámetros (por valor):</b></h5>
+            <p>Según los parámetros de entrada de una función, estos se dividen en dos grupos:</p>
+            <ul>
+                <li>Parámetros por valor</li>
+                <li>Parámetros por referencia</li>
+            </ul>
+            
+            <div class="note">
+                <p style="padding: 5px;">En este caso de estudio nos basaremos en los parámetros por valor ya que estos son los mas utilizados.</p>
+            </div>
+            <h5 style="margin-top: 3%;">Ejemplo de una función con parámetros (por valor):</h5>
+            <div class="code_panel"> 
+            <code>
+                <span class="define_include">unsigned int</span> <span class="functionsDeclarations">sum</span><span class="originalAVR">(</span><span class="define_include">unsigned short</span> <span class="originalAVR">A,</span> <span class="define_include">unsigned short</span> <span class="originalAVR">B</span><span class="originalAVR">)</span><span class="code_comment"> // Funcion con los parametros A y B</span></br>
+                <span class="originalAVR">{</span> </br>
+                <span class="functionsDeclarations" style="margin-left: 1vw;" >return</span> <span class="originalAVR">(A + B);</span> <span class="code_comment">// devuelve la sumatoria de los parametros A y B</span><br>
+                <span class="originalAVR" >}</span> </br><br>
+              
+              <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span> <span class="originalAVR">{</span><span class="code_comment"> //Programa principal</span></br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">a = </span><span class="functionsDeclarations">sum</span><span class="originalAVR">(1, 10); </span><span class="code_comment">// invoca la funcion suma con los parametros A = 1 y B = 10</span><br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">b = </span><span class="functionsDeclarations">sum</span><span class="originalAVR">(15, 6); </span><span class="code_comment">// invoca la funcion suma con los parametros A = 15 y B = 6</span><br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">c = </span><span class="functionsDeclarations">sum</span><span class="originalAVR">(100, 25); </span><span class="code_comment">// invoca la funcion suma con los parametros A = 100 y B = 25</span><br>
+              <span class="code_comment" style="margin-left: 1.5vw;">/** los resultados seran: a = 11, b = 21 y c = 125 **/</span><br>
+              <span class="originalAVR">}</span> </br>
+            </code>
+            </div>
+            <div class="note" style="margin-top: 3%;">
+            <p style="padding: 5px;"><b>Importante:</b> Para llamar a una función con parámetros es importante respetar el orden y el tipo de los parámetros que esta recibe. El primer valor pasado (escrito) corresponde al primer parámetro de entrada; el segundo valor, al segundo parámetro; y así tantas veces como parámetros tenga la función
+            </p>
+            </div>
+        
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Variables" class="jump" style="margin-top: 3%;">
+                Variables: Variables locales y variables globales
+            </h3>
+            <h5><b>Variables globales</b>:</h5>
+            <p style="padding-top: 0;">Las variables declaradas fuera de todas las funciones y antes de sus implementaciones tienen carácter global y se pueden acceder a ellas desde cualquier función o parte del programa</p>
+
+            <h5 style="margin-top: 10px;"><b>Variables locales</b>:</h5>
+            <p style="padding-top: 0;">Las variables declaradas dentro de una función, incluyendo las variables que son pasadas como parámetros, tienen ámbito local. Ellas solo podrán ser accedidas desde el cuerpo de dicha función.</p>
+
+            <p>De esta manera, pueden existir dos o más variables con el mismo nombre, siempre y cuando estén en diferentes funciones. Cada variable pertenece a su función y no tiene nada que ver con las variables de otra función, por más que tengan el mismo nombre.</p>
+            <div class="note">
+                <p style="padding: 5px;"><b>Nota</b>: A diferencia de las variables globales, las variables locales tienen almacenamiento temporal, es decir, se crean al ejecutarse la función y se destruyen al salir de ella.</p>
+            </div>
+            <p>Cuando se llama a una función sus variables locales se crearán en ese momento y cuando se salga de la función se destruirán. Se entiende por destruir al hecho de que la locación de memoria que tenía una variable será luego utilizada por el compilador para otra variable local (así se mejora el uso de la memoria). Como consecuencia, el valor de las variables locales no será el mismo entre llamadas de función</p>
+            <div class="code_panel"> 
+                <code>
+                    <span class="define_include">void</span> <span class="functionsDeclarations"> Var</span><span class="originalAVR">() {</span> </br>
+                    <span style="margin-left: 1.5vw;"><span class="define_include">int</span> <span class="originalAVR">a;</span></span> <span class="code_comment">// Se declara la variable "a"</span></br>
+                    <span style="margin-left: 1.5vw;"><span class="originalAVR">a++;</span></span> <span class="code_comment">// se incrementa la variable en una unidad</span></br>
+                    <span class="originalAVR" >}</span> </br>
+                </code>
+            </div>
+            <p>Cada vez que se llame a la función <b>Var</b> se crea la variable “a”, luego se incrementa y, al terminar de ejecutarse la función, se destruye.</p>
+            <div class="note">
+                <p style="padding: 5px;">Entonces, si, por ejemplo, se llama la función Var 10 veces a lo largo del programa <b>no necesariamente quiere decir que la variable “a” se haya incrementado a un total de 10 veces</b></p>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Variables-estáticas" class="jump" style="margin-top: 3%;">Variables estáticas</h3>
+            <p>Para que una variable tenga una locación de memoria independiente y su valor no cambie entre llamadas de función tenemos dos caminos: o la declaramos como global, o la declaramos como local estática</p>
+
+            <p>Una variable se hace estática anteponiendo a su declaración el especificador <span style="color: blue;">static</span>. Por defecto las variables estáticas se auto inicializan a 0, pero se le puede dar otro valor en la misma declaración (dicha inicialización solo se ejecuta la primera vez que se llama a la función), como se muestra a continuación:</p>
+            <div class="code_panel"> 
+                <code>
+                    <span class="define_include">static int</span> <span class="originalAVR"> var1;</span> <span class="code_comment">// Variable static (inicializada a 0 por defecto)</span></br>
+                    <span class="define_include">static int</span> <span class="originalAVR"> var2 = 50;</span> <span class="code_comment">// Variable static inicializada a 50</span></br> 
+                    </code>
+            </div>
+
+            <h5 style="margin-top: 3%;">Ejemplo:</h5>
+            <div class="code_panel"> 
+                <code>    
+                    <span class="define_include">void</span> <span class="functionsDeclarations"> Var</span><span class="originalAVR">() {</span> </br>
+                    <span style="margin-left: 1.5vw;"><span class="define_include">static int</span> <span class="originalAVR">a = 5;</span></span> <span class="code_comment">//Variable local estática inicializada a 5</span></br>
+                    <span style="margin-left: 1.5vw;"><span class="originalAVR">a++;</span></span> <span class="code_comment">// se incrementa la variable en una unidad</span></br>
+                    <span class="originalAVR" >}</span> </br><br>
+                    <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span> {</br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> i;</span> <span class="code_comment">// Se declara la variable i</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">for</span> <span class="originalAVR">(i = 0; i &lt;= 10; i++) <span class="functionsDeclarations">Var</span><span class="originalAVR">();</span></span> <span class="code_comment">// Este segmento de código llama 10 veces a la funcion Var</span></br>
+                    <span class="code_comment">/**Ahora la variable "a" si deberá valer 15 (a = 15 dado que se inicializa en 5)**/</span><br>
+                    <span class="originalAVR" >}</span> </br>
+                </code>
+            </div>
+
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Variables-volátiles" class="jump" style="margin-top: 3%;">Variables volátiles</h3>
+            <p>La palabra clave <b>volátil</b> esta destinada a evitar que el compilador aplique cualquier optimización en las variables que puedan cambiar en formas que el compilador no puede determinar</p>
+
+            <p>Las variables declaradas como <strong>volátiles</strong> se omiten de la optimización porque sus valores se pueden cambiar por código fuera del alcance del código actual en cualquier momento. El sistema siempre lee el valor actual de una variable volátil desde la ubicación de la memoria en lugar de mantener su valor en el registro temporal en el punto en el que se solicita
+            </p>
+            <p>Si no usamos el calificador volátil pueden surgir los siguientes problemas:</p>
+            <ul>
+                <li>El código puede no funcionar como se esperaba cuando la optimización esta activa</li>
+                <li>El código puede no funcionar como se esperaba cuando las interrupciones están habilitadas y utilizadas</li>
+            </ul>
+            <h5>Ejemplo:</h5>
+            <div class="code_panel"> 
+                <code>    
+                    <span class="define_include">volatile int</span> <span class="originalAVR">count; </span><span class="code_comment">// count es ahora una variable global tipo volátil</span> </br>
+                    <span class="define_include">void</span> <span class="functionsDeclarations"> Interrupt</span><span class="originalAVR">(<span class="define_include">void</span>) {</span> <span class="code_comment">// Función de interrupción</span>  </br>
+                    <span class="code_comment" style="margin-left: 1.5vw;">// Código que accede a la variable count</span><br>
+                    <span class="originalAVR" >}</span> </br><br>
+                    <span class="define_include">int</span> <span class="functionsDeclarations">main</span>(<span class="define_include">void</span>) {  <span class="code_comment">// Función principal</span></br>
+                    <span class="code_comment" style="margin-left: 1.5vw;">// Código que tambien accede a la variable count</span><br>
+                    <span class="originalAVR" >}</span> </br>
+                </code>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Arrays" class="jump" style="margin-top: 3%;">Arrays o Matrices</h3>
+            <p>Una matriz se utiliza para almacenar una colección secuencial de elementos del mismo tipo de tamaño fijo</p>
+            <p>En lugar de declarar variables individuales, se puede declarar una matriz para representar cada una de ellas, con lo cual, para acceder a un elemento especifico de la matriz se utiliza el número del índice encerrado entre corchetes <b>[ ]</b></p>
+
+            <img class="resp1" style="width: 45%;" src="..\Imagenes\Lenguaje C\array.png" alt="array o matiz presentada en lenguaje C" title="Estructura de un array unidimensional de 10 elementos">
+            <div class="note">
+                <p style="padding: 5px;">Los Arrays pueden tener N elementos</p>
+            </div>
+            <p>Para declarar una matriz el usuario especifica el tipo de elementos y la cantidad de elementos a utilizar, de esta manera:</p>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">Tipo_de_Dato</span> <span class="originalAVR"> Nombre_de_la_matriz [ numElementos ];</span></br>
+                </code>
+            </div>
+
+            <div class="note" style="margin-top: 3%;">
+                <p style="padding: 5px;">Esto es lo que se conoce como una matriz unidimensional.</p>
+                <ul>
+                    <li><b>NunElementos</b> debe ser una constante tipo entero mayor que cero donde se define la cantidad de elementos que tendrá la matriz</li>
+                <li style="padding-bottom: 5px;">
+                   <b>Tipo_de_Dato</b> puede ser cualquier tipo de dato
+                </li>
+                </ul>
+               
+            </div>
+            <h5>Ejemplo:</h5>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">unsigned char</span> <span class="originalAVR"> letras[5];</span> <span class="code_comment">// Matriz que contiene 5 elementos tipo unsigned char</span></br>
+                    <span class="define_include">int</span> <span class="originalAVR"> Dig[8];</span> <span class="code_comment">// Matriz de 8 elementos tipo int</span></br>
+                </code>
+            </div>
+            <p>Si, por ejemplo, quisiéramos asignar a cada uno de los elementos de la matriz <b>Letras</b> los caracteres desde la ‘a’ hasta la ‘e’, lo podríamos hacer individualmente así:</p>
+            <h5>Asignación de elementos a la matriz:</h5>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="originalAVR">letras[0] = 'a';</span> <span class="code_comment">// Aquí al índice 0 se le asigna la variable "a"</span></br>
+                    <span class="originalAVR">letras[1] = 'b';</span> <span class="code_comment">// Aquí al índice 1 se le asigna la variable "b"</span></br>
+                    <span class="originalAVR">letras[2] = 'c';</span> <span class="code_comment">// Aquí al índice 2 se le asigna la variable "c"</span></br>
+                    <span class="originalAVR">letras[3] = 'd';</span> <span class="code_comment">// Aquí al índice 3 se le asigna la variable "d"</span></br>
+                    <span class="originalAVR">.</span><br>
+                    <span class="originalAVR">.</span><br>
+                    <span class="originalAVR">.</span><br>
+                </code>
+            </div>
+            <p style="margin-top: 3%;">Se puede inicializar los elementos de una matriz uno por uno usando una sola declaración de la siguiente manera:</p>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="originalAVR"> Dig[8] = {1, 2, 3, 4, 5, 6, 7, 8};</span> <span class="code_comment">//Matriz de 8 elementos ya inicializados tipo int</span></br>
+                </code>
+            </div>
+            <p>El número de valores entre llaves { } <b>no puede ser mayor</b> al número de elementos que declaramos para la matriz entre corchetes [ ]</p>
+
+            <p>Si se omite el tamaño de la matriz (dejando los corchetes vacíos) se crea una matriz lo suficientemente grande como para contener todos los elementos que están siendo inicializados</p>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="originalAVR"> Dig[] = {1, 2, 3, 4, 5, 6, 7, 8};</span> <span class="code_comment">//Matriz de 8 elementos tipo int</span></br>
+                </code>
+            </div>
+           <p>Para acceder a un elemento de la matriz se coloca el índice del elemento entre corchetes después del nombre de la matriz:</p>
+           <div class="code_panel"> 
+            <code>   
+                <span class="originalAVR">A = Dig[4];</span> <span class="code_comment">// se toma el quinto elemento de la matriz Dig y se almacena en la variable A</span><br>
+                <span class="code_comment" style="margin-left: 6.25vw;">// A = 5</span>
+            </code>
+        </div>
+
+        <h5 style="margin-top: 3%;"><b>Cadenas de texto:</b> </h5>
+        <p>Son matrices con datos tipo <span style="color: blue;">char</span>. Hay dos características que distinguen a estas cadenas de los demás. Primero: su inicialización se hace empleando comillas dobles y segundo, el último término es un carácter <b>NULL</b> (simplemente un 0x00). De ahí su nombre</p>
+        <div class="code_panel"> 
+            <code>   
+                <span class="define_include">char</span> <span class="originalAVR"> Mensaje1[10] = "Hello";</span> <span class="code_comment">// matriz de 10 elementos</span></br>
+                <span class="define_include">char</span> <span class="originalAVR"> Msj[] = "Hello";</span> <span class="code_comment">// matriz de 6 elementos</span></br>
+            
+            </code>
+        </div>
+        <ul style="margin-top: 3%;">
+            <li>La matriz <b>Mensaje1</b> tiene espacio para 10 elementos, de los cuales solo los 5 primeros han sido llenados con las letras de <b>Hello</b>, el resto se rellena con ceros.</li>
+            <li>La matriz <b>Msj</b> tiene 6 elementos porque además de las 5 letras de la palabra “<b>Hello</b>” se le ha añadido un <b>Null</b> (0x00) al final. Es decir, la inicialización de Msj es equivalente a:</li>
+        </ul>
+        <div class="code_panel"> 
+            <code>   
+                <span class="define_include">char</span> <span class="originalAVR"> Msj[] = { 'H', 'e', 'l', 'l', 'o', 0x00};</span> <span class="code_comment">// matriz de 6 elementos</span></br>
+            </code>
+        </div>
+        <p>Gráficamente sería de la siguiente manera:</p>
+        <img class="resp1" style="width: 40%; padding: 10px 0;" src="..\Imagenes\Lenguaje C\matriz de caracteres.png" alt="Matriz de caracteres">
+
+
+           <!-- -------------------------------------------------------------------------------------- -->
+            <h3 id="Punteros" class="jump">Punteros</h3>
+            <p>Algunas tareas de programación en C se realizan mas fácilmente con punteros, y otras tareas, como la asignación dinámica de memoria, no se pueden realizar sin usar punteros</p>
+            <p><b>Un puntero es una variable cuyo valor es la dirección de otra variable</b>, es decir, la dirección directa de la ubicación en la memoria donde dicha variable es almacenada. Al igual que cualquier variable o constante, se debe declarar antes de ser utilizado para almacenar cualquier dirección de alguna variable</p><br>
+
+            <h5>Forma general de declarar una variable tipo puntero:</h5>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">Tipo_de_Dato</span> <span class="originalAVR"> * nombre_del_puntero;</span></br>
+                </code>
+            </div>
+            <div class="note" style="margin-top: 3%;">
+                <ul style="padding: 5px 0 5px 40px;">
+                    <li><b>nombre_del_puntero</b> es el nombre de la variable tipo puntero</li>
+                <li style="padding-bottom: 5px;">
+                   <b>Tipo_de_Dato</b> es el tipo de  base del puntero
+                </li>
+                <li><b>El asterisco</b> (*) usado para declarar el puntero, es el mismo usado para la multiplicación. Sin embargo, en esta declaración, el asterisco se esta utilizando para designar una variable como puntero</li>
+                </ul>
+            </div>
+            <h5 style="margin-top: 3%;">Ejemplo:</h5>
+
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="originalAVR"> *ip;</span> <span class="code_comment">// ip es un puntero a variables tipo int</span></br>
+                    <span class="define_include">float</span> <span class="originalAVR"> *fp;</span> <span class="code_comment">// fp es un puntero a variables tipo float</span></br>
+                    <span class="define_include">char</span> <span class="originalAVR"> *cp;</span> <span class="code_comment">// cp es un puntero a variables tipo char</span></br>
+                </code>
+            </div>
+            <p>Como ya se sabe, cada variable tiene una ubicación en la memoria y cada ubicación de la memoria tiene su dirección definida a la que se puede acceder utilizando el operador <b>&</b> que denota una dirección en la memoria</p>
+
+            <p>Hay algunas operaciones importantes que haremos con la ayuda de punteros con mucha frecuencia:</p>
+            <ul>
+                <li>Definimos una variable puntero</li>
+                <li>Asignamos la dirección de una variable a un puntero</li>
+                <li>Finalmente accedemos al valor en la dirección disponible en la variable de puntero</li>
+            </ul>
+
+            <h5>Ejemplo: si declaramos las siguientes variables tenemos lo siguiente</h5>
+
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="originalAVR"> edad = 10;</span> <span class="code_comment">//variable tipo int</span></br>
+                    <span class="define_include">int</span><span class="originalAVR">* pr;</span> <span class="code_comment">// pr es un puntero a variables tipo int</span></br>
+                </code>
+            </div>
+            <img style="padding: 10px 0; width: 100%;" src="..\Imagenes\Lenguaje C\punteros.png" alt="descripcion de un puntero">
+            
+            <h5>Ejemplo:</h5>
+
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">) {</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> edad;</span> <span class="code_comment">//variable tipo int</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> *ptr;</span> <span class="code_comment">// ptr es un puntero a variables tipo int</span></br><br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">ptr = &edad;</span> <span class="code_comment">// ptr apunta a la direccion de "edad"</span></br>
+                    <span class="originalAVR">}</span>
+                </code>
+            </div>
+            <h5 style="margin-top: 3%;">Así:</h5>
+            <img class="resp1" style="padding: 10px 0; width: 45%;" src="..\Imagenes\Lenguaje C\example pointers.png" alt="descripcion de un puntero">
+
+            <p>Una vez que un puntero apunte a una variable cualquiera, se puede acceder al valor de dicha variable utilizando el nombre del puntero precedido por un asterisco, de esta forma:</p>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">) {</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> edad;</span> <span class="code_comment">//variable tipo int</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> *ptr;</span> <span class="code_comment">// ptr es un puntero a variables tipo int</span></br><br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">ptr = &edad;</span> <span class="code_comment">// ptr apunta a la direccion de "edad"</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">*ptr = 10;</span> <span class="code_comment">// Esto es como la variable "edad" es igual a 10</span></br>
+                    
+                    <span class="originalAVR">}</span>
+                </code>
+            </div>
+            <h5 style="margin-top: 3%;">De esta manera:</h5>
+            <img class="resp50" style="padding: 10px 0; width: 25%;" src="..\Imagenes\Lenguaje C\example pointers2.png" alt="descripcion de un puntero">
+            <div class="note">
+                <p style="padding: 5px;">La expresión <b>*prt</b> se debería leer: <b>“la variable apuntada por prt”.</b></p>
+            </div>
+            <h5 style="margin-top: 3%;">En resumen:</h5>
+            <ul>
+                <li>Un puntero guarda direcciones de memoria. Así mismo, un puntero al ser una variable, tiene su propia dirección de memoria.</li>
+                <li>Con el puntero no solo accedemos al valor de la variable apuntada, sino que también podemos modificarlo</li>
+                <li>Un puntero obtiene su valor a partir de la referencia de una variable que se consigue con el operador <b>&</b></li>
+            </ul>
+            <img class="resp1" style="padding: 20px 0; width: 50%;" src="..\Imagenes\Lenguaje C\resmuen de punteros.png" alt="descripcion de un puntero">
+            <h5>Ejemplo:</h5>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">) {</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> height, width, n;</span> <span class="code_comment">//Variables tipo int</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> * p, * q;</span> <span class="code_comment">// p y q son punteros a variables de tipo int</span></br><br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">p = &height;</span> <span class="code_comment">// p apunta a height</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">*p = 10;</span> <span class="code_comment">// Esto es como height = 10</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">p = &width;</span> <span class="code_comment">// p apunta ahora a width</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">*p = 50;</span> <span class="code_comment">// Esto es como width = 50</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">height = *p;</span> <span class="code_comment">// Esto es como height = width</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">q = &height;</span> <span class="code_comment">// q apunta a height</span></br><br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">n = (*p + *q)/2;</span> <span class="code_comment">// Esto es como n = (height + width)/2</span></br>
+                    
+                    <span class="originalAVR">}</span>
+                </code>
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------- -->
+            <h3 style="margin-top: 3%;" id="Punteros-con-matrices" class="jump">Punteros con matrices</h3>
+            <p>Un puntero a una matriz es simplemente un puntero al tipo de dato de la matriz. Cuando se asigna un puntero a una matriz, en realidad el puntero toma la dirección de su primer elemento, a menos que se especifique otro elemento. Luego, bastará con modificar el valor del puntero para que apunte a los otros elementos de la matriz. Veamóslo a través de un ejemplo:</p>
+            <div class="code_panel"> 
+                <code>   
+                    <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">) {</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> m;</span> <span class="code_comment">//Variable tipo int</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> * prt;</span> <span class="code_comment">// prt es un puntero a variables de tipo int</span></br>
+                    <span class="define_include" style="margin-left: 1.5vw;">int</span> <span class="originalAVR"> Dig[] = {78, 98, 26};</span> <span class="code_comment">// Matriz de variables tipo int</span></br><br>
+                    
+                    <span class="originalAVR" style="margin-left: 1.5vw;">prt = &Dig;</span> <span class="code_comment"> // prt apunta a Dig (a su primer elemento)</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">m = *prt;</span> <span class="code_comment"> // Esto da m = 78</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">prt++;</span> <span class="code_comment"> // Incrementa prt para apuntar a siguiente elemento</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">m = *prt; </span> <span class="code_comment">// Esto da m = 98</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">prt++;</span> <span class="code_comment"> // Incrementa prt para apuntar a siguiente elemento</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">m = *prt;</span> <span class="code_comment"> // Esto da m = 26</span></br><br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">*prt = 10; </span> <span class="code_comment"> // Con esto Dig[2] valdrá 10</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">prt--; </span> <span class="code_comment">// Decrementar prt para apuntar a elemento anterior</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">*prt = 100; </span> <span class="code_comment">// Con esto Dig[1] valdrá 100</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">prt = Dig; </span> <span class="code_comment">// prt apunta a Dig Es lo mismo que prt = &Dig</span></br>
+                    <span class="originalAVR" style="margin-left: 1.5vw;">prt = NULL; </span> <span class="code_comment">// puntero nulo, Lo mismo que p = 0x0000, por lo tanto Dig[0] valdra 0</span></br>
+                    
+                    <span class="originalAVR">}</span>
+                </code>
+            </div>
+            
+            <!-- -------------------------------------------------------------------------------------- -->
+        </div>
+
+        <footer class="container-fluid bg-grey" style="padding-top: 0px; padding-left: 0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row respRow">
+                            <div class="col-md-6 your-item">
+                                <div class="logo-part" style="max-height: 250px">
+                                    <img src="..\Imagenes\Facultad-de-ingenieria.png" class="w-50 logo-footer"
+                                        style="display: block; margin: 15px auto;" />
+                                    <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      ">
+                                        Universidad de Carabobo
+                                    </p>
+                                    <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      ">
+                                        Facultad de Ingeniería
+                                    </p>
+                                    <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      ">
+                                        Escuela de Ingenieria Eléctrica
+                                    </p>
+                                    <p id="TTO" style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                      ">
+                                        Dpto. de Sistemas y Automática
+                                    </p>
+                                    <p style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      ">
+                                        © 2021
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-4" style="padding-top: 20px">
+                                <h6 id="brand" style="display: block; text-align: center; margin-bottom: 0">
+                                    Microprocesadores
+                                </h6>
+                                <h6 style="
+                      display: block;
+                      text-align: center;
+                      margin-bottom: 20px;
+                     ">
+                                    SA7E04
+                                </h6>
+                                <p style="display: block; text-align: center">
+                                    Prof: Whendy Garcia.
+                                </p>
+                                <a href="mailto: vctrinox@gmail.com" class="btn-footer">Enviar un correo</a><br />
+                                <a href="https://www.arduino.cc/" class="btn-footer" target="_blank">Ir a: Arduino -
+                                    Home
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row respRow2">
+                            <div class="col-md-6 px-4" id="show" style="padding-top: 20px; height: 250px">
+                                <!--<h6> Help us</h6>
+                        <div class="row ">
+                        <div class="col-md-6">
+                            <ul>
+                            <li> <a href="#"> Home</a> </li>
+                              <li> <a href="#"> About</a> </li>
+                            <li> <a href="#"> Service</a> </li>
+                            <li> <a href="#"> Team</a> </li>
+                            <li> <a href="#"> Help</a> </li>
+                              <li> <a href="#"> Contact</a> </li>
+                         </ul>
+                       </div>
+                       <div class="col-md-6 px-4" id="show">
+                         <ul>
+                                <li> <a href="#"> Cab Faciliy</a> </li>
+                              <li> <a href="#"> Fax</a> </li>
+                              <li> <a href="#"> Terms</a> </li>
+                             <li> <a href="#"> Policy</a> </li>
+                            <li> <a href="#"> Refunds</a> </li>
+                                  <li> <a href="#"> Paypal</a> </li>
+                             </ul>
+                             </div>
+                     </div>-->
+                            </div>
+                            <div class="col-md-6 respCol" style="padding-top: 20px">
+                                <h6>Búsqueda</h6>
+                                <div class="social">
+                                    <a href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3" target="_blank"
+                                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/groups/35195859789/?ref=share" target="_blank"
+                                        title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="https://twitter.com/electricaing_uc?s=20" target="_blank"
+                                        title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw" target="_blank"
+                                        title="YouTube"><i class="fab fa-youtube"></i></a>
+                                </div>
+                                <form class="form-footer my-3" style="margin-bottom: 0 !important">
+                                    <input type="text" placeholder="search here...." name="search" />
+                                    <button id="go"><i class="fa fa-search"></i></button>
+                                </form>
+                                <p class="subTitle" style="
+                      font-style: italic;
+                      margin-bottom: 0;
+                      padding-bottom: 0;
+                       padding-top: 5%;
+                     ">
+                                    Realizado por:
+                                </p>
+                                <p style="font-style: italic; padding: 0; margin-bottom: 0">
+                                    Victor Ojeda, Gilberto Virguez
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- floating button <a href="mailto: vctrinox@gmail.com" class="float"><i class="fa fa-envelope my-float"></i></a>-->
+        <div class="action" onclick="actionToggle()">
+            <span>+</span>
+            <ul style="
+            font-family: 'Roboto', sans-serif;
+            height: 100vw;
+            overflow: auto;
+          ">
+                <li>
+                    <a href="#Estructura-básica">Estructura básica de un programa elaborado en C</a>
+                </li>
+                <li>
+                    <a href="#tipos-de-datos">tipos de datos mas comunes (int, short, char, …)</a>
+                </li>
+                <li>
+                    <a href="#Como-añadir-comentarios">Como añadir comentarios</a>
+                </li>
+                <li>
+                    <a href="#Declaración-de-variables">Declaración de variables</a>
+                </li>
+                <li>
+                    <a href="#Operadores-utilizados">Operadores utilizados (matemáticos, lógicos, por bit)</a>
+                </li>
+                <li><a href="#Ejemplo-con-operadores">Ejemplo con operadores</a></li>
+                <li>
+                    <a href="#While">Sentencia
+                        <p style="color: blue; display: inline-block; padding: 0;">While</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Do-While">Sentencia
+                        <p style="color: blue; display: inline-block; padding: 0;">Do … While</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#for">Sentencia
+                        <p style="color: blue; display: inline-block; padding: 0;">for</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#if-else">Sentencia
+                        <p style="color: blue; display: inline-block; padding: 0;">if … else</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#breack">Sentencia
+                        <p style="color: blue; display: inline-block; padding: 0;">breack</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#switch-case">Sentencia
+                        <p style="color: blue; display: inline-block; padding: 0;">switch … case</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#return">Sentencia
+                        <p style="color: blue; display: inline-block; padding: 0;">return</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Ejemplo-de-sentencias">Ejemplo de sentencias simples</a>
+                </li>
+                <li><a href="#Funciones-en-C">Funciones en C</a></li>
+                <li>
+                    <a href="#Ejemplo-de-funciones">Ejemplo de funciones con parámetros (por valor) y sin
+                        parámetros</a>
+                </li>
+                <li>
+                    <a href="#Variables">Variables: Variables locales y variables globales</a>
+                </li>
+                <li><a href="#Variables-estáticas">Variables estáticas</a></li>
+                <li><a href="#Variables-volátiles">Variables volátiles</a></li>
+                <li><a href="#Arrays">Arrays o Matrices</a></li>
+                <li><a href="#Punteros">Punteros</a></li>
+                <li>
+                    <a href="#Punteros-con-matrices">Punteros con matrices</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End of floating button -->
+    </div>
+</body>
+
+</html>
