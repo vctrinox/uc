@@ -1,0 +1,245 @@
+/**/
+
+.descarga-proteus {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+.descarga-proteus:hover {
+  color: rgb(81, 107, 177);
+}
+
+p,
+ol,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+p.text {
+  margin: 0;
+}
+
+.pasos {
+  display: block;
+  margin: auto auto;
+  width: 330px;
+  padding: 10px;
+}
+
+.paso-1,
+.paso-17 {
+  width: 330px;
+  display: flex;
+  padding: 10px 20px;
+  margin-left: 0;
+}
+
+.paso-2 {
+  margin-top: 30px;
+  /*width: 310px;
+  padding: 10px 20px 12px 20px;
+  display: flex;
+  float: left;
+  margin-top: -140px;
+  z-index: 0;*/
+}
+
+.paso-3 {
+  float: right;
+  width: 390px;
+  margin-top: -120px;
+  margin-right: 40px;
+  /*
+  
+  
+  margin-left: 50px;
+  display: flex;
+  
+  z-index: 1;*/
+}
+
+.flecha2 {
+  width: 15px;
+  transform: rotate(-90deg);
+  display: inline-block;
+  margin-bottom: 0;
+}
+.paso-4,
+.paso-5 {
+  width: 370px;
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+.paso-6,
+.paso-20 {
+  width: 36.12vw; /*42.6vw*/
+  margin-left: 3.48vw;
+  padding: 20px 100px;
+  box-sizing: unset;
+}
+
+.paso-7 {
+  width: 250px;
+}
+.paso-8 {
+  width: 360px;
+}
+
+.paso-7,
+.paso-8 {
+  display: inline-block;
+  padding-left: 55px;
+  box-sizing: unset;
+}
+
+.paso-9,
+.paso-10,
+.paso-11,
+.paso-12 {
+  width: 390px;
+  padding: 10px 10px;
+  box-sizing: unset;
+}
+
+.paso-13,
+.paso-14,
+.paso-21,
+.paso-22 {
+  width: 390px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.paso-21:hover,
+.paso-22:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+.paso-16 {
+  width: 600px;
+  padding-left: 100px;
+  box-sizing: unset;
+}
+
+.paso-23,
+.paso-26,
+.paso-27 {
+  width: 190px;
+  padding: 10px 5px;
+}
+
+.paso-24,
+.paso-25 {
+  width: 300px;
+  padding: 10px 15px;
+}
+
+.paso-28 {
+  width: 580px;
+  padding: 10px 15px;
+}
+
+.paso-19 {
+  float: right;
+  box-sizing: unset;
+  margin-top: -140px;
+  margin-right: 50px;
+}
+
+.paso-18 {
+  padding-left: 20px;
+}
+
+.flecha4 {
+  width: 15px;
+  transform: rotate(-90deg);
+  display: inline-block;
+  margin-bottom: 130px;
+}
+.flecha3 {
+  width: 20px;
+  transform: rotate(-90deg);
+  display: inline-block;
+  margin-left: 50px;
+}
+.fl {
+  width: 20px;
+  padding-left: 150px;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .flecha {
+    display: none;
+  }
+  .paso-6,
+  .paso-20,
+  .paso-16 {
+    width: 370px; /*42.6vw*/
+    margin-left: 0;
+    padding: 5px 5vw;
+    box-sizing: unset;
+  }
+  .paso-4,
+  .paso-5 {
+    margin-left: 0 !important;
+    padding-left: 5vw;
+    box-sizing: unset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paso {
+    width: 83vw;
+    position: relative;
+    padding-left: 5px;
+  }
+  .paso-27,
+  .paso-26,
+  .paso-23 {
+    width: 50vw;
+  }
+  .paso-28 {
+    padding: 10px 0;
+    margin-left: -30px;
+    width: 84vw !important;
+  }
+  .paso-7 {
+    width: 63vw !important;
+  }
+  .paso-8 {
+    margin-top: 30px;
+  }
+  .paso-24,
+  .paso-25 {
+    width: 70vw;
+  }
+  .paso-3 {
+    float: unset;
+    margin: 0;
+    top: 65px;
+  }
+  .paso-2 {
+    margin: 0;
+    top: -70vw;
+    padding-left: 2.3vw;
+  }
+  .paso-19 {
+    float: unset;
+    margin: 0;
+    top: 18vw;
+  }
+
+  .paso-18 {
+    top: -60vw;
+  }
+  .paso-1 {
+    padding-left: 0;
+  }
+  .paso-17 {
+    width: 65vw;
+  }
+}
