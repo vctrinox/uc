@@ -1,416 +1,1504 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertidor Analógico/Digital</title>
+    <link rel="shortcut icon" href="Imagenes\Universidad-de-carabobo.png" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css\prueba.css" />
+    <link rel="stylesheet" href="css\media-screen.css" />
+    <link rel="stylesheet" href="css\descripcion-de-las-librerias.css" />
+    <link rel="stylesheet" href="css\Manejo-de-la-pantalla-LCD.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css"
+    />
+    <link rel="stylesheet" href="..\css\como-agregar-librerias.css" />
+    <!-- Js file -->
+    <script src="Js/menu.js" defer></script>
+    <script src="Js/prueba.js" defer></script>
+    <script src="Js\loader.js" defer></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instalación de proteus 8.5</title>
-  <link rel="shortcut icon" href="../imagenes/Universidad-de-carabobo.png" />
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap"
-    rel="stylesheet" />
-  <!-- CSS file -->
-  <link rel="stylesheet" href="css\prueba.css" />
-  <link rel="stylesheet" href="css\media-screen.css" />
-  <link rel="stylesheet" href="css\instalacion-de-proteus-8.5.css" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css" />
-  <!-- Js file -->
-  <script src="Js/menu.js" defer></script>
-  <script src="Js/prueba.js" defer></script>
-  <script src="Js\loader.js" defer></script>
-  <!-- --------------------------------------------------------------------------------------------------------------- -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- --------------------------------------------------------------------------------------------------------------- -->
-</head>
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+  </head>
 
-<body>
-  <!-- Top content -->
-  <div class="top-content">
-    <div class="icon-bar">
-      <a class="microchip" href="#">
-        <i class="fas fa-microchip"></i>
-      </a>
-    </div>
-    <label class="label">Microprocesadores UC</label>
-    <div class="dropdow newDp inDevice">
-      <a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a>
+  <body>
+    <style>
+      p {
+        margin: 0 !important;
+      }
+    </style>
+    <!-- Top content -->
+    <div class="top-content">
+      <div class="icon-bar">
+        <a class="microchip" href="#">
+          <i class="fas fa-microchip"></i>
+        </a>
+      </div>
+      <label class="label">Microprocesadores UC</label>
 
-  </div>
-
-
-    <ul>
-      <div class="dropdow">
-        <li class="dropbt"><a href="#">Teoria</a></li>
-        <div class="dropdow-content">
-          <a href="Convertidor-ADC.html">Convertidor ADC</a>
-          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
-          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
-          <a href="Timer-0.html">Timer 0</a>
-          <a href="Timer-1.html">Timer 1</a>
-          <a href="Timer-2.html">Timer 2</a>
-          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
-          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
-          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
-          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
-        </div>
+      <div class="dropdow newDp inDevice">
+        <a class="darkTheme" style="cursor: pointer"
+          ><i class="fas fa-adjust" style="color: white"></i
+        ></a>
       </div>
 
-      <div class="dropdow">
-        <li class="dropbt"><a href="#">Laboratorio</a></li>
-        <div class="dropdow-content">
-          <a href="html\Instalacion-de-Proteus-8.5.html" class="active">Instalación de proteus 8.5</a>
-          <a href="html\como-agregar-librerias-a-proteus-8.5.html">Como agregar librerias adicionales en Proteus 8.5</a>
-          <a href="html\Descripcion-y-manejo.html">Descripcion y manejo de las librerias</a>
-          <a href="html\IDE-Arduino.html">IDE software Arduino</a>
-          <a href="html\IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
-          <a href="html\Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
-          <a href="html\introduccion-al-lenguaje-de-programacion-en-C.html">Introduccion al lenguaje de programacion en C</a>
-          <a href="html\manejo-del-display-7seg.html">Manejo del display 7 Segmentos</a>
-          <a href="html\Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
-        </div>
-      </div>
-
-      <div class="dropdow">
-        <li class="dropbt"><a href="#">Descargas</a></li>
-        <div class="dropdow-content">
-          <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos en pdf</a>
-          <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
-        </div>
-      </div>
-      <div class="dropdow newDp">
-        <li><a class="darkTheme" style="cursor: pointer;"><i class="fas fa-adjust" style="color: white;"></i></a></li>
-        <div class="dropdow-content"></div>
-      </div>
-    </ul>
-  </div>
-
-  <!-- Haburguer menu -->
-  <div id="nav-icon2">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <!-- Menu in devices -->
-   
-  <div class="content-device">
-    <ul>
-      <div class="dropdow">
-        <li class="dropbt" onclick="myFunction()">Teoria</li>
-        <div class="dropdow-content device">
-          <a href="Convertidor-ADC.html">Convertidor ADC</a>
-          <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
-          <a href="Modulación-por-ancho-de-pulso.html">Modulación por ancho de pulso <i>PWM</i></a>
-          <a href="Timer-0.html">Timer 0</a>
-          <a href="Timer-1.html">Timer 1</a>
-          <a href="Timer-2.html">Timer 2</a>
-          <a href="Timer0-Modo-Fase-Correcta.html">PWM Timer0 Modo Fase Correcta</a>
-          <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
-          <a href="Timer1-Modo-Fase-Correcta.html">PWM Timer1 Modo Fase Correcta</a>
-          <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
-        </div>
-      </div>
-      <div class="dropdow">
-        <li class="dropbt" onclick="myFunction2()">Laboratorio</li>
-        <div class="dropdow-content device2">
-          <a href="html\Instalacion-de-Proteus-8.5.html" class="active">Instalación de proteus 8.5</a>
-          <a href="html\como-agregar-librerias-a-proteus-8.5.html">Como agregar librerias adicionales en Proteus 8.5</a>
-          <a href="html\Descripcion-y-manejo.html">Descripcion y manejo de las librerias</a>
-          <a href="html\IDE-Arduino.html">IDE software Arduino</a>
-          <a href="html\IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
-          <a href="html\Programar-Arduino-AVRStudio.html">Programar el Arduino con AVR Studio 5</a>
-          <a href="html\introduccion-al-lenguaje-de-programacion-en-C.html">Introduccion al lenguaje de programacion en C</a>
-          <a href="html\manejo-del-display-7seg.html">Manejo del display 7 Segmentos</a>
-          <a href="html\Manejo-de-la-pantalla-LCD.html">Manejo de la pantalla LCD</a>
-        </div>
-      </div>
-      <div class="dropdow">
-        <li class="dropbt" onclick="myFunction3()">Descargas</li>
-        <div class="dropdow-content device3">
-          <a href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg" target="_blank">Descargar archivos en pdf</a>
-          <a href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw" target="_blank">Practicas del Laboratorio</a>
-        </div>
-      </div>
-
-    </ul>
-  </div>
-
-  <!-- sidenav content -->
-  <div class="sidenav2">
-    <label> <a href="#" style="color: black;"> Instalación de proteus 8.5</a></label>
-
-    <ul>
-      <li><a href="#Primeros-pasos">Primeros pasos</a></li>
-      <li><a href="#instalacion-de-la-licencia">Instalación de la licencia</a></li>
-      <li><a href="#En-caso-de-que-Proteus-no-reconozca-las-librerías-instaladas">Qué hacer en caso de que Proteus no
-          reconozca las librerías instaladas</a></li>
-    </ul>
-  </div>
-
-  <!-- content -->
-  <div class="content">
-    <!--title content -->
-    <div class="h1-content page-title">
-      <h1>Instalación de proteus 8.5</h1>
-    </div>
-    <!--main content -->
-    <div class="main-content">
-      <h2 id="Primeros-pasos" class="proteus jump" style="font-family: 'Roboto', sans-serif;">Primeros pasos:</h2>
-      <p class="text">
-        Para comenzar descargamos el archivo <i>“Proteus.rar”</i> a través del
-        siguiente enlace: <a href="#" class="descarga-proteus">Proteus.rar</a>
-      </p>
-      <img src="Imagenes/instalacion-de-proteus/Archivo-proteus-rar-copy.png" class="pasos"
-        alt="instalar proteus version 8.5">
-      <p class="text">Una vez descomprimido, se encontraran 4 archivos, 3 versiones de Proteus diferentes y una llamada
-        “Librerías Proteus” el cual se hablará en otra presentación para su instalación</p>
-      <img src="Imagenes/instalacion-de-proteus/contenido-rar-del-proteus.png" class="pasos"
-        alt="instalar proteus version 8.5">
-      <p class="text"> Una vez descargado el archivo, dentro de la carpeta “Proteus 8.5” se encontraran dos archivos,
-        uno
-        donde se presenta la licencia y otra donde se encuentra el instalador: </p>
-      <img src="Imagenes/instalacion-de-proteus/paso-1.png" class="paso-1 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes\instalacion-de-proteus\flecha.png" style="width: 20px; margin-left: 150px; margin-top: 30px;"
-        class="flecha" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-3.png" class="paso-3 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-2.png" class="paso-2 paso" alt="instalar proteus version 8.5">
-
-
-      <p class="text" style="clear: both;">Seguimos los pasos y luego seleccionamos <i>“Use a locally installed license
-          key”</i></p>
-      <img src="Imagenes/instalacion-de-proteus/paso-4.png" class="paso-4 paso" alt="instalar proteus version 8.5"
-        style="margin-left: 30px;">
-      <img src="Imagenes/instalacion-de-proteus/flecha.png" class="flecha2 flecha" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-5.png" class="paso-5 paso" alt="instalar proteus version 8.5">
-      <h3 id="instalacion-de-la-licencia" class="text jump"
-        style="font-size: 1.5em;  font-family: 'Roboto', sans-serif;"><b>Instalación de la licencia:</b>
-      </h3>
-      <img src="Imagenes/instalacion-de-proteus/paso-6.png" class="paso-6 paso" alt="instalar proteus version 8.5">
-      <p class="text">Buscamos en la carpeta <i>“Proteus 8.5”</i> descargada anteriormente y ubicamos la carpeta
-        <i>“Licence Manager Proteus”</i>
-      </p>
-      <img src="Imagenes/instalacion-de-proteus/paso-7.png" class="paso-7 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/flecha.png" class="flecha3 flecha" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-8.png" class="paso-8 paso" alt="instalar proteus version 8.5">
-      <p class="text">Seguimos los pasos ... </p>
-      <img src="Imagenes/instalacion-de-proteus/paso-9.png" class="paso-9 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-10.png" class="paso-10 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-11.png" class="paso-11 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-12.png" class="paso-12 paso" alt="instalar proteus version 8.5">
-      <p class="text">Luego, se inicia el proceso de instalación de proteus ...</p> </br>
-      <img src="Imagenes/instalacion-de-proteus/paso-13.png" class="paso-13 paso" alt="instalar proteus version 8.5">
-
-      <img src="Imagenes/instalacion-de-proteus/paso-14.png" class="paso-14 paso" alt="instalar proteus version 8.5">
-      <p class="text">Una vez instalado, corremos el programa y nos aseguramos que se encuentre en modo Demo</p>
-      <img src="Imagenes/instalacion-de-proteus/paso-16.png" class="paso-16 paso" alt="instalar proteus version 8.5">
-      <p class="text">Luego cerramos el programa y aplicamos la actualización ubicado en la carpeta <i>“Proteus Design
-          Suite 8.5”</i> donde, en un principio, se ubico el instalador:</p>
-
-      <img src="Imagenes/instalacion-de-proteus/paso-17.png" class="paso-17 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes\instalacion-de-proteus\flecha.png" style="width: 20px; margin-left: 150px; margin-top: 10px;"
-        class="flecha" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-19.png" class="paso-19 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-18.png" class="paso-18 paso" alt="instalar proteus version 8.5">
-
-      <p class="text" style="clear: both;">Abrimos de nuevo el programa y verificamos que la licencia se instalo
-        correctamente</p>
-      <img src="Imagenes/instalacion-de-proteus/paso-20.png" class="paso-20 paso" alt="instalar proteus version 8.5">
-
-      <h3 id="En-caso-de-que-Proteus-no-reconozca-las-librerías-instaladas" class="jump"
-        style="font-size: 1.5em;  font-family: 'Roboto', sans-serif;">En
-        caso de que Proteus no reconozca las librerías instaladas</h3>
-      <p class="text">Puede que, en ocasiones, al instalar Proteus se presente el error donde Proteus no encuentra las
-        librerías instaladas: </p>
-      <img src="Imagenes/instalacion-de-proteus/paso-21.png" class="paso-21 paso" alt="instalar proteus version 8.5">
-      <img src="Imagenes/instalacion-de-proteus/paso-22.png" class="paso-22 paso" alt="instalar proteus version 8.5">
-
-      <p class="text">Esto sucede debido a que no se instalaron en la carpeta correspondiente, por lo que, para darle
-        solución, se procede de la siguiente manera: </p>
-      <ol>
-        <li>En disco local C: Archivos de Programa, copiar la carpeta <i>“Labcenter Electronics”</i></li>
-        <img src="Imagenes/instalacion-de-proteus/paso-23.png" class="paso-23 pass paso"
-          alt="instalar proteus version 8.5">
-        <li>Luego en disco local C:, dar click en <i>“organizar”</i> y luego en <i>“Opciones de carpeta y búsqueda”</i>
-        </li>
-        <img src="Imagenes/instalacion-de-proteus/paso-24.png" class="paso-24 pass paso"
-          alt="instalar proteus version 8.5">
-        <li>Dar click en <i>“ver”</i> y seleccionar <i>“Mostrar archivos, carpetas y unidades ocultos”</i></li>
-        <img src="Imagenes/instalacion-de-proteus/paso-25.png" class="paso-25 pass paso"
-          alt="instalar proteus version 8.5">
-        <li>Una vez dado <i>“Aceptar”</i> aparecerá una carpeta llamada <i>“ProgramData”</i></li>
-        <img src="Imagenes/instalacion-de-proteus/paso-26.png" class="paso-26 pass paso"
-          alt="instalar proteus version 8.5">
-        <li>Dentro de esta carpeta, pegamos la carpeta <i>“Labcenter Electronics”</i></li>
-        <img src="Imagenes/instalacion-de-proteus/paso-27.png" class="paso-27 pass paso"
-          alt="instalar proteus version 8.5">
-        <li>Volvemos a abrir Proteus y verificamos que se haya dado solución al problema</li>
-        <img src="Imagenes/instalacion-de-proteus/paso-28.png" class="paso-28 pass paso"
-          alt="instalar proteus version 8.5">
-      </ol>
-
-
-    </div>
-
-    <footer class="container-fluid bg-grey" style="padding-top: 0px; padding-left: 0">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6">
-                  <div class="row respRow">
-                      <div class="col-md-6 your-item">
-                          <div class="logo-part" style="max-height: 250px">
-                              <img src="..\Imagenes\Facultad-de-ingenieria.png" class="w-50 logo-footer"
-                                  style="display: block; margin: 15px auto;" />
-                              <p style="
-                  font-size: 14px;
-                  display: block;
-                  text-align: center;
-                  margin-bottom: 0;
-                  padding-bottom: 0;
-                  padding-top: 0;
-                ">
-                                  Universidad de Carabobo
-                              </p>
-                              <p style="
-                  font-size: 14px;
-                  display: block;
-                  text-align: center;
-                  margin-bottom: 0;
-                  padding-bottom: 0;
-                  padding-top: 0;
-                ">
-                                  Facultad de Ingeniería
-                              </p>
-                              <p style="
-                  font-size: 14px;
-                  display: block;
-                  text-align: center;
-                  margin-bottom: 0;
-                  padding-top: 0;
-                  padding-bottom: 0;
-                ">
-                                  Escuela de Ingenieria Eléctrica
-                              </p>
-                              <p id="TTO" style="
-                  font-size: 14px;
-                  display: block;
-                  text-align: center;
-                  margin-bottom: 0;
-                  padding-top: 0;
-                ">
-                                  Dpto. de Sistemas y Automática
-                              </p>
-                              <p style="
-                  font-size: 14px;
-                  display: block;
-                  text-align: center;
-                  margin-bottom: 0;
-                  padding-top: 0;
-                  padding-bottom: 0;
-                ">
-                                  © 2021
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-md-6 px-4" style="padding-top: 20px">
-                          <h6 id="brand" style="display: block; text-align: center; margin-bottom: 0">
-                              Microprocesadores
-                          </h6>
-                          <h6 style="
-                display: block;
-                text-align: center;
-                margin-bottom: 20px;
-               ">
-                              SA7E04
-                          </h6>
-                          <p style="display: block; text-align: center">
-                              Prof: Whendy Garcia.
-                          </p>
-                          <a href="mailto: vctrinox@gmail.com" class="btn-footer">Enviar un correo</a><br />
-                          <a href="https://www.arduino.cc/" class="btn-footer" target="_blank">Ir a: Arduino -
-                              Home
-                          </a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <div class="row respRow2">
-                      <div class="col-md-6 px-4" id="show" style="padding-top: 20px; height: 250px">
-                          <!--<h6> Help us</h6>
-                  <div class="row ">
-                  <div class="col-md-6">
-                      <ul>
-                      <li> <a href="#"> Home</a> </li>
-                        <li> <a href="#"> About</a> </li>
-                      <li> <a href="#"> Service</a> </li>
-                      <li> <a href="#"> Team</a> </li>
-                      <li> <a href="#"> Help</a> </li>
-                        <li> <a href="#"> Contact</a> </li>
-                   </ul>
-                 </div>
-                 <div class="col-md-6 px-4" id="show">
-                   <ul>
-                          <li> <a href="#"> Cab Faciliy</a> </li>
-                        <li> <a href="#"> Fax</a> </li>
-                        <li> <a href="#"> Terms</a> </li>
-                       <li> <a href="#"> Policy</a> </li>
-                      <li> <a href="#"> Refunds</a> </li>
-                            <li> <a href="#"> Paypal</a> </li>
-                       </ul>
-                       </div>
-               </div>-->
-                      </div>
-                      <div class="col-md-6 respCol" style="padding-top: 20px">
-                          <h6>Búsqueda</h6>
-                          <div class="social">
-                              <a href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3" target="_blank"
-                                  title="Instagram"><i class="fab fa-instagram"></i></a>
-                              <a href="https://www.facebook.com/groups/35195859789/?ref=share" target="_blank"
-                                  title="Facebook"><i class="fab fa-facebook-square"></i></a>
-                              <a href="https://twitter.com/electricaing_uc?s=20" target="_blank"
-                                  title="Twitter"><i class="fab fa-twitter-square"></i></a>
-                              <a href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw" target="_blank"
-                                  title="YouTube"><i class="fab fa-youtube"></i></a>
-                          </div>
-                          <form class="form-footer my-3" style="margin-bottom: 0 !important">
-                              <input type="text" placeholder="search here...." name="search" />
-                              <button id="go"><i class="fa fa-search"></i></button>
-                          </form>
-                          <p class="subTitle" style="
-                font-style: italic;
-                margin-bottom: 0;
-                padding-bottom: 0;
-                 padding-top: 5%;
-               ">
-                              Realizado por:
-                          </p>
-                          <p style="font-style: italic; padding: 0; margin-bottom: 0">
-                              Victor Ojeda, Gilberto Virguez
-                          </p>
-                      </div>
-                  </div>
-              </div>
+      <ul>
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Teoria</a></li>
+          <div class="dropdow-content">
+            <a href="html\Convertidor-ADC.html" class="active">Convertidor ADC</a>
+            <a href="html\Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+            <a href="html\Modulación-por-ancho-de-pulso.html"
+              >Modulación por ancho de pulso <i>PWM</i></a
+            >
+            <a href="html\Timer-0.html">Timer 0</a>
+            <a href="html\Timer-1.html">Timer 1</a>
+            <a href="html\Timer-2.html">Timer 2</a>
+            <a href="html\Timer0-Modo-Fase-Correcta.html"
+              >PWM Timer0 Modo Fase Correcta</a
+            >
+            <a href="html\Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+            <a href="html\Timer1-Modo-Fase-Correcta.html"
+              >PWM Timer1 Modo Fase Correcta</a
+            >
+            <a href="html\Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
           </div>
-      </div>
-  </footer>
+        </div>
 
-    <!-- floating button <a href="mailto: vctrinox@gmail.com" class="float"><i class="fa fa-envelope my-float"></i></a>-->
-    <div class="action" onclick="actionToggle()">
-      <span >+</span>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li><a href="#Primeros-pasos">Primeros pasos</a></li>
-        <li><a href="#instalacion-de-la-licencia">Instalación de la licencia</a></li>
-        <li><a href="#En-caso-de-que-Proteus-no-reconozca-las-librerías-instaladas">Qué hacer en caso de que Proteus no
-            reconozca las librerías instaladas</a></li>
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Laboratorio</a></li>
+          <div class="dropdow-content">
+            <a href="html\Instalacion-de-Proteus-8.5.html"
+              >Instalación de proteus 8.5</a
+            >
+            <a href="html\como-agregar-librerias-a-proteus-8.5.html"
+              >Como agregar librerias adicionales en Proteus 8.5</a
+            >
+            <a href="html\Descripcion-y-manejo.html"
+              >Descripcion y manejo de las librerias</a
+            >
+            <a href="html\IDE-Arduino.html">IDE software Arduino</a>
+            <a href="html\IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+            <a href="html\Programar-Arduino-AVRStudio.html"
+              >Programar el Arduino con AVR Studio 5</a
+            >
+            <a href="html\introduccion-al-lenguaje-de-programacion-en-C.html"
+              >Introduccion al lenguaje de programacion en C</a
+            >
+            <a href="html\manejo-del-display-7seg.html"
+              >Manejo del display 7 Segmentos</a
+            >
+            <a href="html\Manejo-de-la-pantalla-LCD.html"
+              >Manejo de la pantalla LCD</a
+            >
+          </div>
+        </div>
+
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Descargas</a></li>
+          <div class="dropdow-content">
+            <a
+              href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg"
+              target="_blank"
+              >Descargar archivos en pdf</a
+            >
+            <a
+              href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw"
+              target="_blank"
+              >Practicas del Laboratorio</a
+            >
+          </div>
+        </div>
+        <div class="dropdow newDp">
+          <li>
+            <a class="darkTheme" style="cursor: pointer"
+              ><i class="fas fa-adjust" style="color: white"></i
+            ></a>
+          </li>
+          <div class="dropdow-content"></div>
+        </div>
       </ul>
     </div>
 
-    <!-- End of floating button -->
-  </div>
+    <!-- Haburguer menu -->
+    <div id="nav-icon2">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-</body>
+    <!-- Menu in devices -->
 
+    <div class="content-device">
+      <ul>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction()">Teoria</li>
+          <div class="dropdow-content device">
+            <a href="html\Convertidor-ADC.html" class="active">Convertidor ADC</a>
+            <a href="html\Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+            <a href="html\Modulación-por-ancho-de-pulso.html"
+              >Modulación por ancho de pulso <i>PWM</i></a
+            >
+            <a href="html\Timer-0.html">Timer 0</a>
+            <a href="html\Timer-1.html">Timer 1</a>
+            <a href="html\Timer-2.html">Timer 2</a>
+            <a href="html\Timer0-Modo-Fase-Correcta.html"
+              >PWM Timer0 Modo Fase Correcta</a
+            >
+            <a href="html\Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+            <a href="html\Timer1-Modo-Fase-Correcta.html"
+              >PWM Timer1 Modo Fase Correcta</a
+            >
+            <a href="html\Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
+          </div>
+        </div>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction2()">Laboratorio</li>
+          <div class="dropdow-content device2">
+            <a href="html\Instalacion-de-Proteus-8.5.html"
+              >Instalación de proteus 8.5</a
+            >
+            <a href="html\como-agregar-librerias-a-proteus-8.5.html"
+              >Como agregar librerias adicionales en Proteus 8.5</a
+            >
+            <a href="html\Descripcion-y-manejo.html"
+              >Descripcion y manejo de las librerias</a
+            >
+            <a href="html\Descripcion-y-manejo.html">IDE software Arduino</a>
+            <a href="html\IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+            <a href="html\Programar-Arduino-AVRStudio.html"
+              >Programar el Arduino con AVR Studio 5</a
+            >
+            <a href="html\introduccion-al-lenguaje-de-programacion-en-C.html"
+              >Introduccion al lenguaje de programacion en C</a
+            >
+            <a href="html\manejo-del-display-7seg.html"
+              >Manejo del display 7 Segmentos</a
+            >
+            <a href="html\Manejo-de-la-pantalla-LCD.html"
+              >Manejo de la pantalla LCD</a
+            >
+          </div>
+        </div>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction3()">Descargas</li>
+          <div class="dropdow-content device3">
+            <a
+              href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg"
+              target="_blank"
+              >Descargar archivos en pdf</a
+            >
+            <a
+              href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw"
+              target="_blank"
+              >Practicas del Laboratorio</a
+            >
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <!-- sidenav content -->
+    <div class="sidenav2">
+      <label
+        ><a href="#" style="color: black"
+          >Convertidor Analógico/Digital</a
+        ></label
+      >
+      <ul>
+        <li class="afterICon">
+          <a class="icon icon-solid icon-arrow-down ai0">Conceptos básicos</a>
+        </li>
+
+        <ul>
+          <li><a href="#Definición">Definición de un ADC</a></li>
+          <li><a href="#Voltaje-de-referencia">Voltaje de referencia</a></li>
+          <li>
+            <a href="#voltaje-de-entrada-analógica"
+              >voltaje de entrada analógica</a
+            >
+          </li>
+          <li><a href="#Clasificación">Clasificación</a></li>
+          <li><a href="#Resolución">Resolución</a></li>
+          <li><a href="#Cuantización">Cuantización</a></li>
+        </ul>
+
+        <li><a href="#ADC-Ideal">ADC Ideal</a></li>
+        <li><a href="#ADC-Perfecto">ADC Perfecto</a></li>
+        <li>
+          <a href="#Máximo-error-de-Cuantización"
+            >Máximo error de Cuantización</a
+          >
+        </li>
+        <li><a href="#Teorema-de-muestreo">Teorema de muestreo</a></li>
+        <li class="afterICon">
+          <a class="icon icon-solid icon-arrow-down ai1"
+            >Módulo ADC en el ATmega328P</a
+          >
+        </li>
+
+        <ul>
+          <li >
+            <a href="#Módulo-ADC-en-el-ATmega328P"
+              >Descripcion del Módulo</a
+            >
+          </li>
+          <li>
+            <a href="#ADMUX">Registrob <b>ADMUX</b></a>
+          </li>
+          <li>
+            <a href="#ADCSRA">Registro <b>ADCSRA</b></a>
+          </li>
+          <li>
+            <a href="#ADCSRB">Registro <b>ADCSRB</b></a>
+          </li>
+          <li>
+            <a href="#DIDR0">Registro <b>DIDR0</b></a>
+          </li>
+        </ul>
+
+        <li class="afterICon">
+          <a class="icon icon-solid icon-arrow-down ai2"
+            >Ejemplo 1: registros ADCH y ADCL</a
+          >
+        </li>
+
+        <ul>
+          <li class="afterICon">
+            <a href="#Ejemplo-1"><b>Ejemplo 1</b></a>
+          </li>
+
+          <li><a href="#Ejemplo-1-Diagrama-de-flujo">Diagrama de flujo</a></li>
+          <li>
+            <a href="#Ejemplo-1-Configuración-del-registro-ADMUX"
+              >Configuración del registro ADMUX</a
+            >
+          </li>
+          <li>
+            <a href="#Ejemplo-1-Configuración-del-registro-ADCSRA"
+              >Configuración del registro ADCSRA</a
+            >
+          </li>
+          <li>
+            <a href="#Ejemplo-1-Configuración-del-registro-ADCSRB-y-DIDR0"
+              >Configuración del registro ADCSRB y DIDR0</a
+            >
+          </li>
+          <li><a href="#Ejemplo-1-Código-en-C">Código en C</a></li>
+          <li><a href="#Ejemplo-1-Simulación">Simulación</a></li>
+        </ul>
+
+        <li class="afterICon">
+          <a class="icon icon-solid icon-arrow-down ai3"
+            >Ejemplo 2: Uso de la pantalla LCD con el modulo ADC</a
+          >
+        </li>
+
+        <ul>
+          <li class="afterICon">
+            <a href="#Ejemplo-2"><b>Ejemplo 2</b></a>
+          </li>
+          <li><a href="#Ejemplo-2-Código-en-C">Código en C</a></li>
+          <li style="padding-bottom: 30%">
+            <a href="#Ejemplo-2-Simulación">Simulación</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+      <!--title content -->
+      <div class="h1-content page-title">
+        <h1 class="titleH7" style="font-size: 3em">
+          Convertidor Analógico/Digital (ADC)
+        </h1>
+      </div>
+      <!--main content -->
+      <div class="main-content">
+        <!-- -------------------------------------------------------------------------------------- -->
+        <img class="resp1"
+          style="width: 50%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADC.png"
+          alt="definicion de un convertidor analogico digital ADC AVR"
+        />
+        <h3 id="Definición" class="jump">Definición</h3>
+        <p>
+          Un <b>ADC</b> (<i>Analog Digital Converter</i>) es un sistema
+          electrónico o un módulo que tiene una entrada analógica (<b
+            >𝑉<sub>𝑖𝑛</sub></b
+          >), entrada de voltaje de referencia (<b>𝑉<sub>𝑟𝑒𝑓</sub></b
+          >) y salidas digitales. El ADC convierte la señal de entrada analógica
+          en un valor de salida digital que representa la magnitud o el valor de
+          la entrada analógica en comparación con el voltaje de referencia. Esto
+          muestrea el voltaje analógico de entrada y produce un código digital
+          de salida para cada muestra medida. El símbolo básico de un ADC con
+          señales de entrada y salida se muestra en el siguiente diagrama:
+        </p>
+        <img class="resp80"
+          style="width: 40%; padding: 10px 0"
+          src="..\Imagenes\ADC\diagrama de un ADC.png"
+          alt="diagrama de un convertidor analogico digital ADC AVR"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Voltaje-de-referencia" class="jump">Voltaje de referencia</h3>
+        <p>
+          El voltaje de referencia (<b>𝑉<sub>𝑟𝑒𝑓</sub></b
+          >) es el voltaje estándar contra el cual el voltaje de entrada
+          analógica debe ser medido. <b>𝑉<sub>𝑟𝑒𝑓</sub></b> puede ser un voltaje
+          de entrada provisto a través de un pin externo. Algunos ADC son
+          capaces de generar el 𝑉<sub>𝑟𝑒𝑓</sub> para el módulo ADC desde el
+          voltaje de alimentación del propio dispositivo MCU. El rango de
+          <b>𝑉<sub>𝑟𝑒𝑓</sub></b> varía entre diferentes dispositivos y, la
+          respectiva hoja de datos del dispositivo, debe ser referida para
+          conocer el valor exacto. Típicamente, 𝑉<sub>𝑟𝑒𝑓</sub> se puede
+          seleccionar configurando el campo del bit del registro correspondiente
+        </p>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="voltaje-de-entrada-analógica" class="jump">
+          Voltaje de entrada analógica
+        </h3>
+        <p>
+          El voltaje de entrada analógica (<b>𝐴𝐷𝐶𝑥</b>) es el voltaje que se
+          medirá y convertirá en un valor digital. La entrada del voltaje
+          siempre debe ser menor que el voltaje de referencia 𝑉<sub>𝑟𝑒𝑓</sub>
+          para evitar la saturación del ADC
+        </p>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Clasificación" class="jump">Clasificación</h3>
+        <p>
+          Los módulos ADC se pueden clasificar en función del número de entradas
+          analógicas utilizadas de la siguiente manera:
+        </p>
+        <ol>
+          <li><b>Entrada de un solo extremo</b>:</li>
+          <p>
+            En la entrada de un solo extremo, el muestreo y la conversión del
+            modulo ADC
+            <b>se realiza solo en una señal de entrada analógica</b>
+          </p>
+          <p style="padding-top: 0">
+            El diagrama de bloques básico de una entrada de un solo extremo es
+            el que se muestra a continuación
+          </p>
+          <img class="resp80"
+            style="width: 40%; padding: 10px 0"
+            src="..\Imagenes\ADC\entrada de un solo extremo ADC.png"
+            alt="diagrama de un convertidor analogico digital ADC de un solo extremo AVR"
+          />
+          <li><b>Entrada diferencial</b>:</li>
+          <p>
+            En la entrada diferencial, la diferencia de voltaje de dos entradas
+            analógicas se aplica al módulo ADC. Esto se puede hacer directamente
+            o después de realizar alguna amplificación usando etapas de ganancia
+            adecuadas. Las conversiones diferenciales generalmente funcionan en
+            modo con signo, donde el MSB (<b>Bit Más Significativo</b>) del
+            código de salida actúa como el bit de signo. Cuando se utiliza el
+            modo diferencial, el error de compensación se puede medir fácilmente
+            configurando lo positivo y lo negativo en el mismo pin de entrada y
+            el desplazamiento se puede medir directamente ya que el ADC no
+            requiere la conexión a tierra (GND) como referencia
+          </p>
+          <img class="resp80"
+            style="width: 40%; padding: 10px 0"
+            src="..\Imagenes\ADC\entrada diferencial de un ADC.png"
+            alt="diagrama de un convertidor analogico digital ADC diferencial AVR"
+          />
+          <p style="padding-top: 0">
+            Por ejemplo, cuando se proporcionan dos entradas analógicas,
+            <b>𝐴<sub>𝑖𝑛1</sub> = 1.5V</b> y <b>𝐴<sub>𝑖𝑛2</sub> = 0.5V</b>, el
+            valor digital de salida diferencial se espera que sea
+            <b>𝐴<sub>𝑖𝑛1</sub> - 𝐴<sub>𝑖𝑛2</sub> = 1V</b>
+          </p>
+        </ol>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Resolución" class="jump">Resolución</h3>
+        <p>
+          Todo el rango de voltaje de entrada (que va desde 0V hasta
+          𝑉<sub>𝑟𝑒𝑓</sub>) se divide en una serie de sub rangos llamados Pasos.
+          A cada paso se le asigna un código digital de salida única. Un paso
+          también es llamado LSB (<b>Bits Menos Significativos</b>) y el número
+          de tales pasos vienen usualmente definidos en potencias de dos (<b
+            >2<sup>𝑛</sup></b
+          >)
+        </p>
+        <p style="padding-top: 0">
+          Aquí, <b>𝑛 se llama la Resolución del ADC</b> y
+          <b>2<sup>𝑛</sup> proporciona la cantidad de pasos</b>. Para un 𝑉<sub
+            >𝑟𝑒𝑓</sub
+          >
+          específico, el tamaño del paso está determinado por la resolución, de
+          esta manera:
+        </p>
+        <img class="resp50"
+          style="width: 25%; padding: 10px 0"
+          src="..\Imagenes\ADC\resolucion del ADC.png"
+          alt="resolucion del modulo ADC AVR"
+        />
+        <p>
+          Partiendo del <strong>microcontrolador Atmega328P</strong> el cual
+          posee una resolución de 10 bits (<b>𝑛 = 10</b>, según el Datasheet) y
+          tomando como voltaje de referencia 𝑉<sub>𝑟𝑒𝑓</sub> = 5V (que es la
+          tensión adecuada a la que trabaja el microcontrolador) se tiene:
+        </p>
+        <img class="resp1"
+          style="width: 60%; padding: 10px 0"
+          src="..\Imagenes\ADC\ejemplo de la resolucion del ADC.png"
+          alt="ejemplo de resolucion del modulo ADC AVR"
+        />
+        <p>
+          Luego la resolución para el caso del ADC del AVR de 10 bits con un
+          voltaje de referencia de 5V será:
+        </p>
+
+        <img class="resp50"
+          style="width: 25%; padding: 10px 0"
+          src="..\Imagenes\ADC\resolucion del ADC AVR.png"
+          alt="resolucion del modulo ADC AVR"
+        />
+
+        <div class="note">
+          <p style="padding: 5px">
+            La resolución indica en este caso que a la tensión de referencia de
+            5V se le ha dividido en 1023 partes iguales y cada una de esas
+            partes equivalen aproximadamente a 4.9 𝑚𝑉
+          </p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 3%" id="Cuantización" class="jump">
+          Cuantización
+        </h3>
+        <p>
+          La Cuantización es el proceso donde el voltaje de entrada analógico
+          muestreado será reemplazado por un aproximación de un conjunto finito
+          de valores discretos. También se llama redondeo.
+        </p>
+        <p style="padding-top: 0">
+          <b>Por ejemplo</b>, cuando 𝑉<sub>𝑟𝑒𝑓</sub> = 2V y 𝑛 = 3 bits, todo el
+          rango se divide en 8 pasos (2<sup>3</sup> = 8). Luego:
+        </p>
+        <img class="resp80"
+          style="width: 40%; padding: 10px 0"
+          src="..\Imagenes\ADC\cuantizacion del ADC AVR.png"
+          alt="resolucion del modulo ADC AVR"
+        />
+        <div class="note">
+          <p style="padding: 5px">
+            Cuando el voltaje de la entrada analógica va de 0V a 250mV se asigna
+            el código digital de salida 000 (dado que la resolución es de 3
+            bits) luego, los voltajes de 251mV a 500mV se asigna 001, los
+            voltajes de 501mV a 750mV se asigna 010, los voltajes de 751mV a 1V
+            se asigna 011
+            <b
+              >y así hasta que la tensión analógica se haga igual a la tensión
+              de referencia</b
+            >, lo que ocurrirá cuando la tensión analógica aumente en 250mV unas
+            8 veces lo cual es 8 * 250mV, que son los 2V correspondientes del
+            voltaje de referencia, además el número binario que representa los
+            2V será 111.
+            <b>Este proceso se llama Cuantización</b>
+          </p>
+        </div>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 3%" id="ADC-Ideal" class="jump">ADC Ideal</h3>
+        <p>
+          Cuando la resolución de un ADC específico es infinita, se dice que es
+          un ADC ideal. En otras palabras, la resolución de un ADC ideal es
+          igual a su Número efectivo de bits (<b>ENOB</b> por sus siglas en
+          ingles <b>Effective Number of Bits</b>). En un ADC ideal, todos los
+          valores analógicos posibles de entrada proporcionan una salida digital
+          única del ADC dentro del rango de conversión especificado.
+          <b
+            >Está considerado como un concepto teórico que no puede
+            realizarse</b
+          >. Se puede describir un ADC ideal usando matemáticamente una función
+          de transferencia lineal, como se muestra en las siguiente ilustración
+          gráfica:
+        </p>
+        <img class="resp80"
+          style="width: 40%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADC ideal.png"
+          alt="ADC Ideal AVR"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="ADC-Perfecto" class="jump">ADC Perfecto</h3>
+        <p>
+          Dado que el ADC genera una salida digital, no es posible proporcionar
+          valores de salida continuos.
+          <b
+            >El ADC perfecto realiza el proceso de Cuantización durante la
+            conversión</b
+          >. Esto da como resultado una función de transferencia de escalera
+          donde cada paso representa un LSB
+        </p>
+        <p style="padding-top: 0">
+          Considerando el ejemplo anterior donde 𝑉<sub>𝑟𝑒𝑓</sub> = 2V y 𝑛 = 3
+          bits, el tamaño del paso es 250mV (<b>1 LSB</b>). El rango de entrada
+          de voltaje analógico que va de 0V a 250mV se le asignará el código de
+          salida digital 000 y la entrada al rango de voltaje analógico que va
+          de 251mV a 500mV se le asignará el código digital 001 y así
+          sucesivamente. Como se muestra en la gráfica:
+        </p>
+        <img class="resp80"
+          style="width: 40%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADC perfecto.png"
+          alt="ADC perfecto AVR"
+        />
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Máximo-error-de-Cuantización" class="jump">
+          Máximo error de Cuantización
+        </h3>
+        <p>
+          De la Figura anterior (ADC perfecto en modo de un solo extremo
+          Cuantización no ajustada), es obvio que el voltaje de entrada de 0V
+          produce un código de salida 000.
+          <b
+            >Al mismo tiempo, un voltaje de entrada de 250mV también produce el
+            mismo código de salida 000</b
+          >. Esto explica el error de cuantificación debido al proceso de
+          Cuantización, a medida que el voltaje de entrada aumenta desde 0V, el
+          error de cuantificación también aumenta desde 0LSB y alcanza un error
+          de cuantificación máximo de 1LSB a 250mV. Nuevamente, el error de
+          cuantificación aumenta de 0 a 1LSB a medida que la entrada aumenta de
+          250mV a 500mV. Este error de Cuantización máximo de 1LSB se puede
+          reducir a ± 0.5LSB desplazando la función de transferencia hacia la
+          izquierda a través de 0.5LSB
+        </p>
+        <img class="resp80"
+          style="width: 40%; padding: 10px 0"
+          src="..\Imagenes\ADC\Max error de cuantizacion.png"
+          alt="Maximo error de cuantización del modulo ADC AVR"
+        />
+        <p>
+          La Figura anterior muestra la función de transferencia perfecta junto
+          con la función de transferencia ideal. Como se ve en la figura, el ADC
+          perfecto es igual al ADC ideal en el punto medio exacto de cada paso.
+          <b
+            >Esto significa que el ADC perfecto esencialmente redondea los
+            valores de entrada al valor de paso de salida más cercano</b
+          >.
+        </p>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Teorema-de-muestreo" class="jump">Teorema de muestreo</h3>
+        <p>
+          Acorde con lo que propone el teorema de Nyquist o Teorema del
+          Muestreo,
+          <b
+            >cualquier señal analógica variable en el tiempo debe ser muestreada
+            a una frecuencia como mínimo del doble de la frecuencia de la
+            armónica de mayor frecuencia que compone la señal en cuestión</b
+          >. Partamos de la siguiente imagen:
+        </p>
+        <img class="responsive1"
+          style="width: 60%; padding: 10px 0"
+          src="..\Imagenes\ADC\teorema de muestreo.png"
+          alt="teorema de muestreo AVR"
+        />
+        <p>
+          Los puntos verdes mostrados en la imagen representan la frecuencia de
+          muestreo (𝑓<sub>𝑠</sub> = 400 𝐻𝑧) mientras que, 𝑓<sub>1</sub>, 𝑓<sub
+            >2</sub
+          >
+          y 𝑓<sub>3</sub> representan la armónica de mayor frecuencia que
+          compone la señal analógica, si bien es visto,
+          <b>solo en la primera imagen se cumple el teorema de Muestreo</b>
+          (dado que 𝑓<sub>𝑠</sub> > 2·𝑓<sub>1</sub>) por lo que es una manera
+          adecuada de realizar el muestreo, mientras que en las otras dos
+          imágenes no se cumple el teorema representando la manera inadecuada de
+          realizar el muestreo teniendo como consecuencia la perdida de
+          información de la señal analógica al momento de digitalizar.
+        </p>
+
+        <p style="padding-top: 0">
+          Ahora bien, una señal continua se muestra correctamente si las
+          muestras contienen toda la información necesaria para recrear la forma
+          de onda original. La figura (<b>a</b>), (<b>b</b>) y (<b>c</b>)
+          ilustran el muestreo apropiado de tres ondas senoidales. Esto
+          ciertamente no es obvio, ya que las muestras en (<b>c</b>) ni siquiera
+          parecen capturar la forma de la onda, sin embargo, cada una de estas
+          señales continuas forma un par único de uno a uno con su patrón de
+          muestras, esto garantiza que la reconstrucción pueda llevarse a cabo.
+          En la figura (<b>d</b>) la frecuencia de onda senoidal analógica es
+          mayor que la frecuencia de Nyquist (la mitad de la frecuencia de
+          muestreo). Esto resulta en el fenómeno denominado “<b>Aliasing</b>”
+          donde la frecuencia de los datos muestreados es diferente de la señal
+          continua. Como el “<b>Aliasing</b>” ha corrompido la información, la
+          señal original no se puede reconstruir a partir de las muestras
+        </p>
+        <img class="resp1"
+          style="width: 60%; padding: 10px 0"
+          src="..\Imagenes\ADC\forma de muestreo.png"
+          alt="formas de muestreos AVR"
+        />
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+          style="margin-top: 2%"
+          id="Módulo-ADC-en-el-ATmega328P"
+          class="jump"
+        >
+          Módulo ADC en el ATmega328P
+        </h3>
+        <p>
+          Para la utilización del ADC del AVR del ATmega328P se tienen 4
+          registros para su control, los cuales son el <b>ADMUX</b>, el
+          <b>ADCSRA</b>, el <b>ADCSRB</b> y el <b>DIDR0</b>; el ADC también
+          puede producir interrupciones para lo cual se utilizan unos bits que
+          forman parte del registro ADCSRA, junto con la función <b>sei()</b> y
+          el vector correspondiente para la Rutina De Servicio De Interrupción
+          <b>ADC_vect</b>
+        </p>
+        <p style="padding-top: 0">
+          El módulo ADC además, necesita una frecuencia de trabajo adecuada para
+          obtener conversiones confiables, esta frecuencia de trabajo para el
+          convertidor tiene que estar comprendida entre 50 kHz y 200 kHz según
+          la hoja de datos del ATmega328P. Si la frecuencia de trabajo del ADC
+          es la mayor, la conversión será mas rápida pero el valor obtenido no
+          será muy confiable, por lo contrario, si la frecuencia de trabajo es
+          la menor el valor obtenido será confiable pero la conversión tardará
+          más tiempo, se recomienda por lo tanto, utilizar una frecuencia de
+          trabajo intermedia, siendo por ejemplo, 100 kHz
+        </p>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="ADMUX" style="margin-top: 2%" class="jump">Registro ADMUX</h3>
+        <img class="resp1"
+          style="width: 65%; padding: 20px 0"
+          src="..\Imagenes\ADC\ADMUX.png"
+          alt="Registro ADMUX del modulo ADC del ATmega328P AVR"
+        />
+        <p>
+          <b>Los bits 7 y 6</b> del registro se utilizan para seleccionar la
+          tensión de referencia 𝑉<sub>𝑟𝑒𝑓</sub> de la cual dependerá la
+          resolución para el módulo ADC, la combinación de bits para elegir la
+          tensión de referencia se realiza según la siguiente tabla:
+        </p>
+        <img class="resp1"
+          style="width: 55%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADMUX table.png"
+          alt="Registro ADMUX del modulo ADC del ATmega328P AVR"
+        />
+        <ul>
+          <li>
+            Si se selecciona la combinación <b>00</b> se le indica al AVR que se
+            utilizara una tensión de referencia diferente a la que utiliza el
+            AVR para su funcionamiento, esta tensión será ingresada por el pin
+            <b>AREF</b>
+            del microcontrolador
+          </li>
+          <li>
+            Al selecciona la combinación <b>01</b>, se indica que se utilizara
+            la tensión a la cual funciona el microcontrolador, esta tensión será
+            ingresada por el pin AVCC del AVR, además recomienda colocar un
+            condensador entre este pin y tierra para evitar ruidos
+          </li>
+          <li>La combinación <b>10</b> no es utilizada</li>
+          <li>
+            La combinación <b>11</b> utiliza como tensión de referencia una
+            tensión interna de 1.1V en este caso recomienda colocar un
+            condensador entre el pin AREF y tierra para evitar ruidos
+          </li>
+        </ul>
+        <img class="resp1"
+          style="width: 65%; padding: 15px 0"
+          src="..\Imagenes\ADC\ADMUX2.png"
+          alt="Registro ADMUX del modulo ADC del ATmega328P AVR"
+        />
+        <p>
+          El número binario de 10 bits que representará la tensión analógica se
+          almacenará y se podrá leer desde los registros <b>ADCH</b> y
+          <b>ADCL</b> (siendo cada registro de 8 bits) que juntos hacen uno de
+          16 bits, de esos 16 bits solo serán útiles 10 bits, los otros 6 bits
+          restantes se pondrán automáticamente a 0, se puede elegir entre una
+          justificación a la derecha o una justificación a la izquierda
+        </p>
+        <ul>
+          <li>
+            Con una justificación a la izquierda (<b>bit ADLAR = 1</b>) 8 de los
+            10 bits son almacenados en el registro ADCH mientras los 2 bits
+            restantes se almacenan en los dos bits mas significativos del
+            registro ADCL por otra parte, los 6 bits restantes se colocan a 0
+          </li>
+          <li>
+            Con una justificación a la derecha (<b>bit ADLAR = 0</b>) 8 de los
+            10 bits son almacenados en el registro ADCL mientras los 2 bits
+            restantes se almacenan en los dos bits menos significativos del
+            registro ADCH por otra parte, los 6 bits restantes se colocan a 0
+          </li>
+        </ul>
+        <img class="resp1"
+          style="width: 65%; padding: 10px 0"
+          src="..\Imagenes\ADC\justificacion de los bits.png"
+          alt="Registro ADMUX del modulo ADC del ATmega328P AVR"
+        />
+        <p>
+          En la programación del módulo ADC
+          <b
+            >el número binario de 10 bits que representa el valor de la señal
+            analógica y almacenado en los registros ADCH y ADCL se encuentran en
+            una variable llamada ADC</b
+          >, aunque también se pueden utilizar por separado los registros ADCH y
+          ADCL
+        </p>
+        <img class="resp1"
+          style="width: 65%; padding: 15px 0"
+          src="..\Imagenes\ADC\ADMUX3.png"
+          alt="Registro ADMUX del modulo ADC del ATmega328P AVR"
+        />
+        <p>
+          <b>Los bits 3, 2, 1 y 0</b> se utilizan para seleccionar la entrada
+          analógica a utilizar, el Atmega328P tiene 6 pines que se pueden usar
+          como entradas analógicas las cuales se encuentran en el puerto C y
+          estos son llamados <b>ADC0, ADC1, ADC2, ADC3, ADC4 y ADC5</b>. La
+          selección de la entrada analógica se hace de acuerdo a los valores de
+          estos bits según la tabla que se muestra a continuación; así pues,
+          <b
+            >si queremos seleccionar la entrada analógica 2 la combinación de
+            estos bits serán 0010</b
+          >
+        </p>
+        <img class="resp65"
+          style="width: 30%; padding: 10px 0"
+          src="..\Imagenes\ADC\canal analogico.png"
+          alt="Registro ADMUX del modulo ADC del ATmega328P AVR"
+        />
+        <div class="note">
+          <p style="padding: 5px">
+            El bit 4 no es utilizado, por lo tanto este se pondrá a 0
+          </p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="ADCSRA" style="margin-top: 2%" class="jump">Registro ADCSRA</h3>
+        <img class="resp1"
+          style="width: 60%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADCSRA.png"
+          alt="Registro ADCSRA del modulo ADC del ATmega328P AVR"
+        />
+        <ul>
+          <li style="padding: 3px 0">
+            El bit 7 (<b>ADEN</b>) se usa para activar o desactivar el ADC,
+            cuando este bit es puesto en 1 el convertidor esta activo y listo
+            para usarse, si el bit es puesto a 0 el convertidor estará apagado
+            por lo que, no podrá ser utilizado
+          </li>
+          <li style="padding: 3px 0">
+            El bit 6 (<b>ADSC</b>) se pondrá a 1 para iniciar la conversión
+            analógica digital, cuando la conversión termina este bit se pone a 0
+            automáticamente, lo que indica que la conversión a terminado
+          </li>
+          <li style="padding: 3px 0">
+            El bit 5 (<b>ADATE</b>) al poner este bit a 1 se habilita la opción
+            de disparo o activación automática del convertidor por alguna señal
+            que será elegida de acuerdo al registro ADCSRB que se vera mas
+            adelante
+          </li>
+        </ul>
+        <img class="resp1"
+          style="width: 60%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADCSRA2.png"
+          alt="Registro ADCSRA del modulo ADC del ATmega328P AVR"
+        />
+        <ul>
+          <li style="padding: 3px 0">
+            El bit 4 (<b>ADIF: ADC Interrupt Flag</b>) es el que detecta cuando
+            se ha producido una interrupción por la terminación de una
+            conversión analógica digital, para detectar una interrupción hay que
+            colocarlo primeramente en 0, luego, al terminar una conversión este
+            se pondrá automáticamente en 1, para seguir detectando mas
+            interrupciones luego de que haya ocurrido alguna, hay que colocarlo
+            nuevamente en 0. al utilizar la rutina de interrupciones con el
+            Atmel Studio este bit se pone automáticamente a 0 dentro de la
+            rutina de interrupción
+          </li>
+          <li style="padding: 3px 0">
+            El bit 3 (<b>ADIE: ADC Interrupt Enable</b>) es utilizado para
+            habilitar la interrupción, cuando este bit es puesto a 1 y el bit I
+            del registro SREG también es puesto a 1, la interrupción por la
+            terminación de una conversión esta habilitada
+          </li>
+        </ul>
+        <img class="resp1"
+          style="width: 60%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADCSRA3.png"
+          alt="Registro ADCSRA del modulo ADC del ATmega328P AVR"
+        />
+        <p>
+          <b>Los bits 2, 1 y 0</b> son para elegir el prescaler a utilizar para
+          obtener la frecuencia de trabajo del ADC mediante la combinación de
+          valores de estos bits, a partir de la frecuencia de trabajo del
+          microcontrolador AVR utilizado, los prescaler que se pueden utilizar
+          son los que se indican es la siguiente tabla para el ATmega328P, los
+          valores de la frecuencia de trabajo para el convertidor analógico
+          digital del AVR tienen que estar comprendido entre los 50KHz y los
+          200Khz según la hoja de datos
+        </p>
+        <img class="resp80"
+          style="width: 45%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADCSRA table.png"
+          alt="Registro ADCSRA del modulo ADC del ATmega328P AVR"
+        />
+        <div class="note">
+          <p style="padding: 5px">
+            Por ejemplo si el microcontrolador AVR está trabajando a 16MHz, para
+            obtener una frecuencia de trabajo del convertidor analógico digital
+            de 100Khz o uno cercano que esté entre 50Khz y 200Khz, el prescaler
+            a utilizar seria de 128, con el cual se obtiene una frecuencia de
+            trabajo para el convertidor analógico digital AVR de 125Khz.
+          </p>
+        </div>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="ADCSRB" style="margin-top: 2%" class="jump">Registro ADCSRB</h3>
+        <img class="resp1"
+          style="width: 60%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADCSRB.png"
+          alt="Registro ADCSRB del modulo ADC del ATmega328P AVR"
+        />
+        <ul>
+          <li style="padding: 3px 0">
+            <b>Los bits 7, 5, 4 y 3</b> no son utilizados por lo que se pondrán
+            a 0
+          </li>
+          <li>
+            <b>Los bits 2, 1 y 0</b> dependen del bit 5 del registro ADCSRA, al
+            poner este bit a 1 se habilita la opción de disparo o activación
+            automática del ADC, si se pone a 0 no ocurrirá nada,
+            <b
+              >mediante las combinaciones de los bits 2, 1 y 0 del registro
+              ADCRB, se elige cual será el evento que haga que el convertidor se
+              habilite automáticamente</b
+            >, en la siguiente tabla se tiene el evento a elegir según la
+            combinación valores de estos bits, se tienen 8 posibilidades para el
+            disparo automático.
+          </li>
+        </ul>
+        <img class="resp80"
+          style="width: 45%; padding: 10px 0"
+          src="..\Imagenes\ADC\ADCSRB table.png"
+          alt="Registro ADCSRB del modulo ADC del ATmega328P AVR"
+        />
+        <ul>
+          <li>
+            Si la combinación es 000 y se ha puesto a 1 el bit 5 del registro
+            ADCSRA el convertidor se habilitará automáticamente tras cada
+            conversión, si la combinación es, por ejemplo, 110 el convertidor se
+            disparará cada vez que el timer1 se desborde.
+          </li>
+        </ul>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="DIDR0" style="margin-top: 2%" class="jump">Registro DIDR0</h3>
+        <img class="resp1"
+          style="width: 65%; padding: 10px 0"
+          src="..\Imagenes\ADC\DIDR0.png"
+          alt="Registro DIDR0 del modulo ADC del ATmega328P AVR"
+        />
+        <ul>
+          <li style="padding: 3px 0">
+            <b>Los bits 7 y 6</b> no son utilizados por lo que se pondrán a 0
+          </li>
+          <li style="padding: 3px 0">
+            <b>Del bit 5 al bit 0</b>: mediante estos bits al ponerlos a 1
+            (dependiendo de la entrada analógica a utilizar) se permite que el
+            pin utilizado para la entrada analógica solo funcione con el módulo
+            ADC, y la parte interna del pin que tiene que ver con su
+            comportamiento digital no se vea afectado, se puede decir que es una
+            forma de deshabilitar el comportamiento digital del pin
+          </li>
+        </ul>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Ejemplo-1" style="margin-top: 2%" class="jump">
+          Ejemplo 1: registros ADCH y ADCL
+        </h3>
+        <p>
+          En este primer ejemplo se tomará como fuente analógica una resistencia
+          variable (RV1) <b>conectada a la entrada ADC1 del puerto C</b> del
+          microcontrolador AVR ATmega328P.
+        </p>
+        <p style="padding-top: 0">
+          A este se le hará llegar una señal analógica que variará desde 0V
+          hasta 5V convirtiéndola en la correspondiente señal digital de salida
+          cuyo valor binario para 0V será 0000000000 y para 5V será 1111111111
+          los cuales se visualizaran mediante 10 LEDs variando la resistencia
+          RV1. Los 8 LEDs menos significativos (Representando el registro ADCL
+          justificando la conversión a la derecha) estarán conectados al puerto
+          D mientras los dos bits mas significativos (Representando el registro
+          ADCH) estarán conectados en los bits 0 y 1 del puerto B, como se
+          muestra en el siguiente diagrama realizado en Proteus:
+        </p> 
+        <img class="resp80"
+          style="width: 45%; padding: 10px 0"
+          src="..\Imagenes\ADC\proteus ejemplo 1.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+          id="Ejemplo-1-Diagrama-de-flujo"
+          style="margin-top: 2%"
+          class="jump"
+        >
+          Ejemplo 1: Diagrama de flujo
+        </h3>
+        <img class="resp1"
+          style="width: 70%; padding: 10px 0"
+          src="..\Imagenes\ADC\diagrama de flujo ejemplo 1.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR Diagrama de flujo"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 2%">Ejemplo 1: Configuración de registros</h3>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h4
+          id="Ejemplo-1-Configuración-del-registro-ADMUX"
+          class="jump"
+          style="margin-top: 2%"
+        >
+          <b>Configuración del registro ADMUX</b>
+        </h4>
+        <ul>
+          <li style="padding: 3px 0">
+            La tensión de referencia será la tensión a la cual trabaja el
+            ATmega328P, esto es 5V, por lo que
+            <b>el bit 7 (REFS1) se pondrá a 0</b> y
+            <b>el bit 6 (REFS0) a 1</b>
+          </li>
+          <li style="padding: 3px 0">
+            La justificación del número binario de 10 bits que representa el
+            valor analógico convertido a decimal será a la derecha, por lo que
+            <b>el bit 5 (ADLAR) se pondrá a 0</b>
+          </li>
+          <li style="padding: 3px 0">
+            El bit 4 no se usa por lo que se le pone a 0
+          </li>
+          <li style="padding: 3px 0">
+            Se utilizará la entrada analógica 1 (<b>ADC1</b>) por lo que
+            <b>la combinación de los bits 3, 2, 1 y 0 (MUX 3:0) será 0001</b>
+          </li>
+        </ul>
+        <p>Finalmente el registro ADMUX quedará de la siguiente manera:</p>
+        <style>
+          ::-webkit-scrollbar{
+            display: none;
+          }
+        </style>
+        <div class="code_panel"> 
+          <code>   
+              <span class="variables">ADMUX</span> <span class="originalAVR"> = 0b01000001;</span> <span class="code_comment">//Vref = Vcc, justificacion a la derecha, seleccion del ADC1</span> </br>
+          </code>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h4
+          id="Ejemplo-1-Configuración-del-registro-ADCSRA"
+          class="jump"
+          style="margin-top: 2%"
+        >
+          <b>Configuración del registro ADCSRA</b>
+        </h4>
+        <ul>
+          <li style="padding: 3px 0">
+            En un principio el ADC estará apagado por lo que el bit 7 (<b>ADEN</b>) se pondrá a 0, luego dentro del ciclo de trabajo del programa se activará poniendo este bit a 1
+          </li>
+          <li style="padding: 3px 0">
+            Como el ADC iniciará apagado, no se iniciará ninguna conversión por lo que el bit 6 (<b>ADSC</b>) se pondrá a 0
+          </li>
+          <li style="padding: 3px 0">
+            El bit 5 (<b>ADATE</b>) se colocará a 0 ya que no se usará la habilitación automática del convertidor analógico digital
+          </li>
+          <li style="padding: 3px 0">
+            Los bits 4 (<b>ADIF</b>) y 3 (<b>ADIE</b>) se colocan a 0 ya que no se utilizarán interrupciones
+          </li>
+          <li style="padding: 3px 0">
+            El ATmega328P estará funcionando a 16MHz, se utilizará una frecuencia de conversión para el ADC de 125Khz, por lo que el prescaler utilizado será de 128, para hacer esto el bit 2, 1 y 0 (<b>ADPS 2:0</b>) se colocarán a 1
+          </li>
+        </ul>
+        <p>Finalmente el registro ADCSRA quedará de la siguiente manera:</p>
+        <div class="code_panel"> 
+          <code>   
+              <span class="variables">ADCSRA</span> <span class="originalAVR"> = 0x07;</span> <span class="code_comment">// ADC apagado, no inicia conversion sin habilitacion automatica, sin interrupciones, preescaler de 128 para que la frecuencia de trabajo del ADC sea 125KHz</span> </br>
+          </code>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h4
+          id="Ejemplo-1-Configuración-del-registro-ADCSRB-y-DIDR0"
+          class="jump"
+          style="margin-top: 2%"
+        ><b>Configuración del registro ADCSRB y DIDR0</b></h4>
+        <h4
+          style="margin-top: 2%"
+        >Configuración del registro ADCSRB:</h4>
+        <p>Como no se utiliza habilitación automática, todo este registro se coloca a 0</p>
+        <div class="code_panel"> 
+          <code>   
+              <span class="variables">ADCSRB</span> <span class="originalAVR"> = 0;</span></br>
+          </code>
+        </div>
+        <h4
+          style="margin-top: 2%"
+        >Configuración del registro DIDR0:</h4>
+        <p>Cuando se utilice el pin ADC1 se deshabilitará su parte digital interna, por lo que el bit 1 se pondrá a 1</p>
+        <div class="code_panel"> 
+          <code>   
+              <span class="variables">DIDR0</span> <span class="originalAVR"> = (1 << 1);</span> <span class="code_comment">//deshabilita la parte digital interna del pin ADC1</span></br>
+          </code>
+        </div>
+        <h3
+          style="margin-top: 2%"
+        >Diagrama de flujo:</h3>
+        <img class="resp1"
+          style="width: 75%; padding: 10px 0"
+          src="..\Imagenes\ADC\diagrama de flujo 2 ejemplo 1.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR Diagrama de flujo"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Ejemplo-1-Código-en-C" style="margin-top: 2%" class="jump">
+          Ejemplo 1: Código en C
+        </h3>
+
+        <div class="code_panel">
+          <div id="button1" onclick="CopyToClipboard('code_panel4')"><i class="far fa-copy"></i> copiar código</div>
+          <code id="code_panel4">
+            <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+            <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br>
+            <span class="define_include">#include</span> <span class="originalAVR">&lt;util/delay.h&gt;</span></br></br>
+
+            <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">) {</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// Puerto D como salida</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// Puerto B como salida</span></br><br>
+            <span style="margin-left: 1.5vw;" class="code_comment">/********* Inicializacion del convertidor A/D ********/</span></br>
+            <span style="margin-left: 1.5vw;" class="variables">ADMUX</span> <span class="originalAVR"> = 0b01000001;</span> <span class="code_comment">//Vref = Vcc, justificacion a la derecha, seleccion del ADC1</span> </br>
+            <span style="margin-left: 1.5vw;" class="variables">ADCSRA</span> <span class="originalAVR"> = 0x07;</span> <span class="code_comment">// ADC apagado, no inicia conversion sin habilitacion automatica, sin interrupciones, preescaler de 128 para que la frecuencia de trabajo del ADC sea 125KHz</span> </br>
+            <span style="margin-left: 1.5vw;" class="variables">DIDR0</span> <span class="originalAVR"> = (1 << 1);</span> <span class="code_comment">//deshabilita la parte digital interna del pin ADC1</span></br>
+            <span style="margin-left: 1.5vw;" class="code_comment">/*****************************************************/</span></br><br>
+            <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {</span></br>
+            <span style="margin-left: 2.5vw;"><span class="variables">ADCSRA</span></span> <span class="originalAVR">|= ((1 &lt;&lt;</span><span class="variables"> ADEN</span><span class="originalAVR">)|(1 &lt;&lt;</span> <span class="variables">ADSC</span><span class="originalAVR">));</span> <span class="code_comment">//Activa el ADC y comienza la conversion</span></br>
+            <span class="define_include" style="margin-left: 2.5vw;">while</span> <span class="originalAVR">(</span><span class="variables">ADCSRA</span> <span class="originalAVR">& ( 1 &lt;&lt;</span> <span class="variables">ADSC</span><span class="originalAVR">));</span> <span class="code_comment">// mientras el bit ADSC del registro ADCSRA sea 1 estara en proceso de la conversion A/D, cuando este bit sea 0, finalizara la conversion y el programa continuara</span></br>
+            <span style="margin-left: 2.5vw;"><span class="variables">ADCSRA</span></span> <span class="originalAVR"> &=~ (1 &lt;&lt;</span><span class="variables"> ADEN</span><span class="originalAVR">);</span> <span class="code_comment">// desactiva el modulo A/D </span></br>
+            <span style="margin-left: 2.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= <span class="variables">ADCL</span>;</span></span> <span class="code_comment">//resultado de la conversion de los 8 bits menos significativos en el puertoD</span></br>
+            <span style="margin-left: 2.5vw;"><span class="variables">PORTB</span> <span class="originalAVR">= <span class="variables">ADCH</span>;</span></span> <span class="code_comment">//resultado de la conversion de los 2 bits mas significativos en el puertoB</span></br>
+            <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(100);</span></span>  </br>
+            <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
+            <span class="originalAVR">}</span></br>
+            </code>
+        </div>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Ejemplo-1-Simulación" style="margin-top: 2%" class="jump">
+          Ejemplo 1: Simulación
+        </h3>
+        <img class="resp80 respCenter"
+          style="width: 45%; padding: 10px 0; display: inline-block;"
+          src="..\Imagenes\ADC\ADCL y ADCH 0V.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR "
+        />
+        <img class="resp80 respCenter"
+          style="width: 45%; padding: 10px 0; display: inline-block;"
+          src="..\Imagenes\ADC\ADCL y ADCH 5V.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR "
+        />
+        <div class="note">
+          <p style="padding: 5px;">
+            ¿Qué sucede para valores intermedios? Por ejemplo, para 3.15V ¿Cuánto es su correspondiente conversión binaria?
+          </p>
+        </div>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Ejemplo-2" style="margin-top: 2%" class="jump">
+          Ejemplo 2: Uso de la pantalla LCD con el modulo ADC
+        </h3>
+        <p>En este caso se modificará el circuito anterior, en lugar de utilizar leds se utilizará una pantalla LCD conectada al ATmega328P para visualizar los valores que va tomando la tensión analógica ubicada en el pin ADC1.
+          Para el manejo de la pantalla LCD lea la sección “<a href="Manejo-de-la-pantalla-LCD.html" target = "_blank"style="text-decoration: none;">Manejo de la pantalla LCD por medio del AVR Studio 5</a>” en la sección "<b>Mostrar valores numéricos en la pantalla LCD</b>" en este caso, se  asumirá que ya se conoce como utilizar una pantalla LCD con el microcontrolador AVR</p>
+          <img class="resp1"
+          style="width: 60%; padding: 10px 0;"
+          src="..\Imagenes\ADC\proteus ejemplo 2.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR "
+        />
+        <div class="note">
+          <p style="padding: 5px;">Cabe destacar que la configuración de los registros para el modulo ADC serán los mismos utilizados que en el ejemplo anterior</p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Ejemplo-2-Código-en-C" style="margin-top: 2%" class="jump">
+          Ejemplo 2: Código en C
+        </h3>
+        <div class="code_panel">
+          <div id="button1" onclick="CopyToClipboard('code_panel7')"><i class="far fa-copy"></i> copiar código</div>
+          <code id = "code_panel7">
+
+              <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// 16 MHz</span></br>
+
+              <span class="code_comment">/********* Conexiones a la pantalla LCD ****/</span></br>    
+              <span class="define_include">#define</span> <span class="variables">D4</span> <span class="originalAVR">eS_PORTD4</span> <span class="code_comment">// D4 -> PORTD4</span></br>
+              <span class="define_include">#define</span> <span class="variables">D5</span> <span class="originalAVR">eS_PORTD5</span> <span class="code_comment">// D5 -> PORTD5</span></br>
+              <span class="define_include">#define</span> <span class="variables">D6</span> <span class="originalAVR">eS_PORTD6</span> <span class="code_comment">// D6 -> PORTD6</span></br>
+              <span class="define_include">#define</span> <span class="variables">D7</span> <span class="originalAVR">eS_PORTD7</span> <span class="code_comment">// D7 -> PORTD7</span></br>
+              <span class="define_include">#define</span> <span class="variables">RS</span> <span class="originalAVR">eS_PORTB5</span> <span class="code_comment">// RS -> PORTB5</span></br>
+              <span class="define_include">#define</span> <span class="variables">EN</span> <span class="originalAVR">eS_PORTB4</span> <span class="code_comment">// E  -> PORTB4</span></br>
+              <span class="code_comment">/*******************************************/</span></br>
+              <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span>           </br>
+              <span class="define_include">#include</span> <span class="originalAVR">&lt;util/delay.h&gt;</span>       </br>
+              <span class="define_include">#include</span> <span class = "include_lcd">"LCD_4bits.h"</span></br>
+              <span class="define_include">#include</span> <span class="originalAVR">&lt;stdlib.h&gt;</span></span></br></br>
+              <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">) {</span></br>
+              <span style="margin-left: 1.5vw;" class="define_include">uint16_t</span> <span class="originalAVR"> Conversion;</span> <span class="code_comment">// Variable de 16 bits que almacenara la conversion analogica</span></br>
+              <span style="margin-left: 1.5vw;" class="define_include">float</span> <span class="originalAVR"> VADC;</span> <span class="code_comment">// variable para la conversion a voltaje de la lectura analogica</span></br>
+              <span style="margin-left: 1.5vw;" class="define_include">char</span> <span class="originalAVR"> Txt[16];</span> </br><br>
+                
+              <span style="margin-left: 1.5vw;" class="code_comment">/********* Inicializacion del convertidor A/D ********/</span></br>
+              <span style="margin-left: 1.5vw;" class="variables">ADMUX</span> <span class="originalAVR"> = 0b01000001;</span> <span class="code_comment">//Vref = Vcc, justificacion a la derecha, seleccion del ADC1</span> </br>
+              <span style="margin-left: 1.5vw;" class="variables">ADCSRA</span> <span class="originalAVR"> = 0x07;</span> <span class="code_comment">// ADC apagado, no inicia conversion sin habilitacion automatica, sin interrupciones, preescaler de 128 para que la frecuencia de trabajo del ADC sea 125KHz</span> </br>
+              <span style="margin-left: 1.5vw;" class="variables">DIDR0</span> <span class="originalAVR"> = (1 &lt;&lt; 1);</span> <span class="code_comment">//deshabilita la parte digital interna del pin ADC1</span></br><br>
+              <span style="margin-left: 1.5vw;" class="code_comment">/********* Inicializacin de la Pantalla LCD ********/</span></br>
+              <span style="margin-left: 1.5vw;"><span class="variables">DDRD </span> <span class="originalAVR">= 0xFF;</span></span> <span class="code_comment">// Puerto D como salida</span></br>
+              <span style="margin-left: 1.5vw;"><span class="variables">DDRB</span></span> <span class="originalAVR">|= (1 &lt;&lt; </span> <span class="variables">DDB5</span><span class="originalAVR">)|(1 &lt;&lt; </span><span class="variables">DDB4</span><span class="originalAVR">);</span> <span class="code_comment">// Puerto B para la comunicacion con la LCD</span></br>
+              <span class="functionsDeclarations" style="margin-left: 1.5vw;">Lcd4_Init</span> <span class="originalAVR">();</span></br>
+              <span class="functionsDeclarations" style="margin-left: 1.5vw;">Lcd4_Set_Cursor</span> <span class="originalAVR">(1,0);</span></br>
+              <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">Lcd4_Write_String</span> <span class="originalAVR">(</span><span class = "include_lcd">"Modulo ADC"</span><span class="originalAVR">);</span></span></br>
+              <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(20);</span></span>  </br>
+              <span class="functionsDeclarations" style="margin-left: 1.5vw;">Lcd4_Set_Cursor</span> <span class="originalAVR">(2,0);</span></br>
+              <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">Lcd4_Write_String <span class="originalAVR">(</span></span><span class = "include_lcd">"Voltaje:"</span><span class="originalAVR">);</span></span></br>
+              <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(20);</span></span>  </br><br>
+              
+              <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {</span></br>
+              <span style="margin-left: 2.5vw;"><span class="variables">ADCSRA</span></span> <span class="originalAVR">|= ((1 &lt;&lt;</span><span class="variables"> ADEN</span><span class="originalAVR">)|(1 &lt;&lt;</span> <span class="variables">ADSC</span><span class="originalAVR">));</span> <span class="code_comment">//Activa el ADC y comienza la conversion</span></br>
+              <span class="define_include" style="margin-left: 2.5vw;">while</span> <span class="originalAVR">(</span><span class="variables">ADCSRA</span> <span class="originalAVR">& ( 1 &lt;&lt;</span> <span class="variables">ADSC</span><span class="originalAVR">));</span> <span class="code_comment">// mientras el bit ADSC del registro ADCSRA sea 1 estara en proceso de la conversion A/D, cuando este bit sea 0, finalizara la conversion y el programa continuara</span></br>
+              <span style="margin-left: 2.5vw;"><span class="variables">ADCSRA</span></span> <span class="originalAVR"> &=~ (1 &lt;&lt;</span><span class="variables"> ADEN</span><span class="originalAVR">);</span> <span class="code_comment">// desactiva el modulo A/D </span></br>
+              <span style="margin-left: 2.5vw;"><span class="originalAVR">Conversion =</span> <span class="variables">ADC</span><span class="originalAVR">;</span> <span class="code_comment">// en la variable "Conversion" se almacena el numero de 10 bits de la conversion que se encuentran en los registros ADCH y ADCL</span></br>
+              <span style="margin-left: 2.5vw;"><span class="originalAVR">VADC =</span> <span class="originalAVR">(</span><span class="define_include">float</span><span class="originalAVR">)(Conversion * (5.0 / 1024.0));</span> <span class="code_comment">//voltaje eqivalente de la lectura analogica</span></br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">dtostrf</span><span class="originalAVR">(VADC, 1, 2, Txt);</span></span> <span class="code_comment">// conversion de un numero tipo float a tipo string con dos decimales</span></br>
+              <span class="functionsDeclarations" style="margin-left: 2.5vw;">Lcd4_Set_Cursor</span> <span class="originalAVR">(2, 9);</span></br>
+              <span style="margin-left: 2.5vw;"><span class="functionsDeclarations">Lcd4_Write_String</span> <span class="originalAVR">(Txt);</span></span> <span class="code_comment">// se muestra la lectura (en voltios) de la señal analógica en la LCD</span></br>
+              <span style="margin-left: 1.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(50);</span></span>  </br>
+              <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
+              <span class="originalAVR" >}</span></br>                  
+          </code>
+      </div>
+        
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="Ejemplo-2-Simulación" style="margin-top: 2%" class="jump">
+          Ejemplo 2: Simulación
+        </h3>
+        <img class="resp80 respCenter"
+          style="width: 49%; padding: 10px 0; display: inline-block;"
+          src="..\Imagenes\ADC\ADC con LCD 1.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR con pantalla LCD"
+        />
+        <img class="resp80 respCenter"
+          style="width: 49%; padding: 10px 0; display: inline-block;"
+          src="..\Imagenes\ADC\ADC con LCD 2.png"
+          alt="ejemplo en proteus del modulo ADC del ATmega328P AVR con pantalla LCD"
+        />
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+      </div>
+
+      <footer
+        class="container-fluid bg-grey"
+        style="padding-top: 0px; padding-left: 0"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row respRow">
+                <div class="col-md-6 your-item">
+                  <div class="logo-part" style="max-height: 250px">
+                    <img
+                      src="..\Imagenes\Facultad-de-ingenieria.png"
+                      class="w-50 logo-footer"
+                      style="display: block; margin: 15px auto"
+                    />
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Universidad de Carabobo
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Facultad de Ingeniería
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      "
+                    >
+                      Escuela de Ingenieria Eléctrica
+                    </p>
+                    <p
+                      id="TTO"
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Dpto. de Sistemas y Automática
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      "
+                    >
+                      © 2021
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 px-4" style="padding-top: 20px">
+                  <h6
+                    id="brand"
+                    style="display: block; text-align: center; margin-bottom: 0"
+                  >
+                    Microprocesadores
+                  </h6>
+                  <h6
+                    style="
+                      display: block;
+                      text-align: center;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    SA7E04
+                  </h6>
+                  <p style="display: block; text-align: center">
+                    Prof: Whendy Garcia.
+                  </p>
+                  <a href="mailto: vctrinox@gmail.com" class="btn-footer"
+                    >Enviar un correo</a
+                  ><br />
+                  <a
+                    href="https://www.arduino.cc/"
+                    class="btn-footer"
+                    target="_blank"
+                    >Ir a: Arduino - Home
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row respRow2">
+                <div
+                  class="col-md-6 px-4"
+                  id="show"
+                  style="padding-top: 20px; height: 250px"
+                >
+                  <!--<h6> Help us</h6>
+                        <div class="row ">
+                        <div class="col-md-6">
+                            <ul>
+                            <li> <a href="#"> Home</a> </li>
+                              <li> <a href="#"> About</a> </li>
+                            <li> <a href="#"> Service</a> </li>
+                            <li> <a href="#"> Team</a> </li>
+                            <li> <a href="#"> Help</a> </li>
+                              <li> <a href="#"> Contact</a> </li>
+                         </ul>
+                       </div>
+                       <div class="col-md-6 px-4" id="show">
+                         <ul>
+                                <li> <a href="#"> Cab Faciliy</a> </li>
+                              <li> <a href="#"> Fax</a> </li>
+                              <li> <a href="#"> Terms</a> </li>
+                             <li> <a href="#"> Policy</a> </li>
+                            <li> <a href="#"> Refunds</a> </li>
+                                  <li> <a href="#"> Paypal</a> </li>
+                             </ul>
+                             </div>
+                     </div>-->
+                </div>
+                <div class="col-md-6 respCol" style="padding-top: 20px">
+                  <h6>Búsqueda</h6>
+                  <div class="social">
+                    <a
+                      href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3"
+                      target="_blank"
+                      title="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a
+                      href="https://www.facebook.com/groups/35195859789/?ref=share"
+                      target="_blank"
+                      title="Facebook"
+                      ><i class="fab fa-facebook-square"></i
+                    ></a>
+                    <a
+                      href="https://twitter.com/electricaing_uc?s=20"
+                      target="_blank"
+                      title="Twitter"
+                      ><i class="fab fa-twitter-square"></i
+                    ></a>
+                    <a
+                      href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw"
+                      target="_blank"
+                      title="YouTube"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </div>
+                  <form
+                    class="form-footer my-3"
+                    style="margin-bottom: 0 !important"
+                  >
+                    <input
+                      type="text"
+                      placeholder="search here...."
+                      name="search"
+                    />
+                    <button id="go"><i class="fa fa-search"></i></button>
+                  </form>
+                  <p
+                    class="subTitle"
+                    style="
+                      font-style: italic;
+                      margin-bottom: 0;
+                      padding-bottom: 0;
+                      padding-top: 5%;
+                    "
+                  >
+                    Realizado por:
+                  </p>
+                  <p style="font-style: italic; padding: 0; margin-bottom: 0">
+                    Victor Ojeda, Gilberto Virguez
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- floating button <a href="mailto: vctrinox@gmail.com" class="float"><i class="fa fa-envelope my-float"></i></a>-->
+      <div class="action" onclick="actionToggle()">
+        <span>+</span>
+        <ul
+          style="
+            font-family: 'Roboto', sans-serif;
+            height: 100vw;
+            overflow: auto;
+          "
+        >
+          <li class="afterICon">
+            <a><b>Conceptos básicos:</b></a>
+          </li>
+          <li><a href="#Definición">Definición de un ADC</a></li>
+          <li><a href="#Voltaje-de-referencia">Voltaje de referencia</a></li>
+          <li>
+            <a href="#voltaje-de-entrada-analógica"
+              >Voltaje de entrada analógica</a
+            >
+          </li>
+          <li><a href="#Clasificación">Clasificación</a></li>
+          <li><a href="#Resolución">Resolución</a></li>
+          <li><a href="#Cuantización">Cuantización</a></li>
+
+          <li><a href="#ADC-Ideal">ADC Ideal</a></li>
+          <li><a href="#ADC-Perfecto">ADC Perfecto</a></li>
+          <li>
+            <a href="#Máximo-error-de-Cuantización"
+              >Máximo error de Cuantización</a
+            >
+          </li>
+          <li><a href="#Teorema-de-muestreo">Teorema de muestreo</a></li>
+          <li class="afterICon">
+            <a href="#Módulo-ADC-en-el-ATmega328P"
+              ><b>Módulo ADC en el ATmega328P:</b></a
+            >
+          </li>
+
+          <li>
+            <a href="#ADMUX">Registro <b>ADMUX</b></a>
+          </li>
+          <li>
+            <a href="#ADCSRA">Registro <b>ADCSRA</b></a>
+          </li>
+          <li>
+            <a href="#ADCSRB">Registro <b>ADCSRB</b></a>
+          </li>
+          <li>
+            <a href="#DIDR0">Registro <b>DIDR0</b></a>
+          </li>
+
+          <li class="afterICon">
+            <a href="#Ejemplo-1"><b>Ejemplo 1: registros ADCH y ADCL</b></a>
+          </li>
+
+          <li><a href="#Ejemplo-1-Diagrama-de-flujo">Diagrama de flujo</a></li>
+          <li>
+            <a href="#Ejemplo-1-Configuración-del-registro-ADMUX"
+              >Configuración del registro ADMUX</a
+            >
+          </li>
+          <li>
+            <a href="#Ejemplo-1-Configuración-del-registro-ADCSRA"
+              >Configuración del registro ADCSRA</a
+            >
+          </li>
+          <li>
+            <a href="#Ejemplo-1-Configuración-del-registro-ADCSRB-y-DIDR0"
+              >Configuración del registro ADCSRB y DIDR0</a
+            >
+          </li>
+          <li><a href="#Ejemplo-1-Código-en-C">Código en C</a></li>
+          <li><a href="#Ejemplo-1-Simulación">Simulación</a></li>
+
+          <li class="afterICon">
+            <a href="#Ejemplo-2"><b>Ejemplo 2: Uso de la pantalla LCD con el modulo ADC</b></a>
+          </li>
+
+          <li><a href="#Ejemplo-2-Código-en-C">Código en C</a></li>
+          <li style="padding-bottom: 10%">
+            <a href="#Ejemplo-2-Simulación">Simulación</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End of floating button -->
+    </div>
+  </body>
 </html>
