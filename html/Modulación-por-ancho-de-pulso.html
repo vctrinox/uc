@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulación por ancho de pulso PWM</title>
+    <link rel="shortcut icon" href="..\Imagenes\Universidad-de-carabobo.png" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="..\css\prueba.css" />
+    <link rel="stylesheet" href="..\css\media-screen.css" />
+    <link rel="stylesheet" href="..\css\descripcion-de-las-librerias.css" />
+    <link rel="stylesheet" href="..\css\Manejo-de-la-pantalla-LCD.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css"
+    />
+    <link rel="stylesheet" href="..\css\como-agregar-librerias.css" />
+    <!-- Js file -->
+    <script src="../Js/menu.js" defer></script>
+    <script src="../Js/prueba.js" defer></script>
+    <script src="..\Js\loader.js" defer></script>
+
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+  </head>
+
+  <body>
+    <style>
+      p {
+        margin: 0 !important;
+      }
+    </style>
+    <!-- Top content -->
+    <div class="top-content">
+      <div class="icon-bar">
+        <a class="microchip" href="#">
+          <i class="fas fa-microchip"></i>
+        </a>
+      </div>
+      <label class="label">Microprocesadores UC</label>
+
+      <div class="dropdow newDp inDevice">
+        <a class="darkTheme" style="cursor: pointer"
+          ><i class="fas fa-adjust" style="color: white"></i
+        ></a>
+      </div>
+
+      <ul>
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Teoria</a></li>
+          <div class="dropdow-content">
+            <a href="Convertidor-ADC.html">Convertidor ADC</a>
+            <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+            <a href="Modulación-por-ancho-de-pulso.html" class="active"
+              >Modulación por ancho de pulso <i>PWM</i></a
+            >
+            <a href="Timer-0.html">Timer 0</a>
+            <a href="Timer-1.html">Timer 1</a>
+            <a href="Timer-2.html">Timer 2</a>
+            <a href="Timer0-Modo-Fase-Correcta.html"
+              >PWM Timer0 Modo Fase Correcta</a
+            >
+            <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+            <a href="Timer1-Modo-Fase-Correcta.html"
+              >PWM Timer1 Modo Fase Correcta</a
+            >
+            <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
+          </div>
+        </div>
+
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Laboratorio</a></li>
+          <div class="dropdow-content">
+            <a href="Instalacion-de-Proteus-8.5.html"
+              >Instalación de proteus 8.5</a
+            >
+            <a href="como-agregar-librerias-a-proteus-8.5.html"
+              >Como agregar librerias adicionales en Proteus 8.5</a
+            >
+            <a href="Descripcion-y-manejo.html"
+              >Descripcion y manejo de las librerias</a
+            >
+            <a href="IDE-Arduino.html">IDE software Arduino</a>
+            <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+            <a href="Programar-Arduino-AVRStudio.html"
+              >Programar el Arduino con AVR Studio 5</a
+            >
+            <a href="introduccion-al-lenguaje-de-programacion-en-C.html"
+              >Introduccion al lenguaje de programacion en C</a
+            >
+            <a href="manejo-del-display-7seg.html"
+              >Manejo del display 7 Segmentos</a
+            >
+            <a href="Manejo-de-la-pantalla-LCD.html"
+              >Manejo de la pantalla LCD</a
+            >
+          </div>
+        </div>
+
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Descargas</a></li>
+          <div class="dropdow-content">
+            <a
+              href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg"
+              target="_blank"
+              >Descargar archivos en pdf</a
+            >
+            <a
+              href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw"
+              target="_blank"
+              >Practicas del Laboratorio</a
+            >
+          </div>
+        </div>
+        <div class="dropdow newDp">
+          <li>
+            <a class="darkTheme" style="cursor: pointer"
+              ><i class="fas fa-adjust" style="color: white"></i
+            ></a>
+          </li>
+          <div class="dropdow-content"></div>
+        </div>
+      </ul>
+    </div>
+
+    <!-- Haburguer menu -->
+    <div id="nav-icon2">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu in devices -->
+
+    <div class="content-device">
+      <ul>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction()">Teoria</li>
+          <div class="dropdow-content device">
+            <a href="Convertidor-ADC.html">Convertidor ADC</a>
+            <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+            <a href="Modulación-por-ancho-de-pulso.html" class="active"
+              >Modulación por ancho de pulso <i>PWM</i></a
+            >
+            <a href="Timer-0.html">Timer 0</a>
+            <a href="Timer-1.html">Timer 1</a>
+            <a href="Timer-2.html">Timer 2</a>
+            <a href="Timer0-Modo-Fase-Correcta.html"
+              >PWM Timer0 Modo Fase Correcta</a
+            >
+            <a href="Timer0-Modo-Rapido.html">PWM Timer0 Modo Rapido</a>
+            <a href="Timer1-Modo-Fase-Correcta.html"
+              >PWM Timer1 Modo Fase Correcta</a
+            >
+            <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
+          </div>
+        </div>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction2()">Laboratorio</li>
+          <div class="dropdow-content device2">
+            <a href="Instalacion-de-Proteus-8.5.html"
+              >Instalación de proteus 8.5</a
+            >
+            <a href="como-agregar-librerias-a-proteus-8.5.html"
+              >Como agregar librerias adicionales en Proteus 8.5</a
+            >
+            <a href="Descripcion-y-manejo.html"
+              >Descripcion y manejo de las librerias</a
+            >
+            <a href="Descripcion-y-manejo.html">IDE software Arduino</a>
+            <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+            <a href="Programar-Arduino-AVRStudio.html"
+              >Programar el Arduino con AVR Studio 5</a
+            >
+            <a href="introduccion-al-lenguaje-de-programacion-en-C.html"
+              >Introduccion al lenguaje de programacion en C</a
+            >
+            <a href="manejo-del-display-7seg.html"
+              >Manejo del display 7 Segmentos</a
+            >
+            <a href="Manejo-de-la-pantalla-LCD.html"
+              >Manejo de la pantalla LCD</a
+            >
+          </div>
+        </div>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction3()">Descargas</li>
+          <div class="dropdow-content device3">
+            <a
+              href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg"
+              target="_blank"
+              >Descargar archivos en pdf</a
+            >
+            <a
+              href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw"
+              target="_blank"
+              >Practicas del Laboratorio</a
+            >
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <!-- sidenav content -->
+    <div class="sidenav2">
+      <label
+        ><a href="#" style="color: black"
+          >Modulación por ancho de pulso <i>PWM</i></a
+        ></label
+      >
+      <ul>
+        <li><a href="#definicion">Definición</a></li>
+        <li><a href="#ciclo-de-trabajo">Ciclo de trabajo</a></li>
+        <li>
+          <a href="#Generacion-de-una-onda-sinusoidal"
+            >Generación de una onda sinusoidal</a
+          >
+        </li>
+        <li><a href="#Uso-del-modulo-PWM">Uso del módulo PWM</a></li>
+      </ul>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+      <!--title content -->
+      <div class="h1-content page-title">
+        <h1 class="titleH7" style="font-size: 2.5em">
+          Modulación por ancho de pulso (PWM)
+        </h1>
+      </div>
+      <!--main content -->
+      <div class="main-content">
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="definicion" class="jump">Definición</h3>
+        <p>
+          La modulación de ancho de pulso (PWM) es una técnica de conmutación de
+          potencia comparativamente reciente que sirve para proporcionar
+          cantidades intermedias de potencia eléctrica comprendidos entre
+          niveles completamente encendidos y completamente apagados
+        </p>
+        <p>
+          Un ejemplo típico es un circuito de control de potencia. Refiérase a
+          la siguiente figura. Si un cero lógico (0) indica un interruptor
+          abierto y un uno lógico (1) indica un interruptor cerrado, la potencia
+          eléctrica que se transmite a los consumidores será directamente
+          proporcional a la duración del pulso.
+          <b>Esta relación se le denomina Ciclo de Trabajo</b>
+        </p>
+        <img
+          class="resp1"
+          style="width: 50%"
+          src="..\Imagenes\PWM\PWM example.gif"
+          alt="PWM ARV Example"
+        />
+        <p>
+          Por lo general, los pulsos digitales tienen el mismo período
+          (<b>T</b>) de encendido y apagado, pero en algunas situaciones
+          necesitamos que el pulso digital tenga más/menos tiempo de
+          encendido/apagado.
+          <b
+            >En la técnica PWM, creamos pulsos digitales con una cantidad
+            desigual de estado de encendido y apagado para obtener los valores
+            de voltaje intermedio requeridos</b
+          >.
+        </p>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 id="ciclo-de-trabajo" class="jump">Ciclo de trabajo</h3>
+        <p>
+          El ciclo de trabajo se define por el porcentaje de duración de alto
+          voltaje en un pulso digital completo con un
+          <b>periodo T</b> constante. Se puede calcular por:
+        </p>
+        <img
+          class="resp1"
+          style="width: 45%"
+          src="..\Imagenes\PWM\ciclo de trabajo.png"
+          alt="PWM ARV Example duty cycle"
+        />
+        <p>
+          Si el ciclo de trabajo es del 50%, permanecerá encendido durante la
+          mitad exacta de la duración del período de tiempo total del pulso
+          digital
+        </p>
+        <img
+          class="resp2 resp1"
+          style="width: 55%; display: inline-block"
+          src="..\Imagenes\PWM\PWM example duty cycle.png"
+          alt="PWM ARV Example duty cycle"
+        />
+        <img
+          class="resp2 resp80"
+          id="instalación-de-drivers"
+          style="width: 30%; display: inline-block; margin-left: 5%"
+          src="..\Imagenes\PWM\PWM example half.png"
+          alt="PWM ARV Example duty cycle 50%"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+          style="margin-top: 3%"
+          id="Generacion-de-una-onda-sinusoidal"
+          class="jump"
+        >
+          Generación de una onda sinusoidal
+        </h3>
+        <p>
+          El otro ejemplo, común en la práctica, es el uso de señales PWM en un
+          circuito para generar señales de forma de onda arbitraria como una
+          onda sinusoidal. Como se muestra en la siguiente figura:
+        </p>
+        <img
+          class="resp1"
+          style="width: 80%"
+          src="..\Imagenes\PWM\filter.png"
+          alt="PWM ARV Example filter"
+        />
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 3%" id="Uso-del-modulo-PWM" class="jump">
+          Uso del módulo PWM en el ATmega328P
+        </h3>
+        <p>
+          Para la obtención de señales PWM con el microcontrolador ATmega328P,
+          es muy importante saber utilizar sus temporizadores ya sea, el Timer1,
+          Timer2 o Timer3 según sea el caso de estudio, ya que obtener señales
+          PWM es un modo de operación de los temporizadores.
+        </p>
+        <p>
+          Para una mejor forma de tratar el tema de las señales PWM, se ha
+          separado en 3 partes correspondiendo cada una de ellas al temporizador
+          utilizado, en este caso serán el
+          <a style="text-decoration: none" href="Timer-0.html">Timer0</a> , el
+          <a style="text-decoration: none" href="Timer-1.html">Timer1</a> y el
+          <a style="text-decoration: none" href="Timer-2.html">Timer2</a> que
+          son con los que cuenta el ATmega328P
+        </p>
+        <!-- -------------------------------------------------------------------------------------- -->
+      </div>
+
+      <footer
+        class="container-fluid bg-grey"
+        style="padding-top: 0px; padding-left: 0"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row respRow">
+                <div class="col-md-6 your-item">
+                  <div class="logo-part" style="max-height: 250px">
+                    <img
+                      src="..\Imagenes\Facultad-de-ingenieria.png"
+                      class="w-50 logo-footer"
+                      style="display: block; margin: 15px auto"
+                    />
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Universidad de Carabobo
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Facultad de Ingeniería
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      "
+                    >
+                      Escuela de Ingenieria Eléctrica
+                    </p>
+                    <p
+                      id="TTO"
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Dpto. de Sistemas y Automática
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      "
+                    >
+                      © 2021
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 px-4" style="padding-top: 20px">
+                  <h6
+                    id="brand"
+                    style="display: block; text-align: center; margin-bottom: 0"
+                  >
+                    Microprocesadores
+                  </h6>
+                  <h6
+                    style="
+                      display: block;
+                      text-align: center;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    SA7E04
+                  </h6>
+                  <p style="display: block; text-align: center">
+                    Prof: Whendy Garcia.
+                  </p>
+                  <a href="mailto: vctrinox@gmail.com" class="btn-footer"
+                    >Enviar un correo</a
+                  ><br />
+                  <a
+                    href="https://www.arduino.cc/"
+                    class="btn-footer"
+                    target="_blank"
+                    >Ir a: Arduino - Home
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row respRow2">
+                <div
+                  class="col-md-6 px-4"
+                  id="show"
+                  style="padding-top: 20px; height: 250px"
+                >
+                  <!--<h6> Help us</h6>
+                        <div class="row ">
+                        <div class="col-md-6">
+                            <ul>
+                            <li> <a href="#"> Home</a> </li>
+                              <li> <a href="#"> About</a> </li>
+                            <li> <a href="#"> Service</a> </li>
+                            <li> <a href="#"> Team</a> </li>
+                            <li> <a href="#"> Help</a> </li>
+                              <li> <a href="#"> Contact</a> </li>
+                         </ul>
+                       </div>
+                       <div class="col-md-6 px-4" id="show">
+                         <ul>
+                                <li> <a href="#"> Cab Faciliy</a> </li>
+                              <li> <a href="#"> Fax</a> </li>
+                              <li> <a href="#"> Terms</a> </li>
+                             <li> <a href="#"> Policy</a> </li>
+                            <li> <a href="#"> Refunds</a> </li>
+                                  <li> <a href="#"> Paypal</a> </li>
+                             </ul>
+                             </div>
+                     </div>-->
+                </div>
+                <div class="col-md-6 respCol" style="padding-top: 20px">
+                  <h6>Búsqueda</h6>
+                  <div class="social">
+                    <a
+                      href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3"
+                      target="_blank"
+                      title="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a
+                      href="https://www.facebook.com/groups/35195859789/?ref=share"
+                      target="_blank"
+                      title="Facebook"
+                      ><i class="fab fa-facebook-square"></i
+                    ></a>
+                    <a
+                      href="https://twitter.com/electricaing_uc?s=20"
+                      target="_blank"
+                      title="Twitter"
+                      ><i class="fab fa-twitter-square"></i
+                    ></a>
+                    <a
+                      href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw"
+                      target="_blank"
+                      title="YouTube"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </div>
+                  <form
+                    class="form-footer my-3"
+                    style="margin-bottom: 0 !important"
+                  >
+                    <input
+                      type="text"
+                      placeholder="search here...."
+                      name="search"
+                    />
+                    <button id="go"><i class="fa fa-search"></i></button>
+                  </form>
+                  <p
+                    class="subTitle"
+                    style="
+                      font-style: italic;
+                      margin-bottom: 0;
+                      padding-bottom: 0;
+                      padding-top: 5%;
+                    "
+                  >
+                    Realizado por:
+                  </p>
+                  <p style="font-style: italic; padding: 0; margin-bottom: 0">
+                    Victor Ojeda, Gilberto Virguez
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- floating button <a href="mailto: vctrinox@gmail.com" class="float"><i class="fa fa-envelope my-float"></i></a>-->
+      <div class="action" onclick="actionToggle()">
+        <span>+</span>
+        <ul style="font-family: 'Roboto', sans-serif">
+          <li><a href="#definicion">Definición</a></li>
+          <li><a href="#ciclo-de-trabajo">Ciclo de trabajo</a></li>
+          <li>
+            <a href="#Generacion-de-una-onda-sinusoidal"
+              >Generación de una onda sinusoidal</a
+            >
+          </li>
+          <li><a href="#Uso-del-modulo-PWM">Uso del módulo PWM</a></li>
+        </ul>
+      </div>
+      <!-- End of floating button -->
+    </div>
+  </body>
+</html>
