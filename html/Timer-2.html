@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer 2 con AVR</title>
+    <link rel="shortcut icon" href="..\Imagenes\Universidad-de-carabobo.png" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="..\css\prueba.css" />
+    <link rel="stylesheet" href="..\css\media-screen.css" />
+    <link rel="stylesheet" href="..\css\descripcion-de-las-librerias.css" />
+    <link rel="stylesheet" href="..\css\Manejo-de-la-pantalla-LCD.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css"
+    />
+    <link rel="stylesheet" href="..\css\como-agregar-librerias.css" />
+    <!-- Js file -->
+    <script src="../Js/menu.js" defer></script>
+    <script src="../Js/prueba.js" defer></script>
+    <script src="..\Js\loader.js" defer></script>
+
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+  </head>
+
+  <body>
+    <style>
+      p {
+        margin: 0 !important;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <!-- Top content -->
+    <div class="top-content">
+      <div class="icon-bar">
+        <a class="microchip" href="#">
+          <i class="fas fa-microchip"></i>
+        </a>
+      </div>
+      <label class="label">Microprocesadores UC</label>
+
+      <div class="dropdow newDp inDevice">
+        <a class="darkTheme" style="cursor: pointer"
+          ><i class="fas fa-adjust" style="color: white"></i
+        ></a>
+      </div>
+
+      <ul>
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Teoria</a></li>
+          <div class="dropdow-content">
+            <a href="Convertidor-ADC.html">Convertidor ADC</a>
+            <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+            <a href="Modulación-por-ancho-de-pulso.html"
+              >Modulación por ancho de pulso <i>PWM</i></a
+            >
+            <a href="Timer-0.html" >Timer 0</a>
+            <a href="Timer-1.html">Timer 1</a>
+            <a href="Timer-2.html" class="active">Timer 2</a>
+            <a href="Timer2-Modo-Fase-Correcta.html"
+              >PWM Timer2 Modo Fase Correcta</a
+            >
+            <a href="Timer2-Modo-Rapido.html">PWM Timer2 Modo Rapido</a>
+            <a href="Timer1-Modo-Fase-Correcta.html"
+              >PWM Timer1 Modo Fase Correcta</a
+            >
+            <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
+          </div>
+        </div>
+
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Laboratorio</a></li>
+          <div class="dropdow-content">
+            <a href="Instalacion-de-Proteus-8.5.html"
+              >Instalación de proteus 8.5</a
+            >
+            <a href="como-agregar-librerias-a-proteus-8.5.html"
+              >Como agregar librerias adicionales en Proteus 8.5</a
+            >
+            <a href="Descripcion-y-manejo.html"
+              >Descripcion y manejo de las librerias</a
+            >
+            <a href="IDE-Arduino.html">IDE software Arduino</a>
+            <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+            <a href="Programar-Arduino-AVRStudio.html"
+              >Programar el Arduino con AVR Studio 5</a
+            >
+            <a href="introduccion-al-lenguaje-de-programacion-en-C.html"
+              >Introduccion al lenguaje de programacion en C</a
+            >
+            <a href="manejo-del-display-7seg.html"
+              >Manejo del display 7 Segmentos</a
+            >
+            <a href="Manejo-de-la-pantalla-LCD.html"
+              >Manejo de la pantalla LCD</a
+            >
+          </div>
+        </div>
+
+        <div class="dropdow">
+          <li class="dropbt"><a href="#">Descargas</a></li>
+          <div class="dropdow-content">
+            <a
+              href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg"
+              target="_blank"
+              >Descargar archivos en pdf</a
+            >
+            <a
+              href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw"
+              target="_blank"
+              >Practicas del Laboratorio</a
+            >
+          </div>
+        </div>
+        <div class="dropdow newDp">
+          <li>
+            <a class="darkTheme" style="cursor: pointer"
+              ><i class="fas fa-adjust" style="color: white"></i
+            ></a>
+          </li>
+          <div class="dropdow-content"></div>
+        </div>
+      </ul>
+    </div>
+
+    <!-- Haburguer menu -->
+    <div id="nav-icon2">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu in devices -->
+
+    <div class="content-device">
+      <ul>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction()">Teoria</li>
+          <div class="dropdow-content device">
+            <a href="Convertidor-ADC.html">Convertidor ADC</a>
+            <a href="Manejo-de-interrupciones.html">Manejo de interrupciones</a>
+            <a href="Modulación-por-ancho-de-pulso.html"
+              >Modulación por ancho de pulso <i>PWM</i></a
+            >
+            <a href="Timer-0.html" >Timer 0</a>
+            <a href="Timer-1.html">Timer 1</a>
+            <a href="Timer-2.html" class="active">Timer 2</a>
+            <a href="Timer2-Modo-Fase-Correcta.html"
+              >PWM Timer2 Modo Fase Correcta</a
+            >
+            <a href="Timer2-Modo-Rapido.html">PWM Timer2 Modo Rapido</a>
+            <a href="Timer1-Modo-Fase-Correcta.html"
+              >PWM Timer1 Modo Fase Correcta</a
+            >
+            <a href="Timer1-Modo-Rapido.html">PWM Timer1 Modo Rapido</a>
+          </div>
+        </div>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction2()">Laboratorio</li>
+          <div class="dropdow-content device2">
+            <a href="Instalacion-de-Proteus-8.5.html"
+              >Instalación de proteus 8.5</a
+            >
+            <a href="como-agregar-librerias-a-proteus-8.5.html"
+              >Como agregar librerias adicionales en Proteus 8.5</a
+            >
+            <a href="Descripcion-y-manejo.html"
+              >Descripcion y manejo de las librerias</a
+            >
+            <a href="Descripcion-y-manejo.html">IDE software Arduino</a>
+            <a href="IDE-AVR-Studio-5.html">IDE AVR Studio 5</a>
+            <a href="Programar-Arduino-AVRStudio.html"
+              >Programar el Arduino con AVR Studio 5</a
+            >
+            <a href="introduccion-al-lenguaje-de-programacion-en-C.html"
+              >Introduccion al lenguaje de programacion en C</a
+            >
+            <a href="manejo-del-display-7seg.html"
+              >Manejo del display 7 Segmentos</a
+            >
+            <a href="Manejo-de-la-pantalla-LCD.html"
+              >Manejo de la pantalla LCD</a
+            >
+          </div>
+        </div>
+        <div class="dropdow">
+          <li class="dropbt" onclick="myFunction3()">Descargas</li>
+          <div class="dropdow-content device3">
+            <a
+              href="https://mega.nz/folder/rYYhDYbb#cQcVxUS5VfthcPNgeV1yjg"
+              target="_blank"
+              >Descargar archivos en pdf</a
+            >
+            <a
+              href="https://mega.nz/folder/fE5AAQhY#IVL100RFiLY0-649gnbLAw"
+              target="_blank"
+              >Practicas del Laboratorio</a
+            >
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <!-- sidenav content -->
+    <div class="sidenav2">
+      <label
+        ><a href="#" style="color: black">Timer 2 en el ATmega328P</a></label
+      >
+      <ul>
+        
+
+        <li class="afterICon">
+          <a class="icon icon-solid icon-arrow-down ai0"
+            >Timer2 en el ATmega328P</a
+          >
+        </li>
+        <ul>
+          <li><a href="#Fundamentos">Fundamentos</a></li>
+          <li><a href="#Diagrama-de-tiempo">Diagrama de tiempo</a></li>
+          
+        </ul>
+
+        <li class="afterICon">
+          <a class="icon icon-solid icon-arrow-down ai1"
+            >Timer2 como temporizador</a
+          >
+        </li>
+        <ul>
+          <li>
+            <a href="#Configuracion-del-Registro-TCCR2B"
+              >Configuración del Registro TCCR2B</a
+            >
+          </li>
+          <li>
+            <a href="#Uso-del-Pre-escalador">Ejemplo: Uso del Pre escalador</a>
+          </li>
+          <li>
+            <a href="#Tiempo-Maximo-del-Timer2">Tiempo Máximo del Timer2</a>
+          </li>
+          <li>
+            <a href="#Calculo-para-el-registro-TCNT2"
+              >Cálculo para el registro TCNT2</a
+            >
+          </li>
+          <li><a href="#Ejemplo-1">Ejemplo 1: Timer2 como temporizador</a></li>
+          <li>
+            <a href="#Ejemplo-2"
+              >Ejemplo 2: Timer2 como temporizador con base de tiempo más
+              prolongada</a
+            >
+          </li>
+        </ul>
+
+       
+
+        <li class="afterICon">
+          <a class="icon icon-solid icon-arrow-down ai2">Timer2 modo CTC</a>
+        </li>
+        <ul>
+          <li><a href="#modo-CTC">Definición</a></li>
+          <li>
+            <a href="#Registros-involucrados">Registros involucrados</a>
+          </li>
+          <li>
+            <a href="#Configuracion-del-Registro-TCCR2A"
+              >Configuración del Registro TCCR2A</a
+            >
+          </li>
+          <li>
+            <a href="#Configuracion-del-Registro-TCCR2B-CTC"
+              >Configuración del Registro TCCR2B</a
+            >
+          </li>
+          <li>
+            <a href="#Configuracion-del-registro-OCR2A"
+              >Configuración del registro OCR2A</a
+            >
+          </li>
+          <li>
+            <a href="#Uso-del-Timer2-como-comparador"
+              >Ejemplo: Uso del Timer2 como comparador</a
+            >
+          </li>
+        </ul>
+      </ul>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+      <!--title content -->
+      <div class="h1-content page-title">
+        <h1 class="titleH7" style="font-size: 3em">Timer 2 en el ATmega328P</h1>
+      </div>
+      <!--main content -->
+      <div class="main-content">
+       
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h2 id="Timer2-en-el-ATmega328P" class="jump">
+          Timer2 en el ATmega328P:
+        </h2>
+        <h3 style="margin-top: 2%" id="Fundamentos" class="jump">
+          Fundamentos
+        </h3>
+        <p>
+          A diferencia del Timer0 y el Timer1 <b>el Timer2 no funciona 
+          como contador</b>, solo como temporizador y puede ser 
+          usado en modo comparador, y también en modo PWM, para 
+          utilizarse el timer2 como temporizador, este tiene dos 
+          opciones, el timer2 puede trabajar con el mismo cristal  
+          o reloj con el cual trabaja el microcontrolador, o el 
+          timer2 puede trabajar con un cristal o reloj independiente 
+          conectado exteriormente a los pines TOSC1 y TOSC2 
+          (<b>Pin PB5 y PB6 del ATmega328P respectivamente</b>), en
+           este  caso se dice que trabaja en forma asíncrona 
+           al sistema
+        </p>
+        <img
+          class="resp50"
+          style="width: 20%"
+          src="..\Imagenes\Timers\261px-0_Timer.gif"
+          alt="forma de conteo del timer2 AVR"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h5 id="Diagrama-de-tiempo" class="jump">Diagrama de tiempo</h5>
+        
+        <p>
+          El timer2 es un temporizador de 8 bits que cuenta 
+          con el registro TCNT2 para almacenar sus valores 
+          de temporización que aumentara de uno en uno en 
+          cada ciclo de reloj, ya sea el reloj del sistema 
+          o el reloj externo
+        </p>
+        <img
+          class="resp1"
+          style="width: 50%"
+          src="..\Imagenes\Timers\diagrama de tiempo timer2.png"
+          alt="diagrama de tiempo del timer2 AVR"
+        />
+        <p>
+          En el diagrama anterior podemos apreciar como va 
+          incrementando el registro TCNT2. En esta ocasión, 
+          se presenta un diagrama de tiempo sin pre escalador
+          (𝑐𝑙𝑘<sub>𝐼/𝑂</sub>/1) es decir, el registro TCNT2 se
+          incrementará por cada ciclo (𝑇) de reloj del 
+          microcontrolador (𝑐𝑙𝑘<sub>𝐼/𝑂</sub>).
+        </p>
+        <!-- -------------------------------------------------------------------------------------- -->
+        
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h2 id="Timer2-como-temporizador" class="jump" style="margin-top: 3%">
+          Timer2 como temporizador (con reloj del sistema):
+        </h2>
+        <h3
+          style="margin-top: 2%"
+          id="Configuracion-del-Registro-TCCR2B"
+          class="jump"
+        >
+          Configuración del Registro TCCR2B
+        </h3>
+        <p>
+          Para programar el Timer2 como temporizador se cuenta con el
+          registro TCCR2B que nos permitirá configurarlo de esta manera
+        </p>
+
+        <p style="padding-top: 0">
+          En primera instancia, el timer2 cuenta con lo que se conoce como el
+          pre escalador, esto hace que la frecuencia de trabajo (𝐹<sub>𝐶𝑃𝑈</sub>) se
+          divida por este pre escalador, con lo que se logra que el timer2 tarde
+          un poco mas en aumentar su valor en una unidad; el pre escalador puede
+          tomar el valor de 1, 8, 32, 64, 256 o 1024;<b
+            >estos valores se eligen programando los bits 0, 1 y 2 del registro
+            TCCR2B</b
+          >, los bits 7 a 3 en este caso se pondrán a 0.
+        </p>
+        <img
+          class="resp1"
+          style="width: 65%"
+          src="..\Imagenes\Timers\Registro TCCR2B.png"
+          alt="Registro TCCR2B del timer2 AVR"
+        />
+        <p>
+          En la siguiente tabla se puede observar los valores que hay que dar a
+          estos bits para obtener los diferentes valores de los pre escaladores
+          para el temporizador timer2, observe que cuando estos bits son todos
+          iguales a 0 el timer2 está deshabilitado
+        </p>
+        <img
+          class="resp1"
+          style="width: 58%"
+          src="..\Imagenes\Timers\prescalers timer2.png"
+          alt="Tabla de pre-escaladores del timer2 AVR"
+        />
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 2%" id="Uso-del-Pre-escalador" class="jump">
+          Ejemplo: Uso del Pre escalador
+        </h3>
+        <p>
+          Si el pre escalador utilizado es, por ejemplo, de 256 y la 𝐹<sub
+            >𝐶𝑃𝑈</sub
+          >
+          = 16𝑀𝐻𝑧, entonces la frecuencia de trabajo del timer2 𝐹<sub
+            >𝑇𝑖𝑚𝑒𝑟2</sub
+          >
+          será de 𝐹<sub>𝑇𝑖𝑚𝑒𝑟2</sub> = 𝐹<sub>𝐶𝑃𝑈</sub> ∕𝑃𝑟𝑒𝑒𝑠𝑐𝑎𝑙𝑎𝑑𝑜𝑟, el tiempo
+          que tardará ahora el temporizador en aumentar una unidad será la
+          inversa de este valor lo cual se conoce como periodo: 𝑇<sub
+            >𝑇𝑖𝑚𝑒𝑟2</sub
+          >
+          = 𝑃𝑟𝑒𝑒𝑠𝑐𝑎𝑙𝑎𝑑𝑜𝑟∕𝐹<sub>𝐶𝑃𝑈</sub> por lo que en este caso 𝑇<sub
+            >𝑇𝑖𝑚𝑒𝑟2</sub
+          >
+          = 256∕16𝑀𝐻𝑧 donde 𝑇<sub>𝑇𝑖𝑚𝑒𝑟2</sub> = 16𝑢𝑠, esto quiere decir que ahora
+          el timer2 aumentará en una unidad cada 16𝑢𝑠 y, en este caso, el
+          registro TCNT2 para ir de 0 a 255 tardará 255∗𝑇<sub>𝑇𝑖𝑚𝑒𝑟2</sub> =
+          255∗16𝑢𝑠 = 4.08 𝑚𝑠; y así con la misma idea para los demás pre
+          escaladores.
+        </p>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 2%" id="Tiempo-Maximo-del-Timer2" class="jump">
+          Tiempo Máximo del Timer2
+        </h3>
+        <p>
+          De acuerdo a los tiempos que se quieran obtener al utilizar el timer2,
+          habrá que utilizar el pre escalador adecuado así como inicializar el
+          registro TCNT2 también con un valor adecuado, no olvidemos que este
+          registro es de 8 bits y por lo tanto solo puede contener valores
+          enteros entre 0 y 255
+        </p>
+
+        <p style="padding-top: 0">
+          Cabe destacar, en primera instancia, que para establecer un
+          determinado tiempo del temporizador hay que considerar primero cuanto
+          es el máximo tiempo que puede generar el mismo, para así, evitar
+          inconvenientes al momento de establecer el valor inicial del registro
+          TCNT2
+        </p>
+        <p style="padding-top: 0">
+          Para determinar este tiempo máximo que se puede generar con el
+          temporizador basta con colocar el periodo máximo que se puede generar
+          en el Timer2 a través del máximo valor del pre escalador (1024) y
+          luego multiplicarlo por el máximo valor que este alcanza (255) de esta
+          manera:
+        </p>
+        <img
+          class="resp1"
+          style="width: 55%"
+          src="..\Imagenes\Timers\Tiempo maximo del timer2.png"
+          alt="tiempo maximo del timer2 AVR"
+        />
+        <div class="note" style="margin-top: 3%">
+          <p style="padding: 5px">
+            También hay que tomar en cuenta que este tiempo máximo dependerá de
+            la frecuencia de trabajo del MCU
+          </p>
+        </div>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+          style="margin-top: 2%"
+          id="Calculo-para-el-registro-TCNT2"
+          class="jump"
+        >
+          Cálculo para el registro TCNT2
+        </h3>
+        <p>
+          Partiendo de un ejemplo, si queremos generar un tiempo estimado de 15
+          ms procedemos de la siguiente forma utilizando la siguiente expresión:
+        </p>
+        <img
+          class="resp1"
+          style="width: 50%"
+          src="..\Imagenes\Timers\formula para el TCNT2.png"
+          alt="formula para ajustar el registro TCNT2 del timer2 AVR"
+        />
+        <p>luego:</p>
+        <img
+          class="resp1"
+          style="width: 51%"
+          src="..\Imagenes\Timers\calculo para el TCNT2.png"
+          alt="calculo para ajustar el registro TCNT2 del timer2 AVR"
+        />
+        <div class="note" style="margin: 2%">
+          <p style="padding: 5px">
+            <b>Antes de continuar, aclaremos unas cuantas cosas</b>:
+          </p>
+          <ul>
+            <li>
+              Dado que el registro TCNT2 es de 8 bits el rango de valores
+              permitidos deben estar comprendido entre 0 y 255
+            </li>
+            <li>
+              La selección del pre escalador es mas cuestión de tanteo, se
+              escoge uno, se reemplaza en la ecuación anterior y vemos si el
+              número obtenido esta entre 0 y 255, de ser así la elección del pre
+              escalador es correcta, de lo contrario habrá que utilizar otro
+            </li>
+            <li style="padding-bottom: 5px">
+              El valor obtenido en el TCNT2 (la mayoría de las veces) no suele
+              ser un número entero, por lo que se tiene que escoger entre el
+              número inmediato superior o el número inmediato inferior
+              <b>¿Cuál escogemos?</b>
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          Para saber que valor de aproximación nos conviene más a la hora de
+          seleccionar el valor del TCNT2 simplemente tomamos la expresión
+          anterior, despejamos el 𝑡<sub>𝑒𝑠𝑡𝑖𝑚𝑎𝑑𝑜</sub> y en TCNT2 sustituimos
+          los dos valores obtenidos, de esta manera lograremos observar qué
+          valor para el TCNT2 es más conveniente utilizar, así:
+        </p>
+        <img
+          class="resp1"
+          style="width: 51%"
+          src="..\Imagenes\Timers\aprox para el TCNT2.png"
+          alt="aproximacion para ajustar el registro TCNT2 del timer2 AVR"
+        />
+        <div class="note" style="margin: 3% 0">
+          <p style="padding: 5px">
+            Cabe destacar, que la diferencia al valor estimado original (10 ms)
+            es muy pequeña en ambos casos, por lo que, ya queda por parte del
+            usuario que base de tiempo le convendría más utilizar
+          </p>
+        </div>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 2%" id="Ejemplo-1" class="jump">
+          Ejemplo 1: Timer2 como temporizador
+        </h3>
+        <p>
+          En este primer ejemplo utilizaremos los cálculos obtenidos
+          anteriormente para apagar y encender un LED conectado al 
+          bit 0 del
+          puerto D (<b>PD0</b>) cada 15 ms el cual será visualizado por medio de un osciloscopio
+        </p>
+
+        <div class="code_panel">
+          <div id="button1" onclick="CopyToClipboard('code_panel3')"><i class="far fa-copy"></i> copiar código</div>
+          <code id="code_panel3">
+            <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+            <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br><br>
+           
+             
+            <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span> <span class="originalAVR">{</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= (1 &lt;&lt; 0);</span></span> <span class="code_comment">// bit 0 del PuertoD como salida</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= ~(1  &lt;&lt; 0); </span></span> <span class="code_comment">// bit inicialmente apagado</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">TCCR2B</span> <span class="originalAVR"> = 0b00000111;</span></span> <span class="code_comment">// Preescaler de 1024</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">TCNT2</span> <span class="originalAVR"> = 20; </span></span> <span class="code_comment">// Valor inicial</span></br><br>
+
+            <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {</span></br>
+            <span style="margin-left: 2.5vw;" class="define_include">if</span>  <span class="originalAVR">(</span><span class="variables">TCNT2</span><span class="originalAVR"> == 255) {</span> <br>
+            <span style="margin-left: 2.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">^= (1 &lt;&lt; 0);</span></span>  <span class="code_comment">//Cuando TCNT2 llegue a su valor Max. se invierte el estado del bit</span></br>
+            <span style="margin-left: 2.5vw;"><span class="variables">TCNT2</span> <span class="originalAVR">= 20;</span> <span class="code_comment">// se vuelve a cargar el valor inicial para tener la misma base de tiempo</span> </br>
+            <span style="margin-left: 2.5vw;" class="originalAVR">}</span><br>
+            <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
+          
+            <span class="originalAVR">}</span></br>
+            </code>
+        </div>
+
+        <h5 style="margin-top: 3%;">Circuito en proteus</h5>
+
+        <img
+          class="resp1"
+          style="width: 60%;"
+          src="..\Imagenes\Timers\circuito en proteus timer2.png"
+          alt="Circuito en proteus timer2 AVR"
+        />
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3 style="margin-top: 2%" id="Ejemplo-2" class="jump">
+          Ejemplo 2: Timer2 como temporizador con base de tiempo más prolongada      
+        </h3>
+
+        <p>En este segundo ejemplo se muestra como se pueden obtener
+           bases de tiempos mucho mayores al tiempo máximo del 
+           timer2, basta con incorporar una variable tipo contador 
+           y establecer una base fija de tiempo, con 
+           los cálculos anteriores se obtuvo una base 
+           de 15ms por lo que, para establecer un retardo 
+           de 3 segundos la variable tipo contador tiene que 
+           llegar a un total de 200 unidades 
+           (15 𝑚𝑠 ∗ 200 = 3 𝑠𝑒𝑔𝑢𝑛𝑑𝑜𝑠)</p>
+
+        <div class="code_panel">
+          <div id="button1" onclick="CopyToClipboard('code_panel4')"><i class="far fa-copy"></i> copiar código</div>
+          <code id="code_panel4">
+            <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+            <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br>
+            <span class="define_include">#include</span> <span class="originalAVR">&lt;util/delay.h&gt;</span></br><br>
+            <span class="define_include">uint8_t</span> <span class="originalAVR"> Count = 0;</span> <span class="code_comment">// Variable tipo contador</span></br><br>
+          
+            
+           
+             
+            <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span> <span class="originalAVR">{</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= (1 &lt;&lt; 0);</span></span> <span class="code_comment">// bit 0 del PuertoD como salida</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= ~(1  &lt;&lt; 0); </span></span> <span class="code_comment">// Led inicialmente apagado</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">TCCR2B</span> <span class="originalAVR"> = 0b00000111;</span></span> <span class="code_comment">// Preescaler de 1024</span></br>
+            <span style="margin-left: 1.5vw;"><span class="variables">TCNT2</span> <span class="originalAVR"> = 20; </span></span> <span class="code_comment">// Valor inicial</span></br><br>
+
+            <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {</span></br>
+            <span style="margin-left: 2.5vw;" class="define_include">if</span>  <span class="originalAVR">(</span><span class="variables">TCNT2</span><span class="originalAVR"> == 255) {</span> <br>
+            <span style="margin-left: 3.5vw;"><span class="originalAVR">Count++; </span></span>  <span class="code_comment">// la variable incrementa cada 15 ms</span></br>
+            <span style="margin-left: 3.5vw;"><span class="variables">TCNT2</span> <span class="originalAVR">= 20;</span> <span class="code_comment">// se vuelve a cargar el valor inicial para tener la misma base de tiempo</span> </br>
+            <span style="margin-left: 2.5vw;" class="originalAVR">}</span><br><br>
+
+            <span style="margin-left: 2.5vw;" class="define_include">if</span>  <span class="originalAVR">(Count == 200) {</span><br>
+            <span style="margin-left: 3.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">^= (1 &lt;&lt; 0);</span></span>  <span class="code_comment">//Cuando la Variable Count llegue a 200 ha transcurrido aprox. 3 segundos y se invierte el estado del bit0</span></br>
+            <span style="margin-left: 3.5vw;"><span class="originalAVR">Count = 0; </span> <span class="code_comment">// vuelve a iniciar el conteo de 1 segundo</span> </br>
+            <span style="margin-left: 3.5vw;"><span class="functionsDeclarations">_delay_ms</span><span class="originalAVR">(10);</span></span>  </br>
+            
+            <span style="margin-left: 2.5vw;" class="originalAVR">}</span><br>
+
+            <span class="originalAVR" style="margin-left: 1.5vw;">}</span></br>
+          
+            <span class="originalAVR">}</span></br>
+            </code>
+        </div>
+        
+        <!-- -------------------------------------------------------------------------------------- -->
+        
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h2 id="modo-CTC" class="jump" style="margin-top: 3%">
+          Timer2 modo CTC:
+        </h2>
+
+        <p>Al utilizar el timer2 en modo comparador ocurre que 
+          el registro TCNT2, que es de 8 bits, <b>irá 
+            aumentando su valor de uno en uno desde 0 
+            hasta que este se haga igual a un valor almacenado 
+            en el registro OCR2A</b>, en el momento que se 
+            hacen iguales los valores de los registros 
+            TCNT2 y OCR2A, el registro TCNT2 se pone 
+            automáticamente a cero o también se dice 
+            que se borra, para nuevamente comenzar a
+             aumentar su valor desde 0 hasta que se vuelva hacer 
+             igual al valor almacenado en el registro OCR2A</p>
+
+        <p style="padding-top: 0;">Al mismo tiempo una bandera 
+          de comparación es activada 
+          (OCF2A o OCF2B según sea el caso) 
+          los que nos permitirá manejar interrupciones</p>
+        <img 
+            class="resp1"
+            style="width: 40%;"
+            src="..\Imagenes\Timers\modo CTC timer2.png"
+            alt="TCNT2 window"
+            />
+          
+        <p><b>A esto se lo conoce como el modo de trabajo CTC, que quiere decir borrado del timer por comparación</b></p>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+          style="margin-top: 2%"
+          id="Registros-involucrados"
+          class="jump"
+        >
+        Registros involucrados
+        </h3>
+
+        <p>En el modo de trabajo CTC del timer2 se 
+          utilizarán los registros TCCR2A y TCCR2B</p>
+
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+        style="margin-top: 2%"
+        id="Configuracion-del-Registro-TCCR2A"
+        class="jump"
+        >
+        Configuración del Registro TCCR2A
+        </h3>
+        <p>Con este registro se elige si el evento a ocurrir
+           como respuesta por comparación a la 
+           igualdad entre el registro TCNT2 y el 
+           registro OCR2A, será por el pin OC2A u OC2B</p>
+
+        <img 
+            class="resp1"
+            style="width: 60%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2A timer counter control.png"
+            alt="TCCR2A timer counter control register A AVR"
+        />
+
+        <p>
+         <b>Los bits 7 y 6 controlan el comportamiento del 
+           pin de comparación de salida (OC2A o bien el pin 
+           PB3 del ATmega328P)</b>, para elegir el tipo de 
+           evento que ocurrirá cuando se iguale el registro 
+           TCNT2 con el registro OCR2A, en el caso 
+           de utilizar el pin OC2A para las combinaciones de los 
+           bits 7 y 6 se tiene la siguiente tabla, 
+           si ambos bits son 0 la opción OC2A del pin 
+           no está disponible por lo que el pin se 
+           comporta como una entrada/salida digital normal
+        </p>
+        <img 
+            class="resp1"
+            style="width: 50%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2A table.png"
+            alt="TCCR2A table AVR"
+        />
+        <div class="note" style="margin: 2% 0;">
+          <p style="padding: 5px;"><b>Si por ejemplo el bit7 se 
+            pone a 0 y el bit6 a 1</b> entonces el estado del 
+            pin OC2A cambiará cada vez que la comparación 
+            ocurra,<b>si el bit7 y el bit6 se ponen a 1</b> 
+            ocurrirá que si el pin OC2A estaba a 0 este 
+            se pondrá a 1, pero si estaba a 1 este permanecerá igual</p>
+        </div>
+
+        <img 
+            class="resp1"
+            style="width: 60%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2A timer counter control 2.png"
+            alt="TCCR2A timer counter control register A AVR"
+        />
+        <p><b>Estos bits controlan el comportamiento del 
+          pin de comparación de salida 
+          (OC2B o bien el pin PD3 del ATmega328P)</b> 
+          para elegir el tipo de evento que ocurrirá cuando 
+          se iguale el registro TCNT2 con el registro 
+          OCR2A, en el caso de utilizar el pin 
+          OC2B para las combinaciones de los bits 5 y 4 
+          se tiene la siguiente tabla, si ambos bits son 0 la 
+          opción OC2B del pin no está disponible por lo que el 
+          pin se comporta como una entrada/salida digital normal</p>
+
+        <img 
+            class="resp1"
+            style="width: 50%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2A table 2.png"
+            alt="TCCR2A table AVR"
+        />
+
+        <div class="note" style="margin: 2% 0;">
+          <p style="padding: 5px;">Si por ejemplo <b>el bit5
+             se pone a 0 y el bit4 a 1</b> entonces 
+             el estado del pin OC2B cambiará cada vez que la 
+             comparación ocurra, <b>si el bit5 y el bit4 se ponen 
+               a 1</b> ocurrirá que si el pin OC2B estaba a
+                0 este se pondrá a 1, pero si estaba a 1 
+                este permanecerá igual</p>
+        </div>
+
+        <img 
+            class="resp1"
+            style="width: 60%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2A timer counter control 3.png"
+            alt="TCCR2A timer counter control register A AVR"
+        />
+        <p>Los bits 3 y 2 no se utilizan por lo que se les suele poner a 0</p>
+        <p style="padding-top: 0;"><b>El bit1 para utilizar 
+          el modo CTC tiene que ser puesto a 1 y el bit0 puesto a 0</b></p>
+        
+        <img 
+            class="resp1"
+            style="width: 68%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2A table 3.png"
+            alt="TCCR2A table AVR"
+        />
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+        style="margin-top: 2%"
+        id="Configuracion-del-Registro-TCCR2B-CTC"
+        class="jump"
+        >
+        Configuración del Registro TCCR2B
+        </h3>
+
+        <p>Con este registro se elige el pre escalador a utilizar, 
+          para obtener en cuanto tiempo se quiere que el 
+          registro TCNT2 se iguale al registro OCR2A</p>
+        <img 
+            class="resp1"
+            style="width: 60%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2B timer counter control.png"
+            alt="TCCR2A timer counter control register B AVR"
+        />
+        <p>En la siguiente tabla se puede observar los valores 
+          que hay que dar a estos bits para obtener los
+           diferentes valores de los pre escaladores, 
+           observe que cuando estos bits son todos iguales a 
+           0 el timer2 está deshabilitado, el resto de 
+           los bits se colocan a 0 ya que no se utilizarán</p>
+        <img 
+            class="resp1"
+            style="width: 50%; padding: 10px 0;"
+            src="..\Imagenes\Timers\TCCR2B table.png"
+            alt="TCCR2B table AVR"
+        />
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+        style="margin-top: 2%"
+        id="Configuracion-del-registro-OCR2A"
+        class="jump"
+        >
+        Configuración del registro OCR2A
+        </h3>
+        <p>En el registro OCR2A se cargará el valor hasta 
+          el cual se quiere que llegue el registro 
+          TCNT2 en el modo CTC, por lo que hay que obtener el 
+          valor adecuado a cargar en el registro OCR2A, 
+          esto se realiza mediante la siguiente expresión:</p>
+        <img 
+            class="resp1"
+            style="width: 40%; padding: 10px 0;"
+            src="..\Imagenes\Timers\OCR2A.png"
+            alt="OCR2A AVR"
+        />
+        <p><b>El registros OCR2A es de 8 bits</b> 
+          por lo que el valor obtenido mediante la 
+          ecuación anterior tendrá que ser un número 
+          entero comprendido entre 0 y 255, de no ser 
+          así el valor no será válido</p>
+        
+        <p>Por ejemplo, para lograr que la comparación 
+          ocurra cada 5ms, utilizando un
+           pre escalador de 1024 será necesario cargar el registro 
+           OCR2A con el valor de:</p>
+        <img 
+            class="resp1"
+            style="width: 40%; padding: 10px 0;"
+            src="..\Imagenes\Timers\OCR2A calculo.png"
+            alt="OCR2A AVR"
+        />
+        <p><i>78 sería el valor a cargar en el registro OCR2A para que cada 5ms el valor del registro TCNT2 llegue a 78 y por comparación se produzca un evento en el pin OC2A u OC2B, tras lo cual el registro TCNT2  se pondrá automáticamente a 0 para volver a aumentar su valor nuevamente hasta 78 en un lapso de 5ms y se vuelva ha repetir el proceso</i></p>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h3
+        style="margin-top: 2%"
+        id="Uso-del-Timer2-como-comparador"
+        class="jump"
+        >
+        Ejemplo: Uso del Timer2 como comparador
+        </h3>
+       <p>Para el ejemplo del uso del temporizador contador timer2 en modo CTC, se utilizará el pin PD3 o bien el OC2B del ATmega328P como el pin en el que ocurrirá un evento, que será cada vez que ocurra la igualdad entre el registro TCNT2 y el registro OCR2A donde el estado de este pin OC2B cambie, este pin hay que configurarlo como una salida digital mediante el DDRD correspondiente, se hará que el pin OC2B cambie de estado cada 5ms, esto será observado mediante un osciloscopio conectado a este pin</p>
+       
+       <h5>Circuito en proteus:</h5>
+
+       <img 
+       class="resp80"
+       style="width: 40%; padding: 10px 0;"
+       src="..\Imagenes\Timers\proteus modo CTC timer2.png"
+       alt="Ejemplo en proteus modo CTC AVR"
+       />
+       <p>Utilizando los cálculos anteriores,<b>cargamos el 
+         registro OCR2A = 78</b>, en el registro 
+         TCCR2A hay que poner a 1 su bit4 para que 
+         el evento por cambio de estado sea por el pin 
+         OC2B, y también hay que poner a 1 su
+          bit1 para hacer trabajar el timer2 el modo
+           CTC, sus demás bits se ponen a 0</p>
+     
+       <div class="code_panel">
+        <code>
+          <span class="variables">TCCR2A</span> <span class="originalAVR">= 0b00010010;</span> <span class="code_comment">//cambio estado en el pin OC2B modo CTC</span></br>
+        </code>
+       </div>
+
+      <p>Del registro TCCR2B se colocará a 1 su bit2, a 1 el bit1 y a 1 el bit0 para tener el pre escalador de 1024, para hacer que un led conectado al pin OC2B cambie de estado cada 5ms</p>
+      <div class="code_panel">
+        <code>
+          <span class="variables">TCCR2B</span> <span class="originalAVR">= 0b00000111;</span> <span class="code_comment">//prescaler de 1024</span></br>
+        </code>
+       </div>
+
+       <h4 style="margin-top: 3%;">El código completo queda de la siguiente manera:</h4>
+
+       <div class="code_panel">
+        <div id="button1" onclick="CopyToClipboard('code_panel5')"><i class="far fa-copy"></i> copiar código</div>
+        <code id="code_panel5">
+          <span class="define_include">#define</span> <span class="variables">F_CPU</span> <span class="originalAVR">16000000UL</span> <span class="code_comment">// Frecuencia de trabajo del microcontrolador</span></br>
+          <span class="define_include">#include</span> <span class="originalAVR">&lt;avr/io.h&gt;</span></br><br>
+         
+           
+          <span class="define_include">int</span> <span class="functionsDeclarations">main</span><span class="originalAVR">(</span><span class="define_include">void</span><span class="originalAVR">)</span> <span class="originalAVR">{</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">DDRD</span> <span class="originalAVR">= (1 &lt;&lt; 3);</span></span> <span class="code_comment">// bit 3 del PuertoD como salida</span></br>
+          <span style="margin-left: 1.5vw;"><span class="variables">PORTD</span> <span class="originalAVR">= ~(1  &lt;&lt; 3); </span></span> <span class="code_comment">// bit inicialmente apagado</span></br>
+            
+
+          <span style="margin-left: 1.5vw;" class="variables">TCCR2A</span> <span class="originalAVR">= 0b00010010;</span> <span class="code_comment">//cambio estado en el pin OC2B modo CTC</span></br>
+          <span style="margin-left: 1.5vw;" class="variables">TCCR2B</span> <span class="originalAVR">= 0b00000111;</span> <span class="code_comment">//prescaler de 1024</span></br>
+          <span style="margin-left: 1.5vw;" class="variables">OCR2A</span> <span class="originalAVR">= 78;</span> <span class="code_comment">// Cuando el registro TCNT2 alcance este valor han transcurrido 5ms y luego se  inicializara a 0 para empezar un nuevo ciclo</span></br>          
+          <span class="define_include" style="margin-left: 1.5vw;">while</span> <span class="originalAVR">(1) {}</span></br>
+          <span class="originalAVR">}</span></br>
+          </code>
+      </div>
+      <h4 style="margin-top: 3%;">Simulado en proteus:</h4>
+      <img 
+       class="resp1"
+       style="width: 55%; padding: 10px 0;"
+       src="..\Imagenes\Timers\modo CTC proteus timer2.png"
+       alt="Ejemplo en proteus modo CTC AVR"
+       />
+       <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
+
+        <!-- -------------------------------------------------------------------------------------- -->
+      </div>
+
+      <footer
+        class="container-fluid bg-grey"
+        style="padding-top: 0px; padding-left: 0"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row respRow">
+                <div class="col-md-6 your-item">
+                  <div class="logo-part" style="max-height: 250px">
+                    <img
+                      src="..\Imagenes\Facultad-de-ingenieria.png"
+                      class="w-50 logo-footer"
+                      style="display: block; margin: 15px auto"
+                    />
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Universidad de Carabobo
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Facultad de Ingeniería
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      "
+                    >
+                      Escuela de Ingenieria Eléctrica
+                    </p>
+                    <p
+                      id="TTO"
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                      "
+                    >
+                      Dpto. de Sistemas y Automática
+                    </p>
+                    <p
+                      style="
+                        font-size: 14px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                      "
+                    >
+                      © 2021
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 px-4" style="padding-top: 20px">
+                  <h6
+                    id="brand"
+                    style="display: block; text-align: center; margin-bottom: 0"
+                  >
+                    Microprocesadores
+                  </h6>
+                  <h6
+                    style="
+                      display: block;
+                      text-align: center;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    SA7E04
+                  </h6>
+                  <p style="display: block; text-align: center">
+                    Prof: Whendy Garcia.
+                  </p>
+                  <a href="mailto: vctrinox@gmail.com" class="btn-footer"
+                    >Enviar un correo</a
+                  ><br />
+                  <a
+                    href="https://www.arduino.cc/"
+                    class="btn-footer"
+                    target="_blank"
+                    >Ir a: Arduino - Home
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row respRow2">
+                <div
+                  class="col-md-6 px-4"
+                  id="show"
+                  style="padding-top: 20px; height: 250px"
+                >
+                  <!--<h6> Help us</h6>
+                        <div class="row ">
+                        <div class="col-md-6">
+                            <ul>
+                            <li> <a href="#"> Home</a> </li>
+                              <li> <a href="#"> About</a> </li>
+                            <li> <a href="#"> Service</a> </li>
+                            <li> <a href="#"> Team</a> </li>
+                            <li> <a href="#"> Help</a> </li>
+                              <li> <a href="#"> Contact</a> </li>
+                         </ul>
+                       </div>
+                       <div class="col-md-6 px-4" id="show">
+                         <ul>
+                                <li> <a href="#"> Cab Faciliy</a> </li>
+                              <li> <a href="#"> Fax</a> </li>
+                              <li> <a href="#"> Terms</a> </li>
+                             <li> <a href="#"> Policy</a> </li>
+                            <li> <a href="#"> Refunds</a> </li>
+                                  <li> <a href="#"> Paypal</a> </li>
+                             </ul>
+                             </div>
+                     </div>-->
+                </div>
+                <div class="col-md-6 respCol" style="padding-top: 20px">
+                  <h6>Búsqueda</h6>
+                  <div class="social">
+                    <a
+                      href="https://instagram.com/electricaing_uc?igshid=1grr9yjuz5rk3"
+                      target="_blank"
+                      title="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a
+                      href="https://www.facebook.com/groups/35195859789/?ref=share"
+                      target="_blank"
+                      title="Facebook"
+                      ><i class="fab fa-facebook-square"></i
+                    ></a>
+                    <a
+                      href="https://twitter.com/electricaing_uc?s=20"
+                      target="_blank"
+                      title="Twitter"
+                      ><i class="fab fa-twitter-square"></i
+                    ></a>
+                    <a
+                      href="https://youtube.com/channel/UC-zreC_L2Uqd7vYe4GNi1Hw"
+                      target="_blank"
+                      title="YouTube"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </div>
+                  <form
+                    class="form-footer my-3"
+                    style="margin-bottom: 0 !important"
+                  >
+                    <input
+                      type="text"
+                      placeholder="search here...."
+                      name="search"
+                    />
+                    <button id="go"><i class="fa fa-search"></i></button>
+                  </form>
+                  <p
+                    class="subTitle"
+                    style="
+                      font-style: italic;
+                      margin-bottom: 0;
+                      padding-bottom: 0;
+                      padding-top: 5%;
+                    "
+                  >
+                    Realizado por:
+                  </p>
+                  <p style="font-style: italic; padding: 0; margin-bottom: 0">
+                    Victor Ojeda, Gilberto Virguez
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- floating button <a href="mailto: vctrinox@gmail.com" class="float"><i class="fa fa-envelope my-float"></i></a>-->
+      <div class="action" onclick="actionToggle()">
+        <span>+</span>
+        <ul
+          style="
+            font-family: 'Roboto', sans-serif;
+            height: 100vw;
+            overflow: auto;
+          "
+        >
+          
+
+         <li >
+            <a href="#Timer2-en-el-ATmega328P"
+              ><b>Timer2 en el ATmega328P</b>:</a
+            >
+          </li>
+          
+            <li><a href="#Fundamentos">Fundamentos</a></li>
+            <li><a href="#Diagrama-de-tiempo">Diagrama de tiempo</a></li>
+            
+        
+  
+          <li >
+            <a href="#Timer2-como-temporizador"
+              ><b>Timer2 como temporizador</b>:</a
+            >
+          </li>
+          
+            <li>
+              <a href="#Configuracion-del-Registro-TCCR2B"
+                >Configuración del Registro TCCR2B</a
+              >
+            </li>
+            <li>
+              <a href="#Uso-del-Pre-escalador">Ejemplo: Uso del Pre escalador</a>
+            </li>
+            <li>
+              <a href="#Tiempo-Maximo-del-Timer2">Tiempo Máximo del Timer2</a>
+            </li>
+            <li>
+              <a href="#Calculo-para-el-registro-TCNT2"
+                >Cálculo para el registro TCNT2</a
+              >
+            </li>
+            <li><a href="#Ejemplo-1">Ejemplo 1: Timer2 como temporizador</a></li>
+            <li>
+              <a href="#Ejemplo-2"
+                >Ejemplo 2: Timer2 como temporizador con base de tiempo más
+                prolongada</a
+              >
+            </li>
+       
+          <li >
+            <a href="#modo-CTC"><b>Timer2 modo CTC</b>:</a>
+          </li>
+       
+            <li>
+              <a href="#Registros-involucrados">Registros involucrados</a>
+            </li>
+            <li>
+              <a href="#Configuracion-del-Registro-TCCR2A"
+                >Configuración del Registro TCCR2A</a
+              >
+            </li>
+            <li>
+              <a href="#Configuracion-del-Registro-TCCR2B-CTC"
+                >Configuración del Registro TCCR2B</a
+              >
+            </li>
+            <li>
+              <a href="#Configuracion-del-registro-OCR2A"
+                >Configuración del registro OCR2A</a
+              >
+            </li>
+            <li>
+              <a href="#Uso-del-Timer2-como-comparador"
+                >Ejemplo: Uso del Timer2 como comparador</a
+              >
+            </li>
+        
+        </ul>
+      </div>
+      <!-- End of floating button -->
+    </div>
+  </body>
+</html>
