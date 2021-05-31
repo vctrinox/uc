@@ -1,6 +1,7 @@
 var burguer = document.querySelector("#nav-icon2");
 var coll = document.querySelector(".content-device");
 var concept = document.querySelectorAll(".afterICon");
+var conceptShow = document.querySelectorAll(".afterICon + ul");
 
 burguer.onclick = function () {
   open();
