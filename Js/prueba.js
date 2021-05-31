@@ -28,6 +28,30 @@ function myFunction3() {
   var hola = document.querySelector(".device3");
   hola.classList.toggle("activated");
 }
+/******************************************************* */
+var hasClass = document.querySelectorAll(".icon-arrow-down");
+var index = [];
+
+function myGeneralFunction(e) {
+  var ai = e.target;
+  ai.classList.toggle("activated");
+
+  for (i = 0; i < conceptShow.length; i++) {
+    index.push("ai" + i);
+
+    if (
+      hasClass[i].classList.contains(index[i]) ==
+      ai.classList.contains("ai" + i)
+    ) {
+      conceptShow[i].classList.toggle("activated");
+    }
+  }
+}
+
+for (i = 0; i < concept.length; i++) {
+  concept[i].onclick = myGeneralFunction;
+}
+
 
 /************************* copy to clipboard *************************/
 function CopyToClipboard(containerid) {
